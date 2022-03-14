@@ -1,0 +1,137 @@
+RNMAISCREDITO.exe: 00002B1C: 09:20:06 [127.0.0.1]:EUniSessionException : #2-Sua sessão expirou. Por favor, recarregue a página. (Session not found: IQoEa8O8Tr108B0FEBE ) : Addr: $007E372E
+RNMAISCREDITO.exe: 00004200: 09:21:01 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0
+RNMAISCREDITO.exe: 000021FC: 14:28:51 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 000021FC: 14:28:51 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 000021FC: 14:28:52 [TUniServerModule]:Global Cache Folder Erased. <8> Files deleted.
+RNMAISCREDITO.exe: 000021FC: 14:28:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 000021FC: 14:28:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 0000070C: 14:29:12 [127.0.0.1]:EIBNativeException : [FireDAC][Phys][FB]Unable to complete network request to host "127.0.0.1".
+Failed to establish a connection. : Addr: $00873206
+RNMAISCREDITO.exe: 00001514: 14:29:47 [127.0.0.1]:EIBNativeException : [FireDAC][Phys][FB]Unable to complete network request to host "127.0.0.1".
+Failed to establish a connection. : Addr: $00873206
+RNMAISCREDITO.exe: 000021FC: 14:47:09 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 000021FC: 14:47:09 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 000021FC: 14:47:10 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 000021FC: 14:47:10 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00001E14: 14:47:31 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00001E14: 14:47:31 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00001E14: 14:47:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00001E14: 14:47:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00001E14: 14:49:01 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00001E14: 14:49:01 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00001140: 14:49:04 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00001140: 14:49:04 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00001140: 14:49:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00001140: 14:49:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00002860: 14:49:13 [127.0.0.1]:EUniSessionException : #2-Sua sessão expirou. Por favor, recarregue a página. (Session not found: 3zUOtEjgpR108B535AD ) : Addr: $007E372E
+RNMAISCREDITO.exe: 00001140: 15:02:47 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00001140: 15:02:47 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00001140: 15:02:48 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00001140: 15:02:48 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00001140: 15:02:48 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00001140: 15:02:48 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00001140: 15:02:48 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00001140: 15:02:48 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00001140: 15:02:48 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00001140: 15:02:48 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00001140: 15:02:48 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00001090: 15:02:56 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00001090: 15:02:56 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00001090: 15:02:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00001090: 15:02:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00002774: 15:02:58 [127.0.0.1]:EUniSessionException : #2-Sua sessão expirou. Por favor, recarregue a página. (Session not found: x5MYNpnrHj108B53C24 ) : Addr: $007E372E
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00001090: 15:09:08 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00001090: 15:09:08 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00001090: 15:09:08 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00002E20: 15:09:12 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00002E20: 15:09:12 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00002E20: 15:09:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00002E20: 15:09:13 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00002E20: 15:12:52 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00002E20: 15:12:52 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00001E48: 15:12:54 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00001E48: 15:12:54 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00001E48: 15:12:54 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00001E48: 15:12:54 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00001518: 15:13:02 [127.0.0.1]:EUniSessionException : #2-Sua sessão expirou. Por favor, recarregue a página. (Session not found: JKqtVOblV8108B53D35 ) : Addr: $007E372E
+RNMAISCREDITO.exe: 00001E48: 15:16:17 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00001E48: 15:16:17 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00001E48: 15:16:18 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00001E48: 15:16:18 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00002C1C: 15:16:22 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00002C1C: 15:16:22 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00002C1C: 15:16:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00002C1C: 15:16:22 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00002154: 15:23:38 [127.0.0.1]:EUniSessionException : #2-Sua sessão expirou. Por favor, recarregue a página. (Session not found: TxMGUHhVYC108B53FEA ) : Addr: $007E372E
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00002C1C: 15:26:28 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00001F14: 15:26:36 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00001F14: 15:26:36 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00001F14: 15:26:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00001F14: 15:26:36 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 0000081C: 15:26:44 [127.0.0.1]:EUniSessionException : #2-Sua sessão expirou. Por favor, recarregue a página. (Session not found: xMojq4fjYI108B542CA ) : Addr: $007E372E
+RNMAISCREDITO.exe: 00001F14: 15:43:25 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00001F14: 15:43:25 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00001F14: 15:43:26 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00001F14: 15:43:26 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00001EA0: 15:43:31 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00001EA0: 15:43:31 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00001EA0: 15:43:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00001EA0: 15:43:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00002F8C: 15:43:38 [127.0.0.1]:EUniSessionException : #2-Sua sessão expirou. Por favor, recarregue a página. (Session not found: ZCDRccRn5P108B543A1 ) : Addr: $007E372E

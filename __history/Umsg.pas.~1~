@@ -1,0 +1,47 @@
+unit Umsg;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniGUIBaseClasses, uniButton, unimButton;
+
+type
+  TfrmMsg = class(TUnimForm)
+    btnSim: TUnimButton;
+    btnNao: TUnimButton;
+    procedure btnNaoClick(Sender: TObject);
+    procedure btnSimClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmMsg: TfrmMsg;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmMsg: TfrmMsg;
+begin
+  Result := TfrmMsg(UniMainModule.GetFormInstance(TfrmMsg));
+end;
+
+procedure TfrmMsg.btnNaoClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmMsg.btnSimClick(Sender: TObject);
+begin
+  Close;
+end;
+
+end.

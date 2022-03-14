@@ -1,0 +1,168 @@
+object frmCnpjClienteFormal: TfrmCnpjClienteFormal
+  Left = 0
+  Top = 0
+  ClientHeight = 607
+  ClientWidth = 320
+  Caption = 'frmCnpjClienteFormal'
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  ShowAnimation = 'fade'
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object UnimContainerPanel1: TUnimContainerPanel
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 201
+    Hint = ''
+    Align = alTop
+    object UnimLabel1: TUnimLabel
+      AlignWithMargins = True
+      Left = 10
+      Top = 30
+      Width = 300
+      Height = 168
+      Hint = ''
+      Margins.Left = 10
+      Margins.Top = 30
+      Margins.Right = 10
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Precisamos s'#243' de mais algumas informa'#231#245'es antes de finalizar'
+      Align = alClient
+      ParentFont = False
+      Font.Color = 7092497
+      Font.Height = -33
+      Font.Style = [fsBold]
+    end
+  end
+  object UnimContainerPanel3: TUnimContainerPanel
+    Left = 0
+    Top = 201
+    Width = 320
+    Height = 335
+    Hint = ''
+    Align = alClient
+    object UnimLabel2: TUnimLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 99
+      Width = 314
+      Height = 23
+      Hint = ''
+      Margins.Top = 10
+      AutoSize = False
+      Caption = 'Quantidade de s'#243'cios'
+      Align = alTop
+      ParentFont = False
+      Font.Color = 7092497
+    end
+    object edtCnpj: TUnimDBEdit
+      AlignWithMargins = True
+      Left = 3
+      Top = 39
+      Width = 314
+      Height = 47
+      Hint = ''
+      DataField = 'CNPJ'
+      DataSource = UniMainModule.dsSolicitacao
+      Align = alTop
+      CharCase = ecUpperCase
+      Font.Color = 7092497
+      TabOrder = 2
+      InputType = 'number'
+    end
+    object UnimLabel3: TUnimLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 10
+      Width = 314
+      Height = 23
+      Hint = ''
+      Margins.Top = 10
+      AutoSize = False
+      Caption = 'CNPJ'
+      Align = alTop
+      ParentFont = False
+      Font.Color = 7092497
+    end
+    object slctQtdeSocios: TUnimDBSelect
+      AlignWithMargins = True
+      Left = 3
+      Top = 128
+      Width = 314
+      Height = 47
+      Hint = ''
+      Align = alTop
+      Items.Strings = (
+        '0'
+        '1'
+        '2'
+        '3'
+        '4'
+        '5'
+        '6'
+        '7'
+        '8'
+        '9')
+      ItemIndex = 0
+      Font.Color = 7092497
+      TabOrder = 4
+      DataField = 'QTDE_SOCIOS'
+      DataSource = UniMainModule.dsSolicitacao
+    end
+    object edtSocios: TUnimDBMemo
+      AlignWithMargins = True
+      Left = 3
+      Top = 220
+      Width = 314
+      Height = 235
+      Hint = ''
+      DataField = 'CNPJ_SOCIOS'
+      DataSource = UniMainModule.dsSolicitacao
+      Align = alTop
+      Font.Color = 7092497
+      TabOrder = 5
+    end
+    object UnimLabel4: TUnimLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 188
+      Width = 314
+      Height = 26
+      Hint = ''
+      Margins.Top = 10
+      AutoSize = False
+      Caption = 'Nome e CPF dos s'#243'cios (se houverem)'
+      Align = alTop
+      ParentFont = False
+      Font.Color = 7092497
+    end
+  end
+  object UnimContainerPanel2: TUnimContainerPanel
+    Left = 0
+    Top = 536
+    Width = 320
+    Height = 71
+    Hint = ''
+    Align = alBottom
+    object UnimButton1: TUnimButton
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 314
+      Height = 65
+      Hint = ''
+      Align = alClient
+      Caption = 'Confirmar'
+      OnClick = UnimButton1Click
+      ExplicitTop = 24
+      ExplicitHeight = 44
+    end
+  end
+end

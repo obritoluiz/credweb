@@ -1,0 +1,156 @@
+﻿object frmInfImportantes: TfrmInfImportantes
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 320
+  Caption = 'Informa'#231#245'es importantes'
+  BorderIcons = []
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object pnlPrincipal: TUnimPanel
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 480
+    Hint = ''
+    Align = alClient
+    BorderStyle = ubsNone
+    ExplicitLeft = 136
+    ExplicitTop = 240
+    ExplicitWidth = 256
+    ExplicitHeight = 128
+    object ctnRodapé: TUnimContainerPanel
+      Left = 0
+      Top = 432
+      Width = 320
+      Height = 48
+      Hint = ''
+      Align = alBottom
+      object btnConfirmar: TUnimButton
+        AlignWithMargins = True
+        Left = 160
+        Top = 3
+        Width = 157
+        Height = 42
+        Hint = ''
+        Align = alRight
+        Caption = 'Confirmo'
+      end
+    end
+    object UnimScrollBox1: TUnimScrollBox
+      Left = 0
+      Top = 0
+      Width = 320
+      Height = 432
+      Hint = ''
+      Align = alClient
+      ExplicitLeft = -3
+      ExplicitTop = -3
+      ScrollHeight = 735
+      ScrollWidth = 298
+      object ctnItens: TUnimContainerPanel
+        Left = 4
+        Top = 3
+        Width = 294
+        Height = 732
+        Hint = ''
+        object ctnTitulo: TUnimContainerPanel
+          Left = 0
+          Top = 0
+          Width = 294
+          Height = 65
+          Hint = ''
+          Align = alTop
+          object UnimLabel1: TUnimLabel
+            AlignWithMargins = True
+            Left = 3
+            Top = 3
+            Width = 288
+            Height = 55
+            Hint = ''
+            AutoSize = False
+            Caption = 
+              'Estou ciente de que s'#243' h'#225' possibilidade de libera'#231#227'o de cr'#233'dito ' +
+              'se:'
+            Align = alTop
+            ParentFont = False
+            Font.Color = 7092497
+            Font.Height = -16
+            Font.Style = [fsBold]
+            ExplicitWidth = 310
+          end
+        end
+        object UnimContainerPanel1: TUnimContainerPanel
+          Left = 0
+          Top = 65
+          Width = 294
+          Height = 88
+          Hint = ''
+          Align = alTop
+          object UnimContainerPanel2: TUnimContainerPanel
+            Left = 25
+            Top = 0
+            Width = 269
+            Height = 88
+            Hint = ''
+            Align = alClient
+            ExplicitLeft = 0
+            ExplicitWidth = 65
+            ExplicitHeight = 240
+            object UnimMemo1: TUnimMemo
+              Left = 0
+              Top = 0
+              Width = 269
+              Height = 88
+              Hint = ''
+              Align = alClient
+              Lines.Strings = (
+                
+                  'Todos os campos solicitados por esta Plataforma estiverem preenc' +
+                  'hidos, inclusive a apresenta'#231#227'o e p'#233'-cadastro de avalista ou gru' +
+                  'po de aval*'
+                
+                  '*O grupo de aval '#233' a uni'#227'o volunt'#225'ria de 2 a 3 empreendedores qu' +
+                  'e queiram solicitar o cr'#233'dito, sendo um avalista dos outros. Os ' +
+                  'financiamentos s'#227'o individuais, mas, os integrantes atuam como a' +
+                  'valistas dentro do pr'#243'prio grupo.')
+              ReadOnly = True
+              Font.Height = -12
+              TabOrder = 1
+              ExplicitLeft = 64
+              ExplicitTop = 32
+              ExplicitWidth = 225
+              ExplicitHeight = 235
+            end
+          end
+          object UnimContainerPanel3: TUnimContainerPanel
+            Left = 0
+            Top = 0
+            Width = 25
+            Height = 88
+            Hint = ''
+            Align = alLeft
+            object UnimCheckBox1: TUnimCheckBox
+              AlignWithMargins = True
+              Left = 3
+              Top = 3
+              Width = 19
+              Height = 82
+              Hint = ''
+              Align = alClient
+              Caption = ''
+              ExplicitLeft = 32
+              ExplicitTop = 40
+              ExplicitWidth = 225
+              ExplicitHeight = 47
+            end
+          end
+        end
+      end
+    end
+  end
+end

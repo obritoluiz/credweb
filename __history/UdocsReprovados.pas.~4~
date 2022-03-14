@@ -1,0 +1,61 @@
+unit UdocsReprovados;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Vcl.Imaging.pngimage, uniImage, unimImage, uniGUIBaseClasses, unimPanel,
+  uniBasicGrid, uniDBGrid, unimDBListGrid, uniLabel, unimLabel, uniButton,
+  unimButton;
+
+type
+  TfrmDocsReprovados = class(TUnimForm)
+    UnimPanel3: TUnimPanel;
+    UnimLabel15: TUnimLabel;
+    UnimDBListGrid2: TUnimDBListGrid;
+    UnimLabel1: TUnimLabel;
+    UnimPanel1: TUnimPanel;
+    btnFinalizar: TUnimButton;
+    procedure UnimFormShow(Sender: TObject);
+    procedure UnimDBListGrid2DblClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmDocsReprovados: TfrmDocsReprovados;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UdadosCliente, UdadosUsuario, Umsg, UpedirDocs, UpreCad,
+  UrecuperarSenha, Usejuv, Usolicitacao, Uusuarios;
+
+function frmDocsReprovados: TfrmDocsReprovados;
+begin
+  Result := TfrmDocsReprovados(UniMainModule.GetFormInstance(TfrmDocsReprovados));
+end;
+
+procedure TfrmDocsReprovados.UnimDBListGrid2DblClick(Sender: TObject);
+begin
+  //
+end;
+
+procedure TfrmDocsReprovados.UnimFormShow(Sender: TObject);
+begin
+  //Filtra apenas os documentos do cliente logado
+  with UniMainModule.dsDocumentos.DataSet do
+  begin
+    Filtered  := False;
+    Filter    := 'ID_CLIENTE = ' + IntToStr(frmPrincipal.IDcliente);
+    Filtered  := True;
+  end;
+end;
+
+end.

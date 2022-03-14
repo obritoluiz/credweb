@@ -1,0 +1,32 @@
+unit UfinSolicitacao;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm;
+
+type
+  TfrmFinSolicitacao = class(TUnimForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmFinSolicitacao: TfrmFinSolicitacao;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmFinSolicitacao: TfrmFinSolicitacao;
+begin
+  Result := TfrmFinSolicitacao(UniMainModule.GetFormInstance(TfrmFinSolicitacao));
+end;
+
+end.

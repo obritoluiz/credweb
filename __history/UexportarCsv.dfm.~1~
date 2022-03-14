@@ -1,0 +1,19 @@
+object frmExportarCsv: TfrmExportarCsv
+  Left = 0
+  Top = 0
+  ClientHeight = 527
+  ClientWidth = 320
+  Caption = 'frmExportarCsv'
+  ShowTitle = False
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object LocationSensor1: TLocationSensor
+    Active = True
+    Left = 128
+    Top = 128
+  end
+end

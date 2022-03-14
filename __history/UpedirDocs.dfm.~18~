@@ -1,0 +1,228 @@
+object frmPedirDocs: TfrmPedirDocs
+  Left = 0
+  Top = 0
+  ClientHeight = 668
+  ClientWidth = 560
+  Caption = 'frmPedirDocs'
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  ShowAnimation = 'fade'
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object scrlBody: TUnimScrollBox
+    Left = 0
+    Top = 0
+    Width = 560
+    Height = 668
+    Hint = ''
+    Align = alClient
+    ScrollHeight = 0
+    ScrollWidth = 0
+    object umpDocumentos: TUnimPanel
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 552
+      Height = 660
+      Hint = ''
+      Align = alClient
+      object chkRG: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 66
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Identidade - RG'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Identidade - RG'
+        Checked = True
+      end
+      object chkCompResid: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 254
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Comp. de Resid'#234'ncia'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Comp. de Resid'#234'ncia'
+        Checked = True
+      end
+      object chkCertEstCivil: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 207
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Certid'#227'o de Est. Civ'#237'l'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Certid'#227'o de Est. Civ'#237'l'
+        Checked = True
+      end
+      object chkCPF: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 160
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'CPF'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'CPF'
+        Checked = True
+      end
+      object chkCRMN: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 113
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Estrangeiro - CRMN'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Estrangeiro - CRMN'
+        Checked = True
+      end
+      object umlDocumentos: TUnimLabel
+        AlignWithMargins = True
+        Left = 21
+        Top = 21
+        Width = 510
+        Height = 25
+        Hint = ''
+        Margins.Left = 20
+        Margins.Top = 20
+        Margins.Right = 20
+        Margins.Bottom = 20
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Lista de documentos solicitados'
+        Align = alTop
+        ParentFont = False
+        Font.Color = 7092497
+        Font.Style = [fsBold]
+      end
+      object umbConfirmar: TUnimButton
+        AlignWithMargins = True
+        Left = 4
+        Top = 609
+        Width = 544
+        Height = 47
+        Hint = ''
+        Align = alBottom
+        Caption = 'Confirmar'
+        Font.Color = 7092497
+      end
+      object chkFotoEmpreendimento: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 301
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Foto do Empreendimento'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Foto do Empreendimento'
+        Checked = True
+      end
+      object chkCartaoCpnpj: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 368
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 20
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Cart'#227'o CNPJ'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Cart'#227'o CNPJ'
+        Checked = True
+      end
+      object chkCertificado: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 415
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Certificado da empresa'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Certificado da empresa'
+        Checked = True
+      end
+      object chkCertNegCnpj: TUnimCheckBox
+        AlignWithMargins = True
+        Left = 16
+        Top = 462
+        Width = 535
+        Height = 47
+        Hint = ''
+        Margins.Left = 15
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        FieldLabel = 'Cert. Negativa CNPJ'
+        FieldLabelWidth = 80
+        FieldLabelFont.Color = 7092497
+        Align = alTop
+        Caption = 'Cert. Negativa CNPJ'
+        Checked = True
+      end
+    end
+  end
+end

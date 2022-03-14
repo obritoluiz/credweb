@@ -1,0 +1,14 @@
+object UnimForm1: TUnimForm1
+  Left = 0
+  Top = 0
+  ClientHeight = 527
+  ClientWidth = 320
+  Caption = 'UnimForm1'
+  ShowTitle = False
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+end

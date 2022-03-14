@@ -1,0 +1,93 @@
+unit UrecuperarSenha;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniButton, uniBitBtn, unimBitBtn, uniMemo, unimMemo, uniEdit, unimEdit,
+  uniLabel, unimLabel, Vcl.Imaging.pngimage, uniImage, unimImage, unimPanel,
+  uniGUIBaseClasses, unimScrollBox, unimButton, IdIOHandler, IdIOHandlerSocket,
+  IdIOHandlerStack, IdSSL, IdSSLOpenSSL, IdComponent, IdTCPConnection,
+  IdTCPClient, IdExplicitTLSClientServerBase, IdMessageClient, IdSMTPBase,
+  IdSMTP, IdBaseComponent, IdMessage;
+
+
+
+type
+  TfrmRecuperarSenha = class(TUnimForm)
+    scrlBody: TUnimScrollBox;
+    umpBody: TUnimPanel;
+    UnimImage2: TUnimImage;
+    umpFooter: TUnimPanel;
+    UnimImage1: TUnimImage;
+    UnimLabel8: TUnimLabel;
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    UnimPanel1: TUnimPanel;
+    LabelCPF: TUnimLabel;
+    EditCPF: TUnimEdit;
+    LabelTelefone: TUnimLabel;
+    EditTelefone: TUnimEdit;
+    LabelEmail: TUnimLabel;
+    EditEmail: TUnimEdit;
+    BtnEnviar: TUnimButton;
+    procedure BtnEnviarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  cpf : string;
+  telefone : string;
+  email : string;
+
+function frmRecuperarSenha: TfrmRecuperarSenha;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmRecuperarSenha: TfrmRecuperarSenha;
+begin
+  Result := TfrmRecuperarSenha(UniMainModule.GetFormInstance(TfrmRecuperarSenha));
+end;
+
+
+
+
+procedure TfrmRecuperarSenha.BtnEnviarClick(Sender: TObject);
+var
+  nome : string;
+begin
+  cpf := EditCPF.Text;
+  telefone := EditTelefone.Text;
+  email := EditEmail.Text;
+
+  if (Length(cpf) = 0) OR (Length(telefone) = 0) OR (Length(email) = 0) then
+  begin
+    ShowMessage('Você não preencheu todos os campos, por favor digite as informações novamente.');
+  end
+  else
+  begin
+    with UniMainModule.dsUsuario.DataSet do
+    begin
+      Filtered := False;
+      Filter   := 'usuario = ' + QuotedStr(cpf);
+      Filtered := True;
+    end;
+    nome := UniMainModule.dsUsuario.DataSet.FieldByName('NOME').Value;
+    ShowMessage('Seu nome é: ' + nome);
+  end;
+
+
+end;
+
+end.

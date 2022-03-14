@@ -1,0 +1,37 @@
+unit UdocsReprovados;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Vcl.Imaging.pngimage, uniImage, unimImage, uniGUIBaseClasses, unimPanel,
+  uniBasicGrid, uniDBGrid, unimDBListGrid, uniLabel, unimLabel;
+
+type
+  TfrmDocsReprovados = class(TUnimForm)
+    UnimPanel3: TUnimPanel;
+    UnimLabel15: TUnimLabel;
+    UnimDBListGrid2: TUnimDBListGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmDocsReprovados: TfrmDocsReprovados;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmDocsReprovados: TfrmDocsReprovados;
+begin
+  Result := TfrmDocsReprovados(UniMainModule.GetFormInstance(TfrmDocsReprovados));
+end;
+
+end.

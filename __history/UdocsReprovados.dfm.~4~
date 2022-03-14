@@ -1,0 +1,108 @@
+object frmDocsReprovados: TfrmDocsReprovados
+  Left = 0
+  Top = 0
+  ClientHeight = 533
+  ClientWidth = 692
+  Caption = 'frmDocsReprovados'
+  OnShow = UnimFormShow
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  ShowAnimation = 'fade'
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object UnimPanel3: TUnimPanel
+    Left = 0
+    Top = 0
+    Width = 692
+    Height = 472
+    Hint = ''
+    Align = alClient
+    ExplicitLeft = 59
+    ExplicitTop = 56
+    ExplicitWidth = 694
+    ExplicitHeight = 427
+    object UnimLabel15: TUnimLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 38
+      Width = 684
+      Height = 34
+      Hint = ''
+      Margins.Top = 0
+      AutoSize = False
+      Caption = 
+        'D'#234' um clique duplo nos documentos que deseja marcar como reprova' +
+        'dos.'
+      Align = alTop
+      ParentFont = False
+      Font.Height = -12
+      ExplicitWidth = 685
+    end
+    object UnimDBListGrid2: TUnimDBListGrid
+      AlignWithMargins = True
+      Left = 4
+      Top = 78
+      Width = 684
+      Height = 390
+      Hint = ''
+      Align = alClient
+      DataSource = UniMainModule.dsDocumentos
+      OnDblClick = UnimDBListGrid2DblClick
+      Columns = <
+        item
+          Title.Caption = 'DESCRICAO'
+          FieldName = 'DESCRICAO'
+          Width = 334
+        end
+        item
+          Title.Caption = 'SITUA'#199#195'O'
+          FieldName = 'SITUACAO'
+          Width = 160
+        end
+        item
+          Title.Caption = 'DATA'
+          FieldName = 'DATACADASTRO'
+          Width = 161
+        end>
+    end
+    object UnimLabel1: TUnimLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Width = 684
+      Height = 34
+      Hint = ''
+      Margins.Bottom = 0
+      AutoSize = False
+      Caption = 'Documentos reprovados'
+      Align = alTop
+      ParentFont = False
+      ExplicitWidth = 685
+    end
+  end
+  object UnimPanel1: TUnimPanel
+    Left = 0
+    Top = 472
+    Width = 692
+    Height = 61
+    Hint = ''
+    Align = alBottom
+    object btnFinalizar: TUnimButton
+      AlignWithMargins = True
+      Left = 463
+      Top = 4
+      Width = 225
+      Height = 53
+      Hint = ''
+      Align = alRight
+      Caption = 'Finalizar'
+      ExplicitLeft = 464
+      ExplicitTop = 3
+    end
+  end
+end

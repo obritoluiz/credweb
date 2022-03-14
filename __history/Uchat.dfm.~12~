@@ -1,0 +1,151 @@
+object frmChat: TfrmChat
+  Left = 0
+  Top = 0
+  ClientHeight = 607
+  ClientWidth = 320
+  Caption = 'frmChat'
+  OnShow = UnimFormShow
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 88
+  PlatformData = {}
+  object UnimContainerPanel1: TUnimContainerPanel
+    Left = 0
+    Top = 0
+    Width = 5000
+    Height = 33
+    Hint = ''
+    Align = alTop
+    Color = 9252103
+    ExplicitWidth = 320
+    object lblSair: TUnimLabel
+      AlignWithMargins = True
+      Left = 4952
+      Top = 3
+      Width = 45
+      Height = 27
+      Cursor = crHandPoint
+      Hint = ''
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '<i class="fas fa-times-circle"></i>'
+      Align = alRight
+      ParentFont = False
+      Font.Color = clWhite
+      OnClick = lblSairClick
+      ExplicitLeft = 272
+    end
+    object lblCabecalho: TUnimLabel
+      AlignWithMargins = True
+      Left = 20
+      Top = 3
+      Width = 225
+      Height = 27
+      Hint = ''
+      Margins.Left = 20
+      AutoSize = False
+      Caption = 'Chat com o cliente'
+      Align = alLeft
+      ParentFont = False
+      Font.Color = 14803425
+      Font.Style = [fsBold]
+      ExplicitLeft = 72
+      ExplicitTop = 16
+      ExplicitHeight = 23
+    end
+  end
+  object UnimLabel1: TUnimLabel
+    Left = 0
+    Top = 33
+    Width = 5000
+    Height = 23
+    Hint = ''
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 
+      'Role a p'#225'gina pra baixo para ver as mensagens <i class="fas fa-a' +
+      'rrow-down"></i>'
+    Align = alTop
+    ParentFont = False
+    Font.Height = -11
+    ExplicitLeft = 3
+    ExplicitTop = 48
+  end
+  object scrMensagens: TUnimScrollBox
+    AlignWithMargins = True
+    Left = 3
+    Top = 59
+    Width = 4994
+    Height = 490
+    Hint = ''
+    Align = alClient
+    OnScrollChange = scrMensagensScrollChange
+    ExplicitTop = 36
+    ExplicitHeight = 513
+    ScrollHeight = 0
+    ScrollWidth = 0
+  end
+  object pnlRodape: TUnimPanel
+    Left = 0
+    Top = 552
+    Width = 5000
+    Height = 55
+    Hint = ''
+    Align = alBottom
+    BorderStyle = ubsNone
+    ExplicitWidth = 320
+    object UnimContainerPanel2: TUnimContainerPanel
+      AlignWithMargins = True
+      Left = 274
+      Top = 3
+      Width = 4723
+      Height = 49
+      Hint = ''
+      Align = alClient
+      ExplicitLeft = 264
+      ExplicitTop = 24
+      ExplicitWidth = 240
+      ExplicitHeight = 240
+      object btnEnviar: TUnimButton
+        Left = 0
+        Top = 0
+        Width = 4723
+        Height = 33
+        Hint = ''
+        Align = alTop
+        Caption = '<i class="fas fa-paper-plane"></i>'
+        Font.Color = 657930
+        OnClick = btnEnviarClick
+        ExplicitWidth = 43
+      end
+    end
+    object lblMsg: TUnimEdit
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 265
+      Height = 49
+      Hint = ''
+      Align = alLeft
+      Text = ''
+      EmptyText = 'Sua mensagem'
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object UniTimer: TUniTimer
+    ClientEvent.Strings = (
+      'function(sender)'
+      '{'
+      ' '
+      '}')
+    OnTimer = UniTimerTimer
+    Left = 251
+    Top = 78
+  end
+end

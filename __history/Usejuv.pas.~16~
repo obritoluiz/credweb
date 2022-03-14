@@ -1,0 +1,125 @@
+unit Usejuv;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniBasicGrid, uniDBGrid, unimDBListGrid, unimDBGrid, uniLabel, unimLabel,
+  Vcl.Imaging.pngimage, uniImage, unimImage, unimPanel, unimScrollBox, uniPanel,
+  uniPageControl, unimTabPanel, uniGUIBaseClasses, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, uniButton, uniBitBtn,
+  unimBitBtn, Vcl.Menus, uniMainMenu, uniImageList, uniTreeView, uniTreeMenu,
+  unimTreeMenu, unimButton, uniEdit, unimEdit, uniMultiItem, unimSelect,
+  unimDBTimePicker, uniDBEdit, unimDBEdit, uniDateTimePicker,
+  uniDBDateTimePicker, unimDBDatePicker;
+
+type
+  TfrmAdminSejuv = class(TUnimForm)
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    qryCliente: TFDQuery;
+    dsCliente: TDataSource;
+    pgMain: TUnimTabPanel;
+    pgInicio: TUnimTabSheet;
+    scrlBody: TUnimScrollBox;
+    dbGridDados: TUnimDBListGrid;
+    umcLateral: TUnimContainerPanel;
+    UnimPanel1: TUnimPanel;
+    UnimLabel1: TUnimLabel;
+    mtmenu: TUnimTreeMenu;
+    NativeImageList: TUniNativeImageList;
+    mmenuitens: TUniMenuItems;
+    Sair1: TUniMenuItem;
+    lblUsuario: TUnimLabel;
+    umcCorpo: TUnimContainerPanel;
+    pgAgeCap: TUnimTabSheet;
+    Data: TUnimLabel;
+    edtData: TUnimDBDatePicker;
+    lblHorario: TUnimLabel;
+    lblLocal: TUnimLabel;
+    edtLocal: TUnimDBEdit;
+    btnCOnfirmar: TUnimButton;
+    edtHorario: TUnimDBTimePicker;
+    UnimLabel2: TUnimLabel;
+    procedure dbGridDadosDblClick(Sender: TObject);
+    procedure UnimBitBtn1Click(Sender: TObject);
+    procedure UnimFormShow(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
+    procedure btnCOnfirmarClick(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmAdminSejuv: TfrmAdminSejuv;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, UpreCad;
+
+function frmAdminSejuv: TfrmAdminSejuv;
+begin
+  Result := TfrmAdminSejuv(UniMainModule.GetFormInstance(TfrmAdminSejuv));
+end;
+
+
+procedure TfrmAdminSejuv.btnCOnfirmarClick(Sender: TObject);
+begin
+  pgMain.Pages[0].Visible := True;
+  pgMain.Pages[1].Visible := False;
+end;
+
+procedure TfrmAdminSejuv.dbGridDadosDblClick(Sender: TObject);
+var cliente : string;
+begin
+
+  cliente := dsCliente.DataSet.FieldByName('IDCLIENTE').AsString;
+
+  with UniMainModule.dsCliente.DataSet do
+  begin
+    Filtered := False;
+    Filter   := 'ID = ' + cliente;
+    Filtered := True;
+  end;
+
+  with UniMainModule.dsSolicitacao.DataSet do
+  begin
+    Filtered := False;
+    Filter   := 'CLIENTE = ' + cliente;
+    Filtered := True;
+  end;
+
+  pgMain.Pages[0].Visible := False;
+  pgMain.Pages[1].Visible := True;
+
+end;
+
+procedure TfrmAdminSejuv.Sair1Click(Sender: TObject);
+begin
+  if UniMainModule.msg('Tem certeza que deseja sair?') then Close;
+end;
+
+procedure TfrmAdminSejuv.UnimBitBtn1Click(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmAdminSejuv.UnimFormShow(Sender: TObject);
+begin
+  //Ativa a consulta de clientes
+  qryCliente.Active := True;
+
+  lblUsuario.Caption := 'Bem vindo(a), ' + UniMainModule.dsUsuario.DataSet.FieldByName('NOME').Value + '.';
+end;
+
+end.

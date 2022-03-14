@@ -1,0 +1,102 @@
+credweb.exe: 00003054: 12:42:47 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00003054: 12:42:47 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00003054: 12:42:48 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00003054: 12:42:48 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00003054: 12:42:48 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00003054: 12:42:48 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00003054: 12:42:48 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00003054: 12:42:48 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00003054: 12:42:48 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00003054: 12:42:48 []:<-------------------------------------------------------------->
+credweb.exe: 00003054: 12:42:48 [Terminated]:Exit Code: 0
+credweb.exe: 00000A34: 12:43:54 []:>--------------------------------------------------------------<
+credweb.exe: 00000A34: 12:43:54 [TUniServerModule]:Server First Init.
+credweb.exe: 00000A34: 12:43:54 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00000A34: 12:43:54 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002D40: 12:44:46 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFE9F
+credweb.exe: 00002B14: 12:45:35 [127.0.0.1]:EDatabaseError : Invalid value for field 'DATACADASTRO' : Addr: $0065E687
+credweb.exe: 00000A34: 12:46:20 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00000A34: 12:46:20 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00000A34: 12:46:21 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00000A34: 12:46:21 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00000A34: 12:46:21 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00000A34: 12:46:21 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00000A34: 12:46:21 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00000A34: 12:46:21 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00000A34: 12:46:21 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00000A34: 12:46:21 []:<-------------------------------------------------------------->
+credweb.exe: 00000A34: 12:46:21 [Terminated]:Exit Code: 0
+credweb.exe: 00002178: 12:46:27 []:>--------------------------------------------------------------<
+credweb.exe: 00002178: 12:46:27 [TUniServerModule]:Server First Init.
+credweb.exe: 00002178: 12:46:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002178: 12:46:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000032BC: 12:46:32 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFE9F
+credweb.exe: 000019DC: 12:46:49 [127.0.0.1]:EFDException : [FireDAC][DApt]-400. Update command updated [0] instead of [1] record. Possible reasons: update table does not have PK or row identifier, record has been changed/deleted by another user : Addr: $007D8388
+credweb.exe: 00002178: 13:33:01 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002178: 13:33:01 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002178: 13:33:01 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002178: 13:33:01 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002178: 13:33:01 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002178: 13:33:01 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002178: 13:33:01 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002178: 13:33:02 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002178: 13:33:02 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002178: 13:33:02 []:<-------------------------------------------------------------->
+credweb.exe: 00002178: 13:33:02 [Terminated]:Exit Code: 0
+credweb.exe: 00003574: 13:38:31 []:>--------------------------------------------------------------<
+credweb.exe: 00003574: 13:38:31 [TUniServerModule]:Server First Init.
+credweb.exe: 00003574: 13:38:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00003574: 13:38:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 0000334C: 13:38:35 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFE9F
+credweb.exe: 00002AEC: 13:38:57 [127.0.0.1]:EFDException : [FireDAC][DApt]-400. Update command updated [0] instead of [1] record. Possible reasons: update table does not have PK or row identifier, record has been changed/deleted by another user : Addr: $007D8388
+credweb.exe: 00003574: 17:33:14 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00003574: 17:33:14 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00003574: 17:33:15 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00003574: 17:33:15 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00003574: 17:33:15 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00003574: 17:33:15 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00003574: 17:33:15 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00003574: 17:33:15 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00003574: 17:33:15 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00003574: 17:33:15 []:<-------------------------------------------------------------->
+credweb.exe: 00003574: 17:33:15 [Terminated]:Exit Code: 0
+credweb.exe: 000022E4: 17:33:23 []:>--------------------------------------------------------------<
+credweb.exe: 000022E4: 17:33:23 [TUniServerModule]:Server First Init.
+credweb.exe: 000022E4: 17:33:23 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000022E4: 17:33:23 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00001E34: 17:33:31 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFE9F
+credweb.exe: 00003030: 17:34:10 [127.0.0.1]:EFDException : [FireDAC][DApt]-400. Update command updated [0] instead of [1] record. Possible reasons: update table does not have PK or row identifier, record has been changed/deleted by another user : Addr: $007D8388
+credweb.exe: 000022E4: 17:48:23 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000022E4: 17:48:23 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000022E4: 17:48:23 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000022E4: 17:48:23 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000022E4: 17:48:23 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000022E4: 17:48:23 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000022E4: 17:48:23 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000022E4: 17:48:23 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000022E4: 17:48:23 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000022E4: 17:48:23 []:<-------------------------------------------------------------->
+credweb.exe: 000022E4: 17:48:23 [Terminated]:Exit Code: 0
+credweb.exe: 00002DF0: 17:48:29 []:>--------------------------------------------------------------<
+credweb.exe: 00002DF0: 17:48:29 [TUniServerModule]:Server First Init.
+credweb.exe: 00002DF0: 17:48:29 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002DF0: 17:48:29 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002F58: 17:48:31 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFE9F
+credweb.exe: 00002CB8: 17:49:06 [127.0.0.1]:EFDException : [FireDAC][DApt]-400. Update command updated [0] instead of [1] record. Possible reasons: update table does not have PK or row identifier, record has been changed/deleted by another user : Addr: $007D8388
+credweb.exe: 00002DF0: 17:51:29 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002DF0: 17:51:29 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002DF0: 17:51:29 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002DF0: 17:51:29 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002DF0: 17:51:29 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002DF0: 17:51:29 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002DF0: 17:51:29 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002DF0: 17:51:29 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002DF0: 17:51:29 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002DF0: 17:51:29 []:<-------------------------------------------------------------->
+credweb.exe: 00002DF0: 17:51:29 [Terminated]:Exit Code: 0
+credweb.exe: 00000428: 17:52:03 []:>--------------------------------------------------------------<
+credweb.exe: 00000428: 17:52:03 [TUniServerModule]:Server First Init.
+credweb.exe: 00000428: 17:52:03 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00000428: 17:52:03 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 0000377C: 17:52:08 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFE9F
+credweb.exe: 00003594: 18:05:07 [127.0.0.1]:EFDException : [FireDAC][DApt]-400. Update command updated [0] instead of [1] record. Possible reasons: update table does not have PK or row identifier, record has been changed/deleted by another user : Addr: $007D8388

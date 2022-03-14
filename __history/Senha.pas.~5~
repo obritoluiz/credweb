@@ -1,0 +1,86 @@
+unit Senha;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm;
+
+type
+  TUnimForm1 = class(TUnimForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function Senha: TSenha;
+function alterarSenha(senhaAtual : string; senhaSalva : string; senhaNova : string; senhaNovaConf : string): boolean;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, Mainm, uniGUIApplication;
+
+function Senha: TSenha;
+begin
+  Result := TSenha(UniMainModule.GetFormInstance(TUnimForm1));
+end;
+
+function alterarSenha(senhaAtual : string; senhaSalva : string; senhaNova : string; senhaNovaConf : string): boolean;
+var
+  senhaNovaMD5 :string;
+begin
+  if senhaAtual = senhaSalva then
+  begin
+    if senhaNova = senhaNovaConf then
+    begin
+      senhaNovaMD5 :=  frmPrincipal.MD5(senhaNova);
+
+      if (senhaNova = '') or
+         (senhaNova = NULL) or
+         (senhaNova.Length < 6) or
+         (senhaNova = '123456') then
+      begin
+        ShowMessage('Senha inválida, por favor digite uma senha que tenha pelo menos 6 caracteres.');
+      end
+      else if senhaAtual = senhaNovaMD5 then
+      begin
+        ShowMessage('Erro, a senha nova precisa ser diferente da senha antiga.');
+      end
+      else
+      begin
+        with UniMainModule.dsUsuario.DataSet do
+        begin
+          edit;
+          FieldByName('SENHA').Value := senhaNovaMD5;
+          post;
+        end;
+        EditSenhaAtual.Text := '';
+        EditSenhaNova.Text  := '';
+        EditSenhaConf.text  := '';
+
+        ShowMessage('Senha alterada com sucesso.');
+      end;
+    end
+    else
+    begin
+      EditSenhaAtual.Text := '';
+      EditSenhaNova.Text  := '';
+      EditSenhaConf.text  := '';
+      ShowMessage('As senhas não coincidem, por favor certifique-se que as duas senhas sejam iguais.');
+    end;
+  end
+  else
+  begin
+    EditSenhaAtual.Text := '';
+    EditSenhaNova.Text  := '';
+    EditSenhaConf.text  := '';
+    ShowMessage('Senha atual não foi inserida corretamente');
+  end;
+end;
+
+end.

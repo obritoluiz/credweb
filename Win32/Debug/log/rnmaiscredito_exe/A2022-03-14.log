@@ -1,0 +1,59 @@
+RNMAISCREDITO.exe: 0000186C: 15:25:41 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 0000186C: 15:25:41 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 0000186C: 15:25:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 0000186C: 15:25:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00002ECC: 15:25:53 [127.0.0.1]:EFDException : [FireDAC][Phys][FB]-314. Cannot load vendor library [fbclient.dll or fbembed.dll]. fbclient.dll has unsupported architecture [x64]. Required [x86].
+Não foi possível encontrar o módulo especificado
+Hint: check it is in the PATH or application EXE directories, and has x86 bitness. : Addr: $007EBD64
+RNMAISCREDITO.exe: 00002ECC: 15:25:53 [Requested Theme File not found:]:D:\unim\css\uni-triton.css
+RNMAISCREDITO.exe: 00002ECC: 15:25:53 []:TUniThemeProps: File not found: D:\unim\css\uni-triton.css
+RNMAISCREDITO.exe: 00002ECC: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\modern\theme-triton\resources\theme-triton-all.css
+RNMAISCREDITO.exe: 00001FCC: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\css\uni-ext.css
+RNMAISCREDITO.exe: 000025BC: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\ext-modern-all.js
+RNMAISCREDITO.exe: 00000F94: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 00003640: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\modern\theme-triton\theme-triton.js
+RNMAISCREDITO.exe: 00000B40: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 0000282C: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-pictos\resources\font-pictos-all.css
+RNMAISCREDITO.exe: 000031C0: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\uni\ext-unicommon-min.js
+RNMAISCREDITO.exe: 00002AC8: 15:25:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\timepicker\resources\timePicker.css
+RNMAISCREDITO.exe: 00002A9C: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\uni\ext-sync-min.js
+RNMAISCREDITO.exe: 000005BC: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\classic\locale\locale-pt.js
+RNMAISCREDITO.exe: 00000A04: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\uni\jQuery\jquery-1.11.2.min.js
+RNMAISCREDITO.exe: 0000247C: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\touch-unigui-min.js
+RNMAISCREDITO.exe: 00003528: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\timepicker\resources\timePicker.css
+RNMAISCREDITO.exe: 0000129C: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 0000283C: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-pictos\resources\font-pictos-all.css
+RNMAISCREDITO.exe: 00001E64: 15:25:57 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 00002970: 15:26:26 [127.0.0.1]:EFDException : [FireDAC][Phys][FB]-314. Cannot load vendor library [fbclient.dll or fbembed.dll]. fbclient.dll has unsupported architecture [x64]. Required [x86].
+Não foi possível encontrar o módulo especificado
+Hint: check it is in the PATH or application EXE directories, and has x86 bitness. : Addr: $007EBD64
+RNMAISCREDITO.exe: 00002970: 15:26:26 [Requested Theme File not found:]:D:\unim\css\uni-triton.css
+RNMAISCREDITO.exe: 00002970: 15:26:28 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\modern\theme-triton\resources\theme-triton-all.css
+RNMAISCREDITO.exe: 000034F0: 15:26:28 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\css\uni-ext.css
+RNMAISCREDITO.exe: 00000E04: 15:26:28 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\ext-modern-all.js
+RNMAISCREDITO.exe: 0000288C: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 00002C88: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\modern\theme-triton\theme-triton.js
+RNMAISCREDITO.exe: 00003540: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\uni\ext-unicommon-min.js
+RNMAISCREDITO.exe: 00000914: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\timepicker\resources\timePicker.css
+RNMAISCREDITO.exe: 00002368: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-pictos\resources\font-pictos-all.css
+RNMAISCREDITO.exe: 00003100: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 00003284: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\uni\ext-sync-min.js
+RNMAISCREDITO.exe: 00000BDC: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\classic\locale\locale-pt.js
+RNMAISCREDITO.exe: 00002A78: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\touch-unigui-min.js
+RNMAISCREDITO.exe: 00001640: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\uni\jQuery\jquery-1.11.2.min.js
+RNMAISCREDITO.exe: 0000242C: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-pictos\resources\font-pictos-all.css
+RNMAISCREDITO.exe: 000031A4: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 0000361C: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\touch-unigui-min.js
+RNMAISCREDITO.exe: 00002CE0: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\unim\timepicker\resources\timePicker.css
+RNMAISCREDITO.exe: 00003294: 15:26:29 [HandleFileRequest[127.0.0.1]]:File not found: D:\ext-7.2.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+RNMAISCREDITO.exe: 0000186C: 15:26:56 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 0000186C: 15:26:56 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 0000186C: 15:26:57 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 0000186C: 15:26:57 [Terminated]:Exit Code: 0

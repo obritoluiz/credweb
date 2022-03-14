@@ -1,0 +1,34 @@
+unit UexportarCsv;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  System.Sensors, System.Sensors.Components;
+
+type
+  TfrmExportarCsv = class(TUnimForm)
+    LocationSensor1: TLocationSensor;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmExportarCsv: TfrmExportarCsv;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmExportarCsv: TfrmExportarCsv;
+begin
+  Result := TfrmExportarCsv(UniMainModule.GetFormInstance(TfrmExportarCsv));
+end;
+
+end.

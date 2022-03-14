@@ -1,0 +1,32 @@
+unit UclienteDados;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm;
+
+type
+  TfrmClienteDados = class(TUnimForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmClienteDados: TfrmClienteDados;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmClienteDados: TfrmClienteDados;
+begin
+  Result := TfrmClienteDados(UniMainModule.GetFormInstance(TfrmClienteDados));
+end;
+
+end.

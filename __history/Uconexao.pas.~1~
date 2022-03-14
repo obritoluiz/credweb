@@ -1,0 +1,39 @@
+unit Uconexao;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniEdit, unimEdit, uniGUIBaseClasses, uniLabel, unimLabel;
+
+type
+  TfrmConexao = class(TUnimForm)
+    umlServidor: TUnimLabel;
+    umeServidor: TUnimEdit;
+    UnimLabel1: TUnimLabel;
+    UnimEdit1: TUnimEdit;
+    UnimLabel2: TUnimLabel;
+    UnimEdit2: TUnimEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmConexao: TfrmConexao;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmConexao: TfrmConexao;
+begin
+  Result := TfrmConexao(UniMainModule.GetFormInstance(TfrmConexao));
+end;
+
+end.

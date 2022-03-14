@@ -1,0 +1,74 @@
+unit UclienteDados;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniEdit, uniDBEdit, unimDBEdit, uniLabel, unimLabel, Vcl.Imaging.pngimage,
+  uniImage, unimImage, unimPanel, unimScrollBox, uniPanel, uniPageControl,
+  unimTabPanel, uniGUIBaseClasses, uniButton, uniBitBtn, unimBitBtn,
+  uniMultiItem, unimSelect, unimDBSelect;
+
+type
+  TfrmClienteDados = class(TUnimForm)
+    pgMain: TUnimTabPanel;
+    pgInicio: TUnimTabSheet;
+    scrlBody: TUnimScrollBox;
+    umpFooter: TUnimPanel;
+    UnimImage1: TUnimImage;
+    UnimLabel8: TUnimLabel;
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    edtNome: TUnimDBEdit;
+    UnimLabel1: TUnimLabel;
+    UnimDBEdit1: TUnimDBEdit;
+    UnimLabel2: TUnimLabel;
+    UnimLabel3: TUnimLabel;
+    dbsltMunicipio: TUnimDBSelect;
+    UnimPanel1: TUnimPanel;
+    UnimBitBtn1: TUnimBitBtn;
+    procedure UnimBitBtn1Click(Sender: TObject);
+    procedure UnimFormShow(Sender: TObject);
+    procedure UnimFormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmClienteDados: TfrmClienteDados;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin, UpreCad;
+
+function frmClienteDados: TfrmClienteDados;
+begin
+  Result := TfrmClienteDados(UniMainModule.GetFormInstance(TfrmClienteDados));
+end;
+
+procedure TfrmClienteDados.UnimBitBtn1Click(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmClienteDados.UnimFormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  UniMainModule.dsCliente.DataSet.Post;
+  UniMainModule.dsCliente.DataSet.Filtered := False;
+  UniMainModule.dsCliente.DataSet.Filter   := '';
+end;
+
+procedure TfrmClienteDados.UnimFormShow(Sender: TObject);
+begin
+  UniMainModule.dsCliente.DataSet.Edit;
+end;
+
+end.

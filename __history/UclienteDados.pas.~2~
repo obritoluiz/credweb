@@ -1,0 +1,70 @@
+unit UclienteDados;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniLabel, unimLabel, Vcl.Imaging.pngimage, uniImage, unimImage,
+  uniGUIBaseClasses, unimPanel, uniEdit, uniDBEdit, unimDBEdit, uniButton,
+  uniBitBtn, unimBitBtn, unimScrollBox, uniMultiItem, unimSelect, unimDBSelect,
+  unimList, unimDBList, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, uniBasicGrid, uniDBGrid,
+  unimDBListGrid;
+
+type
+  TfrmClienteDados = class(TUnimForm)
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    umpFooter: TUnimPanel;
+    UnimImage1: TUnimImage;
+    UnimLabel8: TUnimLabel;
+    UnimPanel1: TUnimPanel;
+    edtNome: TUnimDBEdit;
+    lblNome: TUnimLabel;
+    UnimBitBtn1: TUnimBitBtn;
+    UnimScrollBox1: TUnimScrollBox;
+    edtCPF: TUnimDBEdit;
+    UnimLabel1: TUnimLabel;
+    UnimLabel3: TUnimLabel;
+    sltMunicipio: TUnimDBSelect;
+    UnimLabel4: TUnimLabel;
+    UnimDBSelect1: TUnimDBSelect;
+    DataSource1: TDataSource;
+    FDQuery1: TFDQuery;
+    UnimPanel2: TUnimPanel;
+    edtGrupo: TUnimDBEdit;
+    UnimLabel2: TUnimLabel;
+    UnimDBListGrid1: TUnimDBListGrid;
+    UnimLabel5: TUnimLabel;
+    procedure UnimBitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmClienteDados: TfrmClienteDados;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin, UpreCad;
+
+function frmClienteDados: TfrmClienteDados;
+begin
+  Result := TfrmClienteDados(UniMainModule.GetFormInstance(TfrmClienteDados));
+end;
+
+procedure TfrmClienteDados.UnimBitBtn1Click(Sender: TObject);
+begin
+  Close;
+end;
+
+end.

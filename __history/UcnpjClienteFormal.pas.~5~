@@ -1,0 +1,430 @@
+unit UcnpjClienteFormal;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniMemo, uniDBMemo, unimDBMemo, uniMultiItem, unimSelect, unimDBSelect,
+  uniEdit, uniDBEdit, unimDBEdit, uniLabel, unimLabel, uniButton, unimButton,
+  uniGUIBaseClasses, unimPanel, unimScrollBox;
+
+type
+  TfrmCnpjClienteFormal = class(TUnimForm)
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimContainerPanel2: TUnimContainerPanel;
+    UnimContainerPanel3: TUnimContainerPanel;
+    UnimButton1: TUnimButton;
+    UnimLabel1: TUnimLabel;
+    UnimLabel2: TUnimLabel;
+    edtCnpj: TUnimDBEdit;
+    UnimLabel3: TUnimLabel;
+    slctQtdeSocios: TUnimDBSelect;
+    pnlSocio3: TUnimPanel;
+    UnimLabel4: TUnimLabel;
+    edtNomeSocio3: TUnimDBEdit;
+    UnimLabel5: TUnimLabel;
+    edtCPFSocio3: TUnimDBEdit;
+    pnlSocio2: TUnimPanel;
+    UnimLabel6: TUnimLabel;
+    edtNomeSocio2: TUnimDBEdit;
+    UnimLabel7: TUnimLabel;
+    edtCPFSocio2: TUnimDBEdit;
+    pnlSocio1: TUnimPanel;
+    UnimLabel8: TUnimLabel;
+    edtNomeSocio1: TUnimDBEdit;
+    UnimLabel9: TUnimLabel;
+    edtCPFSocio1: TUnimDBEdit;
+    pnlSocio4: TUnimPanel;
+    UnimLabel10: TUnimLabel;
+    edtNomeSocio4: TUnimDBEdit;
+    UnimLabel11: TUnimLabel;
+    edtCPFSocio4: TUnimDBEdit;
+    pnlSocio5: TUnimPanel;
+    UnimLabel12: TUnimLabel;
+    edtNomeSocio5: TUnimDBEdit;
+    UnimLabel13: TUnimLabel;
+    edtCPFSocio5: TUnimDBEdit;
+    pnlSocio6: TUnimPanel;
+    UnimLabel14: TUnimLabel;
+    edtNomeSocio6: TUnimDBEdit;
+    UnimLabel15: TUnimLabel;
+    edtCPFSocio6: TUnimDBEdit;
+    pnlSocio7: TUnimPanel;
+    UnimLabel16: TUnimLabel;
+    edtNomeSocio7: TUnimDBEdit;
+    UnimLabel17: TUnimLabel;
+    edtCPFSocio7: TUnimDBEdit;
+    pnlSocio8: TUnimPanel;
+    UnimLabel18: TUnimLabel;
+    edtNomeSocio8: TUnimDBEdit;
+    UnimLabel19: TUnimLabel;
+    edtCPFSocio8: TUnimDBEdit;
+    pnlSocio9: TUnimPanel;
+    UnimLabel20: TUnimLabel;
+    edtNomeSocio9: TUnimDBEdit;
+    UnimLabel21: TUnimLabel;
+    edtCPFSocio9: TUnimDBEdit;
+    pnlSocio10: TUnimPanel;
+    UnimLabel22: TUnimLabel;
+    edtNomeSocio10: TUnimDBEdit;
+    UnimLabel23: TUnimLabel;
+    edtCPFSocio10: TUnimDBEdit;
+    UnimScrollBox1: TUnimScrollBox;
+    procedure UnimButton1Click(Sender: TObject);
+    procedure slctQtdeSociosChange(Sender: TObject);
+    procedure UnimFormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmCnpjClienteFormal: TfrmCnpjClienteFormal;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UdadosCliente, UdadosUsuario, UdocsReprovados, Umsg, UpedirDocs,
+  UpreCad, UrecuperarSenha, Usejuv, Usolicitacao, Uusuarios;
+
+function frmCnpjClienteFormal: TfrmCnpjClienteFormal;
+begin
+  Result := TfrmCnpjClienteFormal(UniMainModule.GetFormInstance(TfrmCnpjClienteFormal));
+end;
+
+procedure TfrmCnpjClienteFormal.slctQtdeSociosChange(Sender: TObject);
+begin
+  case slctQtdeSocios.ItemIndex of
+    0:
+    begin
+      pnlSocio1.Visible  := False;
+      pnlSocio2.Visible  := False;
+      pnlSocio3.Visible  := False;
+      pnlSocio4.Visible  := False;
+      pnlSocio5.Visible  := False;
+      pnlSocio6.Visible  := False;
+      pnlSocio7.Visible  := False;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 475;
+    end;
+    1:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := False;
+      pnlSocio3.Visible  := False;
+      pnlSocio4.Visible  := False;
+      pnlSocio5.Visible  := False;
+      pnlSocio6.Visible  := False;
+      pnlSocio7.Visible  := False;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 660;
+    end;
+    2:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := False;
+      pnlSocio4.Visible  := False;
+      pnlSocio5.Visible  := False;
+      pnlSocio6.Visible  := False;
+      pnlSocio7.Visible  := False;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 855;
+    end;
+    3:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := False;
+      pnlSocio5.Visible  := False;
+      pnlSocio6.Visible  := False;
+      pnlSocio7.Visible  := False;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 1046;
+    end;
+    4:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := True;
+      pnlSocio5.Visible  := False;
+      pnlSocio6.Visible  := False;
+      pnlSocio7.Visible  := False;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 1232;
+    end;
+    5:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := True;
+      pnlSocio5.Visible  := True;
+      pnlSocio6.Visible  := False;
+      pnlSocio7.Visible  := False;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 1427;
+    end;
+    6:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := True;
+      pnlSocio5.Visible  := True;
+      pnlSocio6.Visible  := True;
+      pnlSocio7.Visible  := False;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 1620;
+    end;
+    7:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := True;
+      pnlSocio5.Visible  := True;
+      pnlSocio6.Visible  := True;
+      pnlSocio7.Visible  := True;
+      pnlSocio8.Visible  := False;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 1810;
+    end;
+    8:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := True;
+      pnlSocio5.Visible  := True;
+      pnlSocio6.Visible  := True;
+      pnlSocio7.Visible  := True;
+      pnlSocio8.Visible  := True;
+      pnlSocio9.Visible  := False;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 2000;
+    end;
+    9:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := True;
+      pnlSocio5.Visible  := True;
+      pnlSocio6.Visible  := True;
+      pnlSocio7.Visible  := True;
+      pnlSocio8.Visible  := True;
+      pnlSocio9.Visible  := True;
+      pnlSocio10.Visible := False;
+
+      //frmCnpjClienteFormal.Height := 2190;
+    end;
+    10:
+    begin
+      pnlSocio1.Visible  := True;
+      pnlSocio2.Visible  := True;
+      pnlSocio3.Visible  := True;
+      pnlSocio4.Visible  := True;
+      pnlSocio5.Visible  := True;
+      pnlSocio6.Visible  := True;
+      pnlSocio7.Visible  := True;
+      pnlSocio8.Visible  := True;
+      pnlSocio9.Visible  := True;
+      pnlSocio10.Visible := True;
+
+      //frmCnpjClienteFormal.Height := 2380;
+    end;
+  end;
+
+end;
+
+procedure TfrmCnpjClienteFormal.UnimButton1Click(Sender: TObject);
+begin
+  case slctQtdeSocios.ItemIndex of
+    1:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 1 Sócio');
+        Abort;
+      end;
+    end;
+    2:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 2 Sócios');
+        Abort;
+      end;
+    end;
+    3:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 3 Sócios');
+        Abort;
+      end;
+    end;
+    4:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') OR
+         (edtNomeSocio4.Text = '') OR (edtCPFSocio4.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 4 Sócios');
+        Abort;
+      end;
+    end;
+    5:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') OR
+         (edtNomeSocio4.Text = '') OR (edtCPFSocio4.Text = '') OR
+         (edtNomeSocio5.Text = '') OR (edtCPFSocio5.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 5 Sócios');
+        Abort;
+      end;
+    end;
+    6:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') OR
+         (edtNomeSocio4.Text = '') OR (edtCPFSocio4.Text = '') OR
+         (edtNomeSocio5.Text = '') OR (edtCPFSocio5.Text = '') OR
+         (edtNomeSocio6.Text = '') OR (edtCPFSocio6.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 6 Sócios');
+        Abort;
+      end;
+    end;
+    7:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') OR
+         (edtNomeSocio4.Text = '') OR (edtCPFSocio4.Text = '') OR
+         (edtNomeSocio5.Text = '') OR (edtCPFSocio5.Text = '') OR
+         (edtNomeSocio6.Text = '') OR (edtCPFSocio6.Text = '') OR
+         (edtNomeSocio7.Text = '') OR (edtCPFSocio7.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 7 Sócios');
+        Abort;
+      end;
+    end;
+    8:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') OR
+         (edtNomeSocio4.Text = '') OR (edtCPFSocio4.Text = '') OR
+         (edtNomeSocio5.Text = '') OR (edtCPFSocio5.Text = '') OR
+         (edtNomeSocio6.Text = '') OR (edtCPFSocio6.Text = '') OR
+         (edtNomeSocio7.Text = '') OR (edtCPFSocio7.Text = '') OR
+         (edtNomeSocio8.Text = '') OR (edtCPFSocio8.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 8 Sócios');
+        Abort;
+      end;
+    end;
+    9:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') OR
+         (edtNomeSocio4.Text = '') OR (edtCPFSocio4.Text = '') OR
+         (edtNomeSocio5.Text = '') OR (edtCPFSocio5.Text = '') OR
+         (edtNomeSocio6.Text = '') OR (edtCPFSocio6.Text = '') OR
+         (edtNomeSocio7.Text = '') OR (edtCPFSocio7.Text = '') OR
+         (edtNomeSocio8.Text = '') OR (edtCPFSocio8.Text = '') OR
+         (edtNomeSocio9.Text = '') OR (edtCPFSocio9.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 9 Sócios');
+        Abort;
+      end;
+    end;
+    10:
+    begin
+      if (edtNomeSocio1.Text = '') OR (edtCPFSocio1.Text = '') OR
+         (edtNomeSocio2.Text = '') OR (edtCPFSocio2.Text = '') OR
+         (edtNomeSocio3.Text = '') OR (edtCPFSocio3.Text = '') OR
+         (edtNomeSocio4.Text = '') OR (edtCPFSocio4.Text = '') OR
+         (edtNomeSocio5.Text = '') OR (edtCPFSocio5.Text = '') OR
+         (edtNomeSocio6.Text = '') OR (edtCPFSocio6.Text = '') OR
+         (edtNomeSocio7.Text = '') OR (edtCPFSocio7.Text = '') OR
+         (edtNomeSocio8.Text = '') OR (edtCPFSocio8.Text = '') OR
+         (edtNomeSocio9.Text = '') OR (edtCPFSocio9.Text = '') OR
+         (edtNomeSocio10.Text = '') OR (edtCPFSocio10.Text = '') then
+      begin
+        ShowMessage('Você precisa fornecer o nome e CPF de 10 Sócios');
+        Abort;
+      end;
+    end;
+  end;
+
+  if edtCnpj.Text = '' then
+  begin
+    ShowMessage('CNPJ inválido');
+    edtCnpj.SetFocus;
+    Abort;
+  end;
+
+  Close;
+end;
+
+procedure TfrmCnpjClienteFormal.UnimFormShow(Sender: TObject);
+begin
+  UniMainModule.dsSolicitacao.DataSet.FieldByName('QTDE_SOCIOS').Value := 0;
+
+  pnlSocio1.Visible  := False;
+  pnlSocio2.Visible  := False;
+  pnlSocio3.Visible  := False;
+  pnlSocio4.Visible  := False;
+  pnlSocio5.Visible  := False;
+  pnlSocio6.Visible  := False;
+  pnlSocio7.Visible  := False;
+  pnlSocio8.Visible  := False;
+  pnlSocio9.Visible  := False;
+  pnlSocio10.Visible := False;
+
+  //frmCnpjClienteFormal.Height := 475;
+end;
+
+end.

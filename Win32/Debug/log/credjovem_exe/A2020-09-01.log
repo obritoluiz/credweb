@@ -1,0 +1,16 @@
+credJovem.exe: 00003AB8: 09:59:37 []:>--------------------------------------------------------------<
+credJovem.exe: 00003AB8: 09:59:37 [TUniServerModule]:Server First Init.
+credJovem.exe: 00003AB8: 09:59:37 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+credJovem.exe: 00003AB8: 09:59:38 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 00003AB8: 09:59:38 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00003AB8: 10:09:02 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 00003AB8: 10:09:02 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 00003AB8: 10:09:03 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 00003AB8: 10:09:03 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 00003AB8: 10:09:03 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 00003AB8: 10:09:03 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 00003AB8: 10:09:03 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 00003AB8: 10:09:03 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 00003AB8: 10:09:03 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 00003AB8: 10:09:03 []:<-------------------------------------------------------------->
+credJovem.exe: 00003AB8: 10:09:03 [Terminated]:Exit Code: 0

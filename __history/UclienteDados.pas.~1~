@@ -1,0 +1,40 @@
+unit UclienteDados;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniLabel, unimLabel, Vcl.Imaging.pngimage, uniImage, unimImage,
+  uniGUIBaseClasses, unimPanel;
+
+type
+  TfrmClienteDados = class(TUnimForm)
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    umpFooter: TUnimPanel;
+    UnimImage1: TUnimImage;
+    UnimLabel8: TUnimLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmClienteDados: TfrmClienteDados;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmClienteDados: TfrmClienteDados;
+begin
+  Result := TfrmClienteDados(UniMainModule.GetFormInstance(TfrmClienteDados));
+end;
+
+end.

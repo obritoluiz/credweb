@@ -1,0 +1,31 @@
+RNMAISCREDITO.exe: 00001014: 09:27:01 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00001014: 09:27:01 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00001014: 09:27:01 [TUniServerModule]:Global Cache Folder Erased. <18> Files deleted.
+RNMAISCREDITO.exe: 00001014: 09:27:01 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00001014: 09:27:01 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00001014: 09:29:47 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00001014: 09:29:47 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00001014: 09:29:48 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00001014: 09:29:48 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00001014: 09:29:48 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00001014: 09:29:48 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00001014: 09:29:48 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00001014: 09:29:48 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00001014: 09:29:48 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00001014: 09:29:48 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00001014: 09:29:48 [Terminated]:Exit Code: 0
+RNMAISCREDITO.exe: 00002354: 09:29:55 []:>--------------------------------------------------------------<
+RNMAISCREDITO.exe: 00002354: 09:29:55 [TUniServerModule]:Server First Init.
+RNMAISCREDITO.exe: 00002354: 09:29:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+RNMAISCREDITO.exe: 00002354: 09:29:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+RNMAISCREDITO.exe: 00002354: 09:30:06 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00002354: 09:30:06 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00002354: 09:30:07 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00002354: 09:30:07 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00002354: 09:30:07 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00002354: 09:30:07 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00002354: 09:30:07 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00002354: 09:30:07 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00002354: 09:30:07 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00002354: 09:30:07 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00002354: 09:30:07 [Terminated]:Exit Code: 0

@@ -1,0 +1,85 @@
+unit UpesquisaInicialReprovada;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniMemo, uniDBMemo, unimDBMemo, uniButton, unimButton, uniLabel, unimLabel,
+  uniGUIBaseClasses, unimMemo;
+
+type
+  TfrmPesqPendencia = class(TUnimForm)
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimLabel1: TUnimLabel;
+    UnimContainerPanel2: TUnimContainerPanel;
+    UnimButton1: TUnimButton;
+    UnimContainerPanel3: TUnimContainerPanel;
+    mmMsgCLiente: TUnimMemo;
+    lblCaracRest: TUnimLabel;
+    procedure UnimButton1Click(Sender: TObject);
+    procedure mmMsgCLienteChange(Sender: TObject);
+    procedure UnimFormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmPesqPendencia: TfrmPesqPendencia;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UcadSucesso, UcnpjClienteFormal, UdadosCliente, UdadosUsuario,
+  UdocsReprovados, Umsg, UpedirDocs, Upep, UpreCad, UrecuperarSenha, Usejuv,
+  Usolicitacao, Utermos, Uusuarios;
+
+function frmPesqPendencia: TfrmPesqPendencia;
+begin
+  Result := TfrmPesqPendencia(UniMainModule.GetFormInstance(TfrmPesqPendencia));
+end;
+
+procedure TfrmPesqPendencia.mmMsgCLienteChange(Sender: TObject);
+var
+  caracteres, restantes, limite : integer;
+begin
+  limite     := 600;
+  caracteres := Length(mmMsgCLiente.Text);
+  restantes  := limite - caracteres;
+
+  lblCaracRest.Text := 'Carácteres restantes: ' + IntToStr(restantes);
+
+  if Length(mmMsgCLiente.Text) > 600 then
+    lblCaracRest.Color := $000D33A6
+  else
+    lblCaracRest.Color := clBlack;
+
+end;
+
+procedure TfrmPesqPendencia.UnimButton1Click(Sender: TObject);
+begin
+  if Length(mmMsgCLiente.Text) > 600 then
+  begin
+    ShowMessage('Limite de caractéres ultrapassado. Máximo 600 caractéres.');
+    mmMsgCLiente.SetFocus;
+    Abort;
+  end;
+
+  frmPrincipal.msgPesqRep := mmMsgCLiente.Text;
+  Close;
+end;
+
+procedure TfrmPesqPendencia.UnimFormShow(Sender: TObject);
+begin
+
+  mmMsgCLiente.Text := frmPrincipal.msgPesqRep;
+
+  mmMsgCLiente.SetFocus;
+end;
+
+end.

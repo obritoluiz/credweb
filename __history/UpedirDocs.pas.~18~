@@ -1,0 +1,158 @@
+unit UpedirDocs;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  unimScrollBox, uniLabel, unimLabel, uniButton, uniBitBtn, unimBitBtn,
+  Vcl.Imaging.pngimage, uniImage, unimImage, uniGUIBaseClasses, unimPanel,
+  uniCheckBox, unimCheckBox, unimButton, uniBasicGrid, uniDBGrid,
+  unimDBListGrid, uniPanel, uniPageControl, unimTabPanel;
+
+type
+  TfrmPedirDocs = class(TUnimForm)
+    scrlBody: TUnimScrollBox;
+    umpDocumentos: TUnimPanel;
+    chkRG: TUnimCheckBox;
+    chkCompResid: TUnimCheckBox;
+    chkCertEstCivil: TUnimCheckBox;
+    chkCPF: TUnimCheckBox;
+    chkCRMN: TUnimCheckBox;
+    umlDocumentos: TUnimLabel;
+    umbConfirmar: TUnimButton;
+    chkFotoEmpreendimento: TUnimCheckBox;
+    chkCartaoCpnpj: TUnimCheckBox;
+    chkCertificado: TUnimCheckBox;
+    chkCertNegCnpj: TUnimCheckBox;
+    pgPrincipal: TUnimTabPanel;
+    pgDocumentos: TUnimTabSheet;
+    pgSolicitados: TUnimTabSheet;
+    pnlDocumentos: TUnimPanel;
+    UnimLabel15: TUnimLabel;
+    UnimDBListGrid2: TUnimDBListGrid;
+    procedure popularTabela();
+    procedure carregarChecks();
+    procedure UnimFormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmPedirDocs: TfrmPedirDocs;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UdadosCliente, UdadosUsuario, UpreCad, Usejuv, Usolicitacao,
+  Uusuarios;
+
+function frmPedirDocs: TfrmPedirDocs;
+begin
+  Result := TfrmPedirDocs(UniMainModule.GetFormInstance(TfrmPedirDocs));
+end;
+
+procedure TfrmPedirDocs.popularTabela();
+var
+  TabelaPopulada: Boolean;
+begin
+
+  with UniMainModule.FDQuery do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('SELECT count(*) as qtd FROM tb_documentos where id_cliente = ');
+    SQL.Add(IntToStr(UniMainModule.dsCliente.DataSet.FieldByName('ID').Value));
+    Open;
+
+    if FieldByName('qtd').Value > 0 then TabelaPopulada := True else TabelaPopulada := False;
+  end;
+
+  if not TabelaPopulada then
+  begin
+    with UniMainModule.dsDocumentos.DataSet do
+    begin
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'RG';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'CRMN (EXTRANGEIRO)';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'CPF';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'CERT. EST. CIVIL';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'COMP. REDIDÊNCIA';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'FOTO EMPREENDIMENTO';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'CARTÃO CNPJ';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'CERTIFICADO EMPRESA';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+
+      Append;
+      FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+      FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+      FieldByName('DESCRICAO').Value      := 'CERTIDÃO NEGATIVA CNPJ';
+      FieldByName('SITUACAO').Value       := 'PENDENTE';
+      Post;
+    end;
+  end;
+
+end;
+
+procedure TfrmPedirDocs.UnimFormShow(Sender: TObject);
+begin
+  //Filtra apenas os documentos do cliente logado
+  with UniMainModule.dsDocumentos.DataSet do
+  begin
+    Filtered  := False;
+    Filter    := 'ID_CLIENTE = ' + IntToStr(frmPrincipal.IDcliente);
+    Filtered  := True;
+  end;
+end;
+
+end.

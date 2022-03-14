@@ -1,0 +1,12 @@
+RNMAISCREDITO.exe: 000033D8: 08:58:04 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFEA7
+RNMAISCREDITO.exe: 00002CE8: 09:18:51 [TUniServerModule]:Shutting Down Server.
+RNMAISCREDITO.exe: 00002CE8: 09:18:51 [TUniServerModule]:Stopping HTTP Server.
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [TUniServerModule]:HTTP Server Stopped.
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [TUniGUISessionManager]:Terminating Session manager.
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [TUniGUISessionManager]:Stopping Cache Eraser...
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [TUniGUISessionManager]:Cache Eraser Stopped.
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [TUniGUISessionManager]:Destroying Worker Threads.
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [TUniGUISessionManager]:Session manager terminated.
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [TUniServerModule]:Server Shutdown Completed.
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 []:<-------------------------------------------------------------->
+RNMAISCREDITO.exe: 00002CE8: 09:18:52 [Terminated]:Exit Code: 0

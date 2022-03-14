@@ -1,0 +1,122 @@
+object frmChat: TfrmChat
+  Left = 0
+  Top = 0
+  ClientHeight = 607
+  ClientWidth = 320
+  Caption = 'frmChat'
+  OnShow = UnimFormShow
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object UnimContainerPanel1: TUnimContainerPanel
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 33
+    Hint = ''
+    Align = alTop
+    Color = 9252103
+    object lblSair: TUnimLabel
+      AlignWithMargins = True
+      Left = 272
+      Top = 3
+      Width = 45
+      Height = 27
+      Cursor = crHandPoint
+      Hint = ''
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '<i class="fas fa-times-circle"></i>'
+      Align = alRight
+      ParentFont = False
+      Font.Color = clWhite
+      OnClick = lblSairClick
+    end
+    object UnimLabel1: TUnimLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 225
+      Height = 27
+      Hint = ''
+      AutoSize = False
+      Caption = 'Chat com o cliente'
+      Align = alLeft
+      ParentFont = False
+      Font.Color = 14803425
+      Font.Style = [fsBold]
+      ExplicitLeft = 72
+      ExplicitTop = 16
+      ExplicitHeight = 23
+    end
+  end
+  object scrMensagens: TUnimScrollBox
+    Left = 0
+    Top = 33
+    Width = 320
+    Height = 519
+    Hint = ''
+    Align = alClient
+    ScrollHeight = 510
+    ScrollWidth = 297
+    object ctnChat: TUnimContainerPanel
+      Left = 2
+      Top = 10
+      Width = 295
+      Height = 500
+      Hint = ''
+    end
+  end
+  object UnimPanel1: TUnimPanel
+    Left = 0
+    Top = 552
+    Width = 320
+    Height = 55
+    Hint = ''
+    Align = alBottom
+    BorderStyle = ubsNone
+    object UnimContainerPanel2: TUnimContainerPanel
+      AlignWithMargins = True
+      Left = 274
+      Top = 3
+      Width = 43
+      Height = 49
+      Hint = ''
+      Align = alClient
+      ExplicitLeft = 264
+      ExplicitTop = 24
+      ExplicitWidth = 240
+      ExplicitHeight = 240
+      object btnEnviar: TUnimButton
+        Left = 0
+        Top = 0
+        Width = 43
+        Height = 33
+        Hint = ''
+        Align = alTop
+        Caption = '<i class="fas fa-paper-plane"></i>'
+        Font.Color = 657930
+        OnClick = btnEnviarClick
+      end
+    end
+    object lblMsg: TUnimEdit
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 265
+      Height = 49
+      Hint = ''
+      Align = alLeft
+      Text = ''
+      EmptyText = 'Sua mensagem'
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+end

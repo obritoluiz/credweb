@@ -1,0 +1,695 @@
+unit Usolicitacao;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniButton, unimButton, unimDBSelect, uniEdit, unimEdit, uniMultiItem,
+  unimSelect, unimScrollBox, uniLabel, unimLabel, Vcl.Imaging.pngimage,
+  uniImage, unimImage, uniGUIBaseClasses, unimPanel, DB, uniPanel,
+  uniPageControl, unimTabPanel, uniRadioButton, unimRadio, uniCheckBox,
+  unimCheckBox, uniDBEdit, unimDBEdit;
+
+type
+  TFrmSolicitacao = class(TUnimForm)
+    pnlCabec: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    UnimScrollBox1: TUnimScrollBox;
+    pnl1: TUnimPanel;
+    UnimLabel1: TUnimLabel;
+    PanelIndividual: TUnimPanel;
+    LabelTipoFinanc: TUnimLabel;
+    SelectTipoFinanc: TUnimSelect;
+    PanelAvalista: TUnimPanel;
+    EditAvalistaNome: TUnimEdit;
+    LabelAvalistaCPF: TUnimLabel;
+    LabelAvalista: TUnimLabel;
+    LabelNomeAvalista: TUnimLabel;
+    LabelEstadoCivilAvalista: TUnimLabel;
+    SelectEstadoCivilAvalista: TUnimSelect;
+    LabelTelefoneAvalista: TUnimLabel;
+    LabelEmailAvalista: TUnimLabel;
+    EditEmailAvalista: TUnimEdit;
+    PanelConjugeAvalista: TUnimPanel;
+    LabelNomeAvalistaConjuge: TUnimLabel;
+    EditNomeAvalistaConjuge: TUnimEdit;
+    LabelCpfAvalistaConjuge: TUnimLabel;
+    EditCpfAvalistaConjuge: TUnimEdit;
+    LabelAvalistaConjuge: TUnimLabel;
+    EditCpfAvalista: TUnimEdit;
+    EditTelefoneAvalista: TUnimEdit;
+    SelectAvalistaClienteAGN: TUnimDBSelect;
+    LabelAvalistaAGN: TUnimLabel;
+    PanelColetivo: TUnimPanel;
+    LabelParticipantesGrupo: TUnimLabel;
+    SelectQuantidadePessoas: TUnimSelect;
+    PanelParticipante2: TUnimPanel;
+    LabelParticipante2: TUnimLabel;
+    LabelCpfParticipante2: TUnimLabel;
+    EditCpfParticipante2: TUnimEdit;
+    PanelParticipante3: TUnimPanel;
+    LabelParticipante3: TUnimLabel;
+    LabelCpfParticipante3: TUnimLabel;
+    EditCpfParticipante3: TUnimEdit;
+    ctnCapInvest: TUnimContainerPanel;
+    cntTipoNegocio: TUnimContainerPanel;
+    UnimContainerPanel2: TUnimContainerPanel;
+    btnFinalizar: TUnimButton;
+    pnl2: TUnimPanel;
+    UnimLabel2: TUnimLabel;
+    UnimLabel3: TUnimLabel;
+    UnimLabel4: TUnimLabel;
+    edtAtivNegocio: TUnimEdit;
+    UnimImage1: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    sltObjetivo: TUnimSelect;
+    sltTipoNegocio: TUnimSelect;
+    lblDescTipoFin: TUnimLabel;
+    UnimLabel6: TUnimLabel;
+    chkTermo: TUnimCheckBox;
+    chkPEP: TUnimCheckBox;
+    slctLinha: TUnimSelect;
+    lblLinha: TUnimLabel;
+    lblLinkLinha: TUnimLabel;
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimLabel5: TUnimLabel;
+    UnimContainerPanel3: TUnimContainerPanel;
+    UnimLabel7: TUnimLabel;
+    cntLinha: TUnimContainerPanel;
+    edtFatAnual: TUnimDBEdit;
+    edtCredPret: TUnimDBEdit;
+    procedure SelectTipoFinancChange(Sender: TObject);
+    procedure SelectEstadoCivilAvalistaChange(Sender: TObject);
+    procedure SelectQuantidadePessoasChange(Sender: TObject);
+    procedure UnimFormShow(Sender: TObject);
+    function validarDadosSolicitacao() : boolean;
+    procedure EditCpfParticipante2Change(Sender: TObject);
+    procedure EditCpfParticipante3Change(Sender: TObject);
+    procedure EditAvalistaNomeChange(Sender: TObject);
+    procedure EditCpfAvalistaChange(Sender: TObject);
+    procedure EditTelefoneAvalistaChange(Sender: TObject);
+    procedure EditEmailAvalistaChange(Sender: TObject);
+    procedure EditNomeAvalistaConjugeChange(Sender: TObject);
+    procedure EditCpfAvalistaConjugeChange(Sender: TObject);
+    procedure btnFinalizarClick(Sender: TObject);
+    procedure UnimButton1Click(Sender: TObject);
+    procedure chkTermoClick(Sender: TObject);
+    procedure chkPEPClick(Sender: TObject);
+    procedure lblLinkLinhaClick(Sender: TObject);
+    procedure sltTipoNegocioChange(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    var codigoCliente         : integer;
+    var cpfCliente            : string;
+    var codigoGrupo           : string;
+    var municipio             : string;
+    var estadoCivil           : string;
+    var cpfConjuge            : string;
+    var dataAtual             : string;
+    var codigoSolicitacao     : Integer;
+  end;
+
+function FrmSolicitacao: TFrmSolicitacao;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, UpreCad, UdadosCliente, ServerModule,
+  Uacomp, Uadmin, UanexarDoc, UdadosUsuario, Umsg, UpedirDocs, UrecuperarSenha,
+  Usejuv, Uusuarios, UcnpjClienteFormal, UdocsReprovados, Utermos, Upep,
+  UcadSucesso;
+
+function FrmSolicitacao: TFrmSolicitacao;
+begin
+  Result := TFrmSolicitacao(UniMainModule.GetFormInstance(TFrmSolicitacao));
+end;
+
+procedure TFrmSolicitacao.EditAvalistaNomeChange(Sender: TObject);
+begin
+  EditAvalistaNome.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.EditCpfAvalistaChange(Sender: TObject);
+begin
+  EditCpfAvalista.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.EditCpfAvalistaConjugeChange(Sender: TObject);
+begin
+  EditCpfAvalistaConjuge.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.EditCpfParticipante2Change(Sender: TObject);
+begin
+  EditCpfParticipante2.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.EditCpfParticipante3Change(Sender: TObject);
+begin
+  EditCpfParticipante3.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.EditEmailAvalistaChange(Sender: TObject);
+begin
+  EditEmailAvalista.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.EditNomeAvalistaConjugeChange(Sender: TObject);
+begin
+  EditNomeAvalistaConjuge.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.EditTelefoneAvalistaChange(Sender: TObject);
+begin
+  EditTelefoneAvalista.Color := clWindow;
+end;
+
+procedure TFrmSolicitacao.SelectEstadoCivilAvalistaChange(Sender: TObject);
+begin
+if SelectEstadoCivilAvalista.ItemIndex = 0 then
+  begin
+    PanelIndividual.Height := 650;
+    PanelAvalista.Height := 640;
+    PanelConjugeAvalista.Height := 190;
+    PanelConjugeAvalista.Visible := True;
+  end
+  else
+  begin
+    PanelIndividual.Height := 450;
+    PanelAvalista.Height := 440;
+    PanelConjugeAvalista.Height := 0;
+    PanelConjugeAvalista.Visible := False;
+    end;
+end;
+
+procedure TFrmSolicitacao.SelectQuantidadePessoasChange(Sender: TObject);
+begin
+  SelectQuantidadePessoas.Color := clWindow;
+
+  if SelectQuantidadePessoas.ItemIndex = 0 then
+  begin
+    PanelColetivo.Height := 200;
+    PanelParticipante2.Height := 117;
+    PanelParticipante3.Height := 0;
+  end
+  else if SelectQuantidadePessoas.ItemIndex = 1 then
+  begin
+    PanelColetivo.Height := 326;
+    PanelParticipante2.Height := 117;
+    PanelParticipante3.Height := 117;
+  end;
+end;
+
+procedure TFrmSolicitacao.SelectTipoFinancChange(Sender: TObject);
+begin
+  SelectTipoFinanc.Color := clWindow;
+  if SelectTipoFinanc.ItemIndex = 0 then  //INDIVIDUAL
+  begin
+    PanelColetivo.Height := 0;
+    PanelParticipante2.Height := 0;
+    PanelParticipante3.Height := 0;
+    SelectQuantidadePessoas.ItemIndex := -1;
+
+    if SelectEstadoCivilAvalista.ItemIndex = 0 then
+    begin
+    //Exibe painel do conjuge do avalista para solicitação individual
+      PanelIndividual.Height := 650;
+      PanelAvalista.Height := 640;
+      PanelConjugeAvalista.Height := 190;
+    end
+    else
+    begin
+    //Exibe painel do avalista para solicitação individual sem conjuge
+      PanelIndividual.Height := 450;
+      PanelAvalista.Height := 440;
+      PanelConjugeAvalista.Height := 0;
+    end;
+
+  end
+  else                                    //SOLIDÁRIO
+  begin
+    //Exibir painél da solicitação em grupo
+    PanelIndividual.Height := 0;
+    PanelAvalista.Height := 0;
+    PanelColetivo.Height := 80;
+    PanelParticipante2.Height := 0;
+    PanelParticipante3.Height := 0;
+  end;
+end;
+
+procedure TFrmSolicitacao.sltTipoNegocioChange(Sender: TObject);
+begin
+  if sltTipoNegocio.ItemIndex = 0 then  //Se for FORMAL
+  begin
+    slctLinha.Items.Clear;
+    slctLinha.Items.Add('NÃO SEI INFORMAR');
+    slctLinha.Items.Add('MICROCRÉDITO - MEI');
+    slctLinha.Items.Add('MICROCRÉDITO - TURISMO');
+    slctLinha.Items.Add('MICROCRÉDITO - ESCOLAR');
+    slctLinha.Items.Add('TURISMO - FUNGETUR');
+    slctLinha.Items.Add('AGN - MICRO');
+    slctLinha.Items.Add('AGN - PRÓ EMPRESA');
+    slctLinha.ItemIndex := 0;
+  end
+  else
+  begin
+    slctLinha.Items.Clear;
+    slctLinha.Items.Add('NÃO SEI INFORMAR');
+    slctLinha.Items.Add('MICROCRÉDITO');
+    slctLinha.Items.Add('AGN - AGRO');
+    slctLinha.ItemIndex := 0;
+  end;
+
+end;
+
+function TFrmSolicitacao.validarDadosSolicitacao() : boolean;
+var erro :boolean;
+begin
+  erro := False;
+
+  if (SelectTipoFinanc.ItemIndex = -1) then //tipo do financiamento
+  begin
+    SelectTipoFinanc.Color := clRed;
+    erro := True;
+  end;
+
+  if SelectTipoFinanc.Text = 'INDIVIDUAL' then
+  begin
+    if EditAvalistaNome.Text = '' then
+    begin
+      EditAvalistaNome.Color := clRed;
+      erro := True;
+    end;
+    if frmPrincipal.ValidarCPF(EditCpfAvalista.Text) = False then
+    begin
+      EditCpfAvalista.Color := clRed;
+      erro := True;
+    end;
+    if cpfCliente = EditCpfAvalista.Text then
+    begin
+      ShowMessage('Você não pode ser seu próprio avalisata, por favor insira outra pessoa como avalista.');
+      EditCpfAvalista.Color := clRed;
+      erro := True;
+    end;
+
+    //verificar estado civil do cliente
+    if (estadoCivil = 'CASADO(A)') and
+       (cpfConjuge = EditCpfAvalista.Text) then
+    begin
+      ShowMessage('Em um financiamento individual o cônjuge não pode ser o avalista!');
+      EditCpfAvalista.Color := clRed;
+      erro := True;
+    end;
+
+    if EditTelefoneAvalista.Text = '' then
+    begin
+      EditTelefoneAvalista.Color := clRed;
+      erro := True;
+    end;
+    if (Length(EditTelefoneAvalista.Text) < 8) or (Length(EditTelefoneAvalista.Text) > 12) then
+    begin
+      EditTelefoneAvalista.Color := clRed;
+      erro := True;
+    end;
+    if EditEmailAvalista.Text = '' then
+    begin
+      EditEmailAvalista.Color := clRed;
+      erro := True;
+    end;
+    if Pos('@', EditEmailAvalista.Text) = 0 then
+    begin
+      EditEmailAvalista.Color := clRed;
+      erro := True;
+    end;
+    if (SelectAvalistaClienteAGN.ItemIndex = -1) then
+    begin
+      SelectAvalistaClienteAGN.Color := clRed;
+      erro := True;
+    end;
+    if SelectEstadoCivilAvalista.ItemIndex = -1 then
+    begin
+      SelectEstadoCivilAvalista.Color := clRed;
+      erro := True;
+    end;
+    if SelectEstadoCivilAvalista.Text = 'CASADO(A)' then
+    begin
+      if EditNomeAvalistaConjuge.Text = '' then
+      begin
+        EditNomeAvalistaConjuge.Color := clRed;
+        erro := True;
+      end;
+      if frmPrincipal.ValidarCPF(EditCpfAvalistaConjuge.Text) = False then
+      begin
+        EditCpfAvalistaConjuge.Color := clRed;
+        erro := True;
+      end;
+
+    end;
+  end
+  else if SelectTipoFinanc.ItemIndex = 1 then
+  begin
+    if SelectQuantidadePessoas.ItemIndex = -1 then
+    begin
+      SelectQuantidadePessoas.Color := clRed;
+      erro := True;
+    end
+    else if cpfCliente = EditCpfParticipante2.Text then
+    begin
+      ShowMessage('Um grupo não pode ter 2 membros com o mesmo cpf!');
+      erro := True;
+      EditCpfParticipante2.Color := clRed;
+    end;
+    if estadoCivil = 'CASADO(A)' then
+      begin
+        if cpfConjuge = EditCpfParticipante2.Text then
+        begin
+          ShowMessage('Um casal não pode participar duas vezes do grupo!');
+          erro := True;
+          EditCpfParticipante2.Color := clRed;
+        end;
+      end;
+    if frmPrincipal.ValidarCPF(EditCpfParticipante2.Text) = False then
+    begin
+      EditCpfParticipante2.Color := clRed;
+      erro := True;
+    end;
+
+    if SelectQuantidadePessoas.ItemIndex = 1 then
+    begin
+      if cpfCliente = EditCpfParticipante3.Text then
+      begin
+        ShowMessage('Um grupo não pode ter 2 membros com o mesmo cpf!');
+        erro := True;
+        EditCpfParticipante3.Color := clRed;
+      end;
+      if estadoCivil = 'CASADO(A)' then
+      begin
+        if cpfConjuge = EditCpfParticipante3.Text then
+        begin
+          ShowMessage('Um casal não pode participar duas vezes do grupo!');
+          erro := True;
+          EditCpfParticipante3.Color := clRed;
+        end;
+      end;
+      if EditCpfParticipante2.Text = EditCpfParticipante3.Text then
+      begin
+        ShowMessage('Um grupo não pode ter 2 membros com o mesmo cpf!');
+        erro := True;
+        EditCpfParticipante3.Color := clRed;
+      end;
+      if frmPrincipal.ValidarCPF(EditCpfParticipante3.Text) = False then
+      begin
+        EditCpfParticipante3.Color := clRed;
+        erro := True;
+      end;
+    end;
+  end;
+
+  if erro then result := False else result := True;
+
+end;
+
+procedure TFrmSolicitacao.btnFinalizarClick(Sender: TObject);
+var
+  codigoAvalista,
+  codigoSolicitacao,
+  idUsuario,
+  idCliente : Integer;
+  cidade : string;
+begin
+  if chkTermo.Checked = False then
+  begin
+    ShowMessage('Você precisa ler e aceitar os termos.');
+    Abort;
+  end;
+
+  if edtFatAnual.Text = '' then
+  begin
+    ShowMessage('Você precisa informar o seu faturamento anual.');
+    edtFatAnual.SetFocus;
+    Abort;
+  end;
+
+  if edtCredPret.Text = '' then
+  begin
+    ShowMessage('Você precisa informar o valor do crédito pretendido.');
+    edtCredPret.SetFocus;
+    Abort;
+  end;
+
+
+  if (frmPrincipal.acesso = 'CREDJOVEM') or (frmPrincipal.acesso = 'CREDTUR') then
+  begin
+    //
+  end;
+
+  if (validarDadosSolicitacao = True) or (frmPrincipal.ConfirmaParticipacao = 'SIM') then
+  begin
+
+    //Salvando usuário e cliente no banco
+    idUsuario := frmPrincipal.proxID('tb_usuario');
+
+    if (UniMainModule.tb_usuario.State in [dsInsert]) then
+    begin
+      UniMainModule.dsUsuario.DataSet.FieldByName('ID').Value := idUsuario;
+      UniMainModule.dsUsuario.DataSet.Post;
+    end;
+
+    //Salva dados na tabela cliente
+    idCliente := frmPrincipal.proxID('tb_cliente');
+    if (UniMainModule.tb_cliente.State in [dsInsert]) then
+    begin
+      with UniMainModule.dsCliente.DataSet do
+      begin
+        if chkTermo.Checked then
+          FieldByName('ACEITATERMO').Value := 'SIM'
+        else FieldByName('ACEITATERMO').Value := 'NÃO';
+
+        if chkPEP.Checked then
+          FieldByName('PEP').Value := 'SIM'
+        else FieldByName('PEP').Value := 'NÃO';
+
+        FieldByName('ID').Value                := idCliente;
+        FieldByName('USUARIO').Value           := idUsuario;
+        post;
+      end;
+    end;
+
+    //Caso seja um cadastro NOVO, inclui o grupo
+    //Cliente não aceitou fazer parte do grupo ou é novo
+    if (frmPrincipal.ConfirmaParticipacao <> 'SIM') then
+    begin
+      //Tratando o nome da cidade para gerar nome do grupo
+      cidade := StringReplace(frmPrincipal.RemoverAcento(municipio), ' ', '', [rfReplaceAll, rfIgnoreCase]);
+      cidade := StringReplace(cidade, '-', '', [rfReplaceAll]);
+      cidade := StringReplace(cidade, '''', '', [rfReplaceAll]);
+
+      //Gerar o nome do grupo pra uso interno do sistema
+      codigoGrupo := 'APP'+cidade+'#'+frmPrincipal.proxCodGrupo(municipio)+FormatDateTime('yyyy', Now);
+
+
+      //cadastrando cliente no grupo
+      with UniMainModule.dsGrupo.Dataset do
+      begin
+        append;
+        FieldByName('ID').Value                   := frmPrincipal.proxID('tb_grupo');
+        FieldByName('NOME').Value                 := codigoGrupo;
+        FieldByName('CPF').Value                  := cpfCliente;
+        FieldByName('CADASTRO').Value             := 'SIM';
+        FieldByName('DATACADASTRO').Value         := dataAtual;
+        FieldByName('CONFIRMAPARTICIPACAO').Value := 'SIM';
+        post;
+      end;
+
+      //Avalista
+      if SelectTipoFinanc.ItemIndex = 0 then
+      begin
+        codigoAvalista := frmPrincipal.proxID('tb_avalista');
+        UniMainModule.dsSolicitacao.DataSet.FieldByName('AVALISTA').Value := codigoAvalista;
+        if SelectEstadoCivilAvalista.ItemIndex = 0 then
+        begin
+          EditNomeAvalistaConjuge.Text := '';
+          EditCpfAvalistaConjuge.Text := '';
+        end;
+
+        with UniMainModule.dsAvalista.DataSet do
+        begin
+          Append;
+          FieldByName('ID').Value           := codigoAvalista;
+          FieldByName('NOME').Value         := EditAvalistaNome.Text;
+          FieldByName('CPF').Value          := EditCpfAvalista.Text;
+          FieldByName('TELEFONE').Value     := EditTelefoneAvalista.text;
+          FieldByName('EMAIL').Value        := EditEmailAvalista.Text;
+          FieldByName('ESTADOCIVIL').Value  := SelectEstadoCivilAvalista.Text;
+          FieldByName('NOMECONJUGE').Value  := EditNomeAvalistaConjuge.Text;
+          FieldByName('CPFCONJUGE').Value   := EditCpfAvalistaConjuge.Text;
+          FieldByName('CLIENTEAGN').Value   := 'NÃO';
+          FieldByName('DATACADASTRO').Value := dataAtual;
+          Post;
+        end;
+      end
+      else if SelectTipoFinanc.ItemIndex = 1 then
+      begin
+        with UniMainModule.dsGrupo.Dataset do
+        begin
+          append;
+          FieldByName('ID').Value           := frmPrincipal.proxID('tb_grupo');
+          FieldByName('NOME').Value         := codigoGrupo;
+          FieldByName('CPF').Value          := EditCpfParticipante2.Text;
+          FieldByName('CADASTRO').Value     := 'NÃO';
+          FieldByName('DATACADASTRO').Value := dataAtual;
+          post;
+        end;
+        if (SelectQuantidadePessoas.Text = 'TRÊS') and
+          (EditCpfParticipante3.Text <> '')  then
+        begin
+          with UniMainModule.dsGrupo.Dataset do
+          begin
+            append;
+            FieldByName('ID').Value           := frmPrincipal.proxID('tb_grupo');
+            FieldByName('NOME').Value         := codigoGrupo;
+            FieldByName('CPF').Value          := EditCpfParticipante3.Text;
+            FieldByName('CADASTRO').Value     := 'NÃO';
+            FieldByName('DATACADASTRO').Value := dataAtual;
+            post;
+          end;
+        end;
+      end;
+
+    end;
+
+
+
+    //Cadastrando solicitacao
+    codigoSolicitacao := frmPrincipal.proxID('tb_solicitacao');
+    with UniMainModule.dsSolicitacao.DataSet do
+    begin
+      FieldByName('ID').Value      := codigoSolicitacao;
+      //Salva a linha de crédito credjovem quando o cadastro é feito a partir
+      //da tela do credjovem
+      if frmPrincipal.acesso = 'credjovem' then
+        FieldByName('LINHA').Value := 'CREDJOVEM';
+
+      if sltTipoNegocio.ItemIndex = 1 then
+      begin
+        if slctLinha.Text = 'MICROCRÉDITO' then FieldByName('LINHA').Value := '10014 - AGN/MCEI';
+        if slctLinha.Text = 'AGN - AGRO'   then FieldByName('LINHA').Value := '10006 - AGN/AGRO';
+      end
+      else
+      begin
+        if slctLinha.Text = 'MICROCRÉDITO - MEI'     then FieldByName('LINHA').Value := '10015 - AGN/MCMEI';
+        if slctLinha.Text = 'MICROCRÉDITO - TURISMO' then FieldByName('LINHA').Value := '10020 - AGN/PRÓ-TURISMO';
+        if slctLinha.Text = 'MICROCRÉDITO - ESCOLAR' then FieldByName('LINHA').Value := '10021 - AGN/PRÓ-ESCOLAR';
+        if slctLinha.Text = 'TURISMO - FUNGETUR'     then FieldByName('LINHA').Value := '210001 - FUNGETUR (SELIC)';
+        if slctLinha.Text = 'AGN - MICRO'            then FieldByName('LINHA').Value := '100010 - AGN MICRO';
+        if slctLinha.Text = 'AGN - PRÓ EMPRESA'      then FieldByName('LINHA').Value := '10003 - AGN PRÓ-EMPRESA';
+      end;
+
+      FieldByName('SITUACAO').Value          := 1;
+      FieldByName('DATACADASTRO').Value      := dataAtual;
+      FieldByName('ATIVIDADE').Value         := edtAtivNegocio.Text;
+      FieldByName('OBJETIVO').Value          := sltObjetivo.Text;
+      FieldByName('TIPONEGOCIO').Value       := sltTipoNegocio.Text;
+
+      if (frmPrincipal.ConfirmaParticipacao <> 'SIM') then
+      begin
+        FieldByName('CLIENTE').Value           := idCliente;
+        FieldByName('GRUPO').Value             := codigoGrupo;
+        FieldByName('TIPOFINANCIAMENTO').Value := SelectTipoFinanc.Text;
+      end;
+
+      if sltTipoNegocio.ItemIndex = 0 then frmCnpjClienteFormal.ShowModal;
+
+      Post;
+    end;
+
+    frmPrincipal.adicionarEtapa(1, codigoSolicitacao);
+
+    if SelectTipoFinanc.ItemIndex = 1 then
+      ShowMessage('Aviso - Seu pré cadastro só será analisado quando todos os integrantes ' +
+                    'do seu grupo solidário se cadastrarem e confirmarem a participação no grupo.');
+
+    frmCadSucesso.ShowModal();
+    Close;
+
+  end
+  else
+  begin
+    ShowMessage('Alguns dados não foram preenchidos corretamente, por favor, preencha o formulário novamente');
+  end;
+end;
+
+
+procedure TFrmSolicitacao.UnimButton1Click(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrmSolicitacao.chkPEPClick(Sender: TObject);
+begin
+  frmPEP.ShowModal();
+end;
+
+procedure TFrmSolicitacao.chkTermoClick(Sender: TObject);
+begin
+  frmTermo.ShowModal();
+end;
+
+procedure TFrmSolicitacao.UnimFormShow(Sender: TObject);
+begin
+  dataAtual := FormatDateTime('dd/mm/yyyy', Now);
+
+  sltTipoNegocio.ItemIndex := 0;
+  slctLinha.Items.Clear;
+  slctLinha.Items.Add('NÃO SEI INFORMAR');
+  slctLinha.Items.Add('MICROCRÉDITO - MEI');
+  slctLinha.Items.Add('MICROCRÉDITO - TURISMO');
+  slctLinha.Items.Add('MICROCRÉDITO - ESCOLAR');
+  slctLinha.Items.Add('TURISMO - FUNGETUR');
+  slctLinha.Items.Add('AGN - MICRO');
+  slctLinha.Items.Add('AGN - PRÓ EMPRESA');
+  slctLinha.ItemIndex := 0;
+
+  with UniMainModule.dsCliente.DataSet do
+  begin
+    //codigoCliente := FieldByName('ID').Value;
+    cpfCliente    := FieldByName('CPF').Value;
+    municipio     := FieldByName('MUNICIPIO').Value;
+    estadoCivil   := FieldByName('ESTADOCIVIL').Value;
+    if estadoCivil = 'CASADO(A)' then
+    begin
+      cpfConjuge  := FieldByName('CPFCONJUGE').Value;
+    end;
+  end;
+
+  pnl1.Visible := True;
+
+  PanelParticipante2.Height := 117;
+  PanelParticipante3.Height := 0;
+  PanelColetivo.Height      := 200;
+  PanelIndividual.Height    := 0;
+
+  if (frmPrincipal.ConfirmaParticipacao = 'SIM') then
+  begin
+    PanelColetivo.Visible    := False;
+    PanelIndividual.Visible  := False;
+    LabelTipoFinanc.Visible  := False;
+    lblDescTipoFin.Visible   := False;
+    SelectTipoFinanc.Visible := False;
+
+  end;
+end;
+
+procedure TFrmSolicitacao.lblLinkLinhaClick(Sender: TObject);
+begin
+  UniSession.AddJS('window.location.href="http://www.agn.rn.gov.br/Conteudo.asp?TRAN=ITEM&TARG=245155&ACT=&PAGE=0&PARM=&LBL=AGN%2FRN";');
+end;
+
+end.

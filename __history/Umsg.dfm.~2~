@@ -1,0 +1,133 @@
+object frmMsg: TfrmMsg
+  Left = 0
+  Top = 0
+  ClientHeight = 188
+  ClientWidth = 334
+  Caption = 'AVISO'
+  OnShow = UnimFormShow
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object cTopo: TUnimContainerPanel
+    Left = 0
+    Top = 0
+    Width = 334
+    Height = 65
+    Hint = ''
+    Align = alTop
+    Color = 13008896
+    ExplicitTop = -3
+    ExplicitWidth = 352
+    object UnimLabel1: TUnimLabel
+      AlignWithMargins = True
+      Left = 83
+      Top = 20
+      Width = 272
+      Height = 42
+      Hint = ''
+      Margins.Top = 20
+      AutoSize = False
+      Caption = 'Cred web'
+      Align = alLeft
+      ParentFont = False
+      Font.Color = clWhite
+      Font.Height = -27
+      ExplicitLeft = 93
+      ExplicitTop = 17
+    end
+    object UnimLabel2: TUnimLabel
+      AlignWithMargins = True
+      Left = 20
+      Top = 0
+      Width = 57
+      Height = 62
+      Hint = ''
+      Margins.Left = 20
+      Margins.Top = 0
+      AutoSize = False
+      Caption = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>'
+      Align = alLeft
+      ParentColor = False
+      Color = 9595734
+      ParentFont = False
+      Font.Color = clWhite
+      Font.Height = -53
+      ExplicitLeft = 0
+      ExplicitTop = -6
+      ExplicitHeight = 65
+    end
+  end
+  object cCorpo: TUnimContainerPanel
+    Left = 0
+    Top = 65
+    Width = 334
+    Height = 70
+    Hint = ''
+    Align = alClient
+    ExplicitTop = 62
+    ExplicitWidth = 466
+    ExplicitHeight = 109
+    object lblTexto: TUnimLabel
+      AlignWithMargins = True
+      Left = 10
+      Top = 10
+      Width = 321
+      Height = 57
+      Hint = ''
+      Margins.Left = 10
+      Margins.Top = 10
+      AutoSize = False
+      Caption = 'Corpo da mensagem'
+      Align = alClient
+      ParentFont = False
+      Font.Color = 13008896
+      Font.Height = -27
+      Font.Style = [fsBold]
+      ExplicitLeft = 66
+      ExplicitTop = 40
+      ExplicitWidth = 225
+      ExplicitHeight = 23
+    end
+  end
+  object cRodape: TUnimContainerPanel
+    Left = 0
+    Top = 135
+    Width = 334
+    Height = 53
+    Hint = ''
+    Align = alBottom
+    Color = 13008896
+    ExplicitTop = 116
+    object btnNao: TUnimButton
+      AlignWithMargins = True
+      Left = 117
+      Top = 3
+      Width = 105
+      Height = 47
+      Hint = ''
+      Align = alRight
+      Caption = 'N'#227'o'
+      OnClick = btnNaoClick
+      ExplicitLeft = 3
+      ExplicitTop = 193
+    end
+    object btnSim: TUnimButton
+      AlignWithMargins = True
+      Left = 228
+      Top = 3
+      Width = 103
+      Height = 47
+      Hint = ''
+      Align = alRight
+      Caption = 'Sim'
+      OnClick = btnSimClick
+      ExplicitLeft = 360
+    end
+  end
+end

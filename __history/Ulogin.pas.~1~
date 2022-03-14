@@ -1,0 +1,35 @@
+unit Ulogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Vcl.Imaging.GIFImg, uniImage, unimImage, uniGUIBaseClasses;
+
+type
+  TfrmLogin = class(TUnimForm)
+    ctnLoading: TUnimContainerPanel;
+    imgLoading: TUnimImage;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmLogin: TfrmLogin;
+begin
+  Result := TfrmLogin(UniMainModule.GetFormInstance(TfrmLogin));
+end;
+
+end.

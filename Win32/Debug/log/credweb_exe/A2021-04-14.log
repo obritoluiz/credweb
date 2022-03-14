@@ -1,0 +1,30 @@
+credweb.exe: 00001B80: 11:48:13 []:>--------------------------------------------------------------<
+credweb.exe: 00001B80: 11:48:13 [TUniServerModule]:Server First Init.
+credweb.exe: 00001B80: 11:48:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00001B80: 11:48:13 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00001B80: 11:48:37 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00001B80: 11:48:37 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00001B80: 11:48:38 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00001B80: 11:48:38 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00001B80: 11:48:38 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00001B80: 11:48:38 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00001B80: 11:48:38 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00001B80: 11:48:38 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00001B80: 11:48:38 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00001B80: 11:48:38 []:<-------------------------------------------------------------->
+credweb.exe: 00001B80: 11:48:38 [Terminated]:Exit Code: 0
+credweb.exe: 000015A4: 11:53:39 []:>--------------------------------------------------------------<
+credweb.exe: 000015A4: 11:53:39 [TUniServerModule]:Server First Init.
+credweb.exe: 000015A4: 11:53:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000015A4: 11:53:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000015A4: 11:54:19 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000015A4: 11:54:19 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000015A4: 11:54:20 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000015A4: 11:54:20 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000015A4: 11:54:20 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000015A4: 11:54:20 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000015A4: 11:54:20 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000015A4: 11:54:20 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000015A4: 11:54:20 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000015A4: 11:54:20 []:<-------------------------------------------------------------->
+credweb.exe: 000015A4: 11:54:20 [Terminated]:Exit Code: 0

@@ -1,0 +1,144 @@
+unit UrecuperarSenha;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniButton, uniBitBtn, unimBitBtn, uniMemo, unimMemo, uniEdit, unimEdit,
+  uniLabel, unimLabel, Vcl.Imaging.pngimage, uniImage, unimImage, unimPanel,
+  uniGUIBaseClasses, unimScrollBox, unimButton, IdIOHandler, IdIOHandlerSocket,
+  IdIOHandlerStack, IdSSL, IdSSLOpenSSL, IdComponent, IdTCPConnection,
+  IdTCPClient, IdExplicitTLSClientServerBase, IdMessageClient, IdSMTPBase,
+  IdSMTP, IdBaseComponent, IdMessage, IdSSLOpenSSL, IdText, IdAttachmentFile,
+  IdExplicitTLSClientServerBase;
+
+
+
+type
+  TfrmRecuperarSenha = class(TUnimForm)
+    scrlBody: TUnimScrollBox;
+    umpBody: TUnimPanel;
+    UnimImage2: TUnimImage;
+    umpFooter: TUnimPanel;
+    UnimImage1: TUnimImage;
+    UnimLabel8: TUnimLabel;
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    UnimPanel1: TUnimPanel;
+    UnimLabel1: TUnimLabel;
+    UnimLabel2: TUnimLabel;
+    UnimLabel3: TUnimLabel;
+    UnimLabel4: TUnimLabel;
+    UnimLabel5: TUnimLabel;
+    UnimLabel6: TUnimLabel;
+    UnimLabel7: TUnimLabel;
+    UnimPanel2: TUnimPanel;
+    EditEmail: TUnimEdit;
+    EditSenha: TUnimEdit;
+    UnimPanel3: TUnimPanel;
+    EditPara: TUnimEdit;
+    EditTitulo: TUnimEdit;
+    mmobody: TUnimMemo;
+    BtnEnviar: TUnimBitBtn;
+    IdMessage: TIdMessage;
+    IdSMTP: TIdSMTP;
+    IdSSLIOHandlerSocketOpenSSL: TIdSSLIOHandlerSocketOpenSSL;
+    BtnVoltar: TUnimBitBtn;
+    procedure BtnVoltarClick(Sender: TObject);
+    procedure BtnEnviarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  mailUsername : string;
+  mailPassword : string;
+  mailDestino : string;
+  mailTitulo : string;
+  mailBody :string;
+
+function frmRecuperarSenha: TfrmRecuperarSenha;
+procedure Gmail(Username, Password, Destino, Titulo, body : string);
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmRecuperarSenha: TfrmRecuperarSenha;
+begin
+  Result := TfrmRecuperarSenha(UniMainModule.GetFormInstance(TfrmRecuperarSenha));
+end;
+
+procedure Gmail(Username, Password, Destino, Titulo, body : string);
+var
+  DATA : TIdMessage;
+  SMTP : TIdSMTP;
+  SSL  : TIdSSLIOHandlerSocketOpenSSL;
+begin
+  SMTP := TIdSMTP.Create(nil);
+  DATA := TIdMessage.Create(nil);
+  SSL := TIdSSLIOHandlerSocketOpenSSL.Create(nil);
+
+  SSL.SSLOptions.Method := sslvTLSv1;
+  SSL.SSLOptions.Mode   := sslmUnassigned;
+  SSL.SSLOptions.VerifyMode := [];
+  SSL.SSLOptions.VerifyDepth := 0;
+
+  DATA.From.Address := Username;
+  DATA.Recipients.EMailAddresses := Destino;
+  DATA.Subject := Titulo;
+  DATA.Body.Text := body;
+
+  SMTP.IOHandler := SSL;
+  SMTP.Host := 'smtp.gmail.com';
+  SMTP.Port := 465;
+  SMTP.Username := Username;
+  SMTP.Password := Password;
+  SMTP.UseTLS := utUseExplicitTLS;
+
+  SMTP.Connect;
+  SMTP.Send(DATA);
+  SMTP.Disconnect;
+
+  SMTP.Free;
+  DATA.Free;
+  SSL.Free;
+
+end;
+
+
+
+procedure TfrmRecuperarSenha.BtnEnviarClick(Sender: TObject);
+begin
+
+  mailUsername := EditEmail.Text;
+  mailPassword := EditSenha.Text;
+  mailDestino := EditPara.Text;
+  mailTitulo := EditTitulo.Text;
+  mailBody := mmobody.Text;
+
+  ShowMessage('Enviando email para: '+ mailDestino);
+  try
+    begin
+      Gmail(mailUsername, mailPassword, mailDestino, mailTitulo, mailBody);
+    end;
+  except
+    ShowMessage('Falha ao enviar email.');
+  end;
+
+end;
+
+procedure TfrmRecuperarSenha.BtnVoltarClick(Sender: TObject);
+begin
+  Close;
+end;
+
+end.

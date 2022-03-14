@@ -1,0 +1,5 @@
+credweb.exe: 000031BC: 10:18:56 []:>--------------------------------------------------------------<
+credweb.exe: 000031BC: 10:18:56 [TUniServerModule]:Server First Init.
+credweb.exe: 000031BC: 10:18:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000031BC: 10:18:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002F24: 10:19:19 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CC92F

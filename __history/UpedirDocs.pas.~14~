@@ -1,0 +1,192 @@
+unit UpedirDocs;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  unimScrollBox, uniLabel, unimLabel, uniButton, uniBitBtn, unimBitBtn,
+  Vcl.Imaging.pngimage, uniImage, unimImage, uniGUIBaseClasses, unimPanel,
+  uniCheckBox, unimCheckBox, unimButton;
+
+type
+  TfrmPedirDocs = class(TUnimForm)
+    scrlBody: TUnimScrollBox;
+    umpDocumentos: TUnimPanel;
+    chkRG: TUnimCheckBox;
+    chkCompResid: TUnimCheckBox;
+    chkCertEstCivil: TUnimCheckBox;
+    chkCPF: TUnimCheckBox;
+    chkCRMN: TUnimCheckBox;
+    umlDocumentos: TUnimLabel;
+    umbConfirmar: TUnimButton;
+    chkFotoEmpreendimento: TUnimCheckBox;
+    chkCartaoCpnpj: TUnimCheckBox;
+    chkCertificado: TUnimCheckBox;
+    chkCertNegCnpj: TUnimCheckBox;
+    procedure umbConfirmarClick(Sender: TObject);
+    function verificarDocSolic(desc: string):Boolean;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmPedirDocs: TfrmPedirDocs;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UdadosCliente, UdadosUsuario, UpreCad, Usejuv, Usolicitacao,
+  Uusuarios;
+
+function frmPedirDocs: TfrmPedirDocs;
+begin
+  Result := TfrmPedirDocs(UniMainModule.GetFormInstance(TfrmPedirDocs));
+end;
+
+function TfrmPedirDocs.verificarDocSolic(desc: string):Boolean;
+begin
+  with UniMainModule.FDQuery do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('SELECT count(*) as qtd FROM tb_documentos where id_cliente = ');
+    SQL.Add(UniMainModule.dsCliente.DataSet.FieldByName('ID').Value + ' and descricao = ' + QuotedStr(desc));
+    Open;
+    if FieldByName('qtd').Value > 0 then Result := True else Result := False;
+  end;
+
+end;
+
+procedure TfrmPedirDocs.umbConfirmarClick(Sender: TObject);
+begin
+
+  with UniMainModule.dsDocumentos.DataSet do
+  begin
+    if chkRG.Checked then
+    begin
+      if not verificarDocSolic('RG') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'RG';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkCRMN.Checked then
+    begin
+      if not verificarDocSolic('CRMN (EXTRANGEIRO)') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'CRMN (EXTRANGEIRO)';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkCPF.Checked then
+    begin
+      if not verificarDocSolic('CPF') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'CPF';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkCertEstCivil.Checked then
+    begin
+      if not verificarDocSolic('CERT. EST. CIVIL') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'CERT. EST. CIVIL';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkCompResid.Checked then
+    begin
+      if not verificarDocSolic('COMP. REDIDÊNCIA') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'COMP. REDIDÊNCIA';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkFotoEmpreendimento.Checked then
+    begin
+      if not verificarDocSolic('FOTO EMPREENDIMENTO') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'FOTO EMPREENDIMENTO';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkCartaoCpnpj.Checked then
+    begin
+      if not verificarDocSolic('CARTÃO CNPJ') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'CARTÃO CNPJ';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkCertificado.Checked then
+    begin
+      if not verificarDocSolic('CERTIFICADO EMPRESA') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'CERTIFICADO EMPRESA';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+
+    if chkCertNegCnpj.Checked then
+    begin
+      if not verificarDocSolic('CERTIDÃO NEGATIVA CNPJ') then
+      begin
+        Append;
+        FieldByName('ID').Value             := frmPrincipal.proxID('tb_documentos');
+        FieldByName('ID_CLIENTE').Value     := frmPrincipal.IDcliente;
+        FieldByName('DESCRICAO').Value      := 'CERTIDÃO NEGATIVA CNPJ';
+        FieldByName('SITUACAO').Value       := 'PENDENTE';
+        Post;
+      end;
+    end;
+  end;
+
+  Close;
+end;
+
+end.

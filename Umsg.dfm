@@ -1,0 +1,122 @@
+object frmMsg: TfrmMsg
+  Left = 0
+  Top = 0
+  ClientHeight = 226
+  ClientWidth = 229
+  Caption = 'AVISO'
+  OnShow = UnimFormShow
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object cTopo: TUnimContainerPanel
+    Left = 0
+    Top = 0
+    Width = 229
+    Height = 65
+    Hint = ''
+    Align = alTop
+    Color = 7092497
+    object UnimLabel1: TUnimLabel
+      AlignWithMargins = True
+      Left = 73
+      Top = 20
+      Width = 272
+      Height = 42
+      Hint = ''
+      Margins.Top = 20
+      AutoSize = False
+      Caption = 'RN+Cr'#233'dito'
+      Align = alLeft
+      ParentFont = False
+      Font.Color = clWhite
+      Font.Height = -27
+    end
+    object UnimLabel2: TUnimLabel
+      AlignWithMargins = True
+      Left = 10
+      Top = 0
+      Width = 57
+      Height = 62
+      Hint = ''
+      Margins.Left = 10
+      Margins.Top = 0
+      AutoSize = False
+      Caption = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>'
+      Align = alLeft
+      ParentColor = False
+      Color = 9595734
+      ParentFont = False
+      Font.Color = clWhite
+      Font.Height = -53
+    end
+  end
+  object cCorpo: TUnimContainerPanel
+    Left = 0
+    Top = 65
+    Width = 229
+    Height = 125
+    Hint = ''
+    Align = alClient
+    ExplicitHeight = 66
+    object lblTexto: TUnimLabel
+      AlignWithMargins = True
+      Left = 10
+      Top = 10
+      Width = 216
+      Height = 112
+      Hint = ''
+      Margins.Left = 10
+      Margins.Top = 10
+      AutoSize = False
+      Caption = 'Corpo da mensagem'
+      Align = alClient
+      ParentFont = False
+      Font.Color = 7092497
+      Font.Height = -13
+      Font.Style = [fsBold]
+      ExplicitHeight = 53
+    end
+  end
+  object cRodape: TUnimContainerPanel
+    Left = 0
+    Top = 190
+    Width = 229
+    Height = 36
+    Hint = ''
+    Align = alBottom
+    Color = 7092497
+    ExplicitTop = 131
+    object btnNao: TUnimButton
+      AlignWithMargins = True
+      Left = 80
+      Top = 3
+      Width = 70
+      Height = 30
+      Hint = ''
+      Align = alRight
+      Caption = 'N'#227'o'
+      Font.Color = 7092497
+      Font.Height = -17
+      OnClick = btnNaoClick
+    end
+    object btnSim: TUnimButton
+      AlignWithMargins = True
+      Left = 156
+      Top = 3
+      Width = 70
+      Height = 30
+      Hint = ''
+      Align = alRight
+      Caption = 'Sim'
+      Font.Color = 7092497
+      Font.Height = -17
+      OnClick = btnSimClick
+    end
+  end
+end

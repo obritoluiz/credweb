@@ -1,0 +1,46 @@
+unit UinfImportantes;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniMemo, unimMemo, uniCheckBox, unimCheckBox, uniLabel, unimLabel,
+  unimScrollBox, uniButton, unimButton, uniGUIBaseClasses, unimPanel;
+
+type
+  TUnimForm1 = class(TUnimForm)
+    pnlPrincipal: TUnimPanel;
+    ctnRodapé: TUnimContainerPanel;
+    btnConfirmar: TUnimButton;
+    UnimScrollBox1: TUnimScrollBox;
+    ctnItens: TUnimContainerPanel;
+    ctnTitulo: TUnimContainerPanel;
+    UnimLabel1: TUnimLabel;
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimContainerPanel2: TUnimContainerPanel;
+    UnimContainerPanel3: TUnimContainerPanel;
+    UnimCheckBox1: TUnimCheckBox;
+    UnimMemo1: TUnimMemo;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function UnimForm1: TUnimForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function UnimForm1: TUnimForm1;
+begin
+  Result := TUnimForm1(UniMainModule.GetFormInstance(TUnimForm1));
+end;
+
+end.

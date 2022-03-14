@@ -1,0 +1,497 @@
+unit UpreCad;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Vcl.Imaging.pngimage, uniImage, unimImage, uniGUIBaseClasses, unimPanel,
+  uniMultiItem, unimSelect, unimDBSelect, uniDBEdit, unimDBEdit, uniButton,
+  uniBitBtn, unimBitBtn, uniEdit, unimEdit, uniLabel, unimLabel, uniRadioButton,
+  unimRadio, unimScrollBox, DB;
+
+type
+  TFrmPreCad = class(TUnimForm)
+    UnimScrollBox1: TUnimScrollBox;
+    UnimPanel1: TUnimPanel;
+    LabelTitulo: TUnimLabel;
+    UnimPanel2: TUnimPanel;
+    LabelNome: TUnimLabel;
+    LabelCPF: TUnimLabel;
+    LabelMunicipio: TUnimLabel;
+    EditNome: TUnimDBEdit;
+    SelectMunicipio: TUnimDBSelect;
+    UnimPanel4: TUnimPanel;
+    LabelSenha: TUnimLabel;
+    LabelConfirmSenha: TUnimLabel;
+    EditConfSenha: TUnimEdit;
+    BtnSalvar: TUnimBitBtn;
+    UnimPanel5: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    UnimLabel7: TUnimLabel;
+    UnimPanel6: TUnimPanel;
+    UnimImage1: TUnimImage;
+    UnimLabel8: TUnimLabel;
+    EditSenha: TUnimEdit;
+    LabelEstadoCivil: TUnimLabel;
+    UnimPanel7: TUnimPanel;
+    LabelNomeConjuge: TUnimLabel;
+    LabelCPFconjuge: TUnimLabel;
+    LabelTelefone: TUnimLabel;
+    LabelEmail: TUnimLabel;
+    EditEmail: TUnimDBEdit;
+    EditCPF: TUnimDBEdit;
+    EditTelefone: TUnimDBEdit;
+    SelectEstadoCivil: TUnimDBSelect;
+    SelectClienteAGN: TUnimDBSelect;
+    EditNomeConjuge: TUnimDBEdit;
+    LabelConjuge: TUnimLabel;
+    LabelClienteAGN: TUnimLabel;
+    EditCpfConjuge: TUnimDBEdit;
+    procedure UnimFormShow(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure EditCPFChange(Sender: TObject);
+    procedure EditSenhaChange(Sender: TObject);
+    procedure EditConfSenhaChange(Sender: TObject);
+    procedure SelectEstadoCivilChange(Sender: TObject);
+    procedure EditNomeChange(Sender: TObject);
+    procedure EditTelefoneChange(Sender: TObject);
+    procedure EditEmailChange(Sender: TObject);
+    procedure EditNomeConjugeChange(Sender: TObject);
+    procedure EditCpfConjugeChange(Sender: TObject);
+    function ChecarDadosCliente(): boolean;
+    function ValidarSenha(senha : string): boolean;
+    Function RemoveAcento(const pText: string): string;
+    function grupoJaCadastrado(confirmacao : string): boolean;
+
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+    var codigoCliente       : integer;
+    var codigoGrupo         : string;
+    var clienteJaCadastrado : boolean;
+    var dataAtual           : string;
+    var cpfCliente          : string;
+    var municipio           : string;
+    var estadoCivil         : string;
+    var cpfConjuge          : string;
+    var codigoSolicitacao   : Integer;
+  end;
+
+function FrmPreCad: TFrmPreCad;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, Usolicitacao, ServerModule, Uacomp,
+  Uadmin, UclienteDados;
+
+function FrmPreCad: TFrmPreCad;
+begin
+  Result := TFrmPreCad(UniMainModule.GetFormInstance(TFrmPreCad));
+end;
+
+
+function TFrmPreCad.ChecarDadosCliente(): boolean;
+var erro :boolean;
+begin
+  erro := False;
+  if (EditNome.Text = '' ) then //Nome cliente
+  begin
+    EditNome.Color := clRed;
+    erro := True;
+  end;
+  if frmPrincipal.VerificaInscricao(FrmPreCad.EditCPF.Text) = 2 then
+  begin
+    ShowMessage('CPF JÁ CADASTRADO!');
+    EditCPF.Color := clRed;
+    erro := True;
+  end;
+  if frmPrincipal.ValidarCPF(EditCPF.Text) = False then
+  begin
+    ShowMessage('CPF INVÁLIDO!');
+    EditCPF.Color := clRed;
+    erro := True;
+  end;
+  if (EditTelefone.Text = '') then //telefone cliente
+  begin
+    EditTelefone.Color := clRed;
+    erro := True;
+  end;
+  if (Length(EditTelefone.Text) < 8) or (Length(EditTelefone.Text) > 12) then // or (Length(EditTelefone.Text) > 12)
+  begin
+    EditTelefone.Color := clRed;
+    erro := True;
+  end;
+  if (EditEmail.Text = '') then //email cliente
+  begin
+    EditEmail.Color := clRed;
+    erro := True;
+  end;
+  if Pos('@', EditEmail.Text) = 0 then //email cliente
+  begin
+    EditEmail.Color := clRed;
+    erro := True;
+  end;
+  if (SelectEstadoCivil.ItemIndex = -1) then //estado civil cliente
+  begin
+    SelectEstadoCivil.Color := clRed;
+    erro := True;
+  end;
+
+  if SelectEstadoCivil.ItemIndex = 0 then  //Cliente é casado
+  begin
+    if EditNomeConjuge.Text = '' then
+    begin
+      EditNomeConjuge.Color := clRed;
+      erro := True;
+    end;
+    if frmPrincipal.ValidarCPF(EditCpfConjuge.Text) = False then
+    begin
+      EditCpfConjuge.Color := clRed;
+      erro := True;
+    end;
+    if EditCPF.Text = EditCpfConjuge.Text then
+    begin
+      EditCpfConjuge.Color := clRed;
+      erro := True;
+    end;
+    if EditCPF.Text = EditCpfConjuge.Text then
+    begin
+      EditCpfConjuge.Color := clRed;
+    end;
+  end;
+
+  if (SelectMunicipio.ItemIndex = -1) then //municipio cliente
+  begin
+    SelectMunicipio.Color := clRed;
+    erro := True;
+  end;
+  if (SelectClienteAGN.ItemIndex = -1) then // se já é cliente AGN
+  begin
+    SelectClienteAGN.Color := clRed;
+    erro := True;
+  end;
+
+  if ValidarSenha(EditSenha.Text) = False then
+  begin
+    ShowMessage('Senha inválida');
+    EditSenha.Color := clRed;
+    erro := True;
+  end;
+  if (EditSenha.Text <> EditConfSenha.Text) then //Senhas diferentes
+  begin
+    ShowMessage('As senhas não coincidem, por favor digite sua senha novamente.');
+    EditConfSenha.Color := clred;
+    EditConfSenha.Text := '';
+    erro := True;
+  end;
+
+  if erro then result := False else result := True;
+
+end;
+
+function TFrmPreCad.ValidarSenha(senha : string): boolean;
+begin
+  if (senha = '') or
+     (senha = null) or
+     (senha.Length < 6) or
+     (senha = '123456') then
+  begin
+    result := False;
+  end
+  else result := True;
+end;
+
+//CADASTRAR SOLICITAÇÃO DO CLIENTE CASO ELE CONFIRME PARTICIPAÇÃO NO GRUPO SOLIDÁRIO
+function TFrmPreCad.grupoJaCadastrado(confirmacao : string): boolean;
+var cliente : integer;
+begin
+  dataAtual := FormatDateTime('dd/mm/yyyy', Now);
+
+  with UniMainModule.dsCliente.DataSet do
+  begin
+    codigoCliente := FieldByName('ID').Value;
+    cpfCliente    := FieldByName('CPF').Value;
+    municipio     := FieldByName('MUNICIPIO').Value;
+    estadoCivil   := FieldByName('ESTADOCIVIL').Value;
+
+    if estadoCivil = 'CASADO(A)' then
+    begin
+      cpfConjuge  := FieldByName('CPFCONJUGE').Value;
+    end;
+  end;
+
+  codigoGrupo := frmPrincipal.codigoGrupo;
+
+  if confirmacao = 'SIM' then
+  begin
+    //Cadastra usuário
+    if (UniMainModule.tb_usuario.State in [dsInsert]) then
+    begin
+      UniMainModule.dsUsuario.DataSet.Post;
+    end;
+
+    //Cadastra Cliente
+    if (UniMainModule.tb_cliente.State in [dsInsert]) then
+    begin
+      UniMainModule.dsCliente.DataSet.post;
+    end;
+
+    //Cadastra solicitacao
+    UniMainModule.dsSolicitacao.DataSet.Append;
+    cliente := UniMainModule.dsCliente.DataSet.FieldByName('ID').Value;
+    cpfCliente := UniMainModule.dsCliente.DataSet.FieldByName('CPF').Value;
+
+    codigoSolicitacao := frmPrincipal.proxID('tb_solicitacao');
+
+    with UniMainModule.dsSolicitacao.DataSet do
+    begin
+      FieldByName('ID').Value := codigoSolicitacao;
+      FieldByName('CLIENTE').Value := cliente;
+      FieldByName('GRUPO').Value := codigoGrupo;
+      FieldByName('LINHACREDITO').Value := 'CREDJOVEM';
+      FieldByName('SITUACAO').Value := 'PRÉ-CADASTRO';
+      FieldByName('TIPOFINANCIAMENTO').Value := 'SOLIDÁRIO';
+      FieldByName('DATACADASTRO').Value := dataAtual;
+      Post;
+    end;
+
+    //Atualizar cadastro e confirmaParticipacao da tabela grupo para SIM
+    with UniMainModule.dsGrupo.DataSet do
+    begin
+      Filtered := False;
+      Filter  := '(CPF=' + QuotedStr(cpfCliente) + ') AND (NOME=' +
+                  QuotedStr(codigoGrupo) + ')';
+      Filtered := True;
+
+      Edit;
+      FieldByName('CADASTRO').Value := 'SIM';
+      FieldByName('CONFIRMAPARTICIPACAO').Value := 'SIM';
+      FieldByName('DATAATUALIZACAO').Value := dataAtual;
+      Post;
+    end;
+
+    ShowMessage('Solicitação realizada com sucesso.');
+    result := True;
+
+  end
+  else if confirmacao = 'NÃO' then
+  begin
+    cpfCliente := UniMainModule.dsCliente.DataSet.FieldByName('CPF').Value;
+    with UniMainModule.dsGrupo.DataSet do
+    begin
+      Filtered := False;
+      Filter  := '(CPF=' + QuotedStr(cpfCliente) + ') AND (NOME=' +
+                  QuotedStr(codigoGrupo) +')';
+      Filtered := True;
+      Edit;
+      FieldByName('CADASTRO').Value := 'SIM';
+      FieldByName('CONFIRMAPARTICIPACAO').Value := 'NÃO';
+      FieldByName('DATAATUALIZACAO').Value := dataAtual;
+      Post;
+    end;
+
+//    ShowMessage('Cliente não confirmou a participação no grupo');
+    result := False;
+  end;
+
+end;
+
+procedure TFrmPreCad.BtnSalvarClick(Sender: TObject);
+var
+  codigoSolicitacao : Integer;
+  codigoAvalista : Integer;
+  municipio : string;
+  data_atual : string;
+  senha : string;
+  participa : string;
+  resultado : boolean;
+  usuario : Integer;
+const
+  perfilcliente : integer = 4;
+begin
+
+  if ChecarDadosCliente then
+  begin
+    data_atual := FormatDateTime('dd/mm/yyyy', Now);
+
+    if MessageDlg('Tem certeza que deseja salvar? Após salvar você não poderá mais alterar seus dados.', mtConfirmation,
+    [mbYes, mbNo]) = mrYes then
+    begin
+
+      UniMainModule.dsSolicitacao.DataSet.Append;
+
+      //Cadastrando usuário
+      senha := frmPrincipal.MD5(EditSenha.text);
+      usuario := frmPrincipal.proxID('tb_usuario');
+      with UniMainModule.dsUsuario.DataSet do
+      begin
+        Append;
+        FieldByName('ID').Value           := usuario;
+        FieldByName('NOME').Value         := UniMainModule.dsCliente.DataSet.FieldByName('NOME').Value;
+        FieldByName('USUARIO').Value      := UniMainModule.dsCliente.DataSet.FieldByName('CPF').Value;
+        FieldByName('SENHA').Value        := senha;
+        FieldByName('PERFIL').Value       := perfilcliente;
+        FieldByName('DATACADASTRO').Value := data_atual;
+      end;
+
+      //Cadastrando cliente
+      if SelectEstadoCivil.ItemIndex <> 0 then
+      begin
+        EditNomeConjuge.Text := '';
+        EditCpfConjuge.Text := '';
+      end;
+      with UniMainModule.dsCliente.DataSet do
+      begin
+        FieldByName('ID').Value           := codigoCliente;
+        FieldByName('DATACADASTRO').Value := data_atual;
+        FieldByName('USUARIO').Value      := usuario;
+      end;
+
+      participa := frmPrincipal.ConfirmaParticipacao;
+      //Verifica se o cliente vai realizar uma nova solicitação ou fará parte de um grupo solidário
+      ShowMessage(participa);
+      if participa = 'SIM' then  //Confirmou que será avalista solidário
+      begin
+
+        frmAdmin.ShowModal;
+      end
+      else if participa = 'NÃO' then  //Não será avalista solidário
+      begin
+        FrmSolicitacao.ShowModal;
+        Close;
+      end
+      else
+      begin  //Não foi incluído em nenhum grupo
+        ShowMessage('Grupo ainda não foi cadastrado');
+        FrmSolicitacao.ShowModal;
+        Close;
+      end;
+
+    end;
+
+  end
+  else
+  begin
+    ShowMessage('Alguns campos não foram preenchidos corretamente,'+
+                ' por favor preencha o formulário novamente.');
+  end;
+
+end;
+
+function TFrmPreCad.RemoveAcento(const pText: string): string;
+type
+  USAscii20127 = type AnsiString(20127);
+begin
+  Result := string(USAscii20127(pText));
+end;
+
+procedure TFrmPreCad.EditConfSenhaChange(Sender: TObject);
+begin
+  EditConfSenha.Color := clWindow;
+end;
+
+procedure TFrmPreCad.EditNomeChange(Sender: TObject);
+begin
+  EditNome.Color := clWindow;
+end;
+
+procedure TFrmPreCad.EditNomeConjugeChange(Sender: TObject);
+begin
+  EditNomeConjuge.Color := clWindow;
+end;
+
+procedure TFrmPreCad.EditCPFChange(Sender: TObject);
+begin
+  EditCPF.Color := clWindow;
+end;
+
+procedure TFrmPreCad.EditCpfConjugeChange(Sender: TObject);
+begin
+  EditCpfConjuge.color := clWindow;
+end;
+
+procedure TFrmPreCad.EditEmailChange(Sender: TObject);
+begin
+  EditEmail.Color := clWindow;
+end;
+
+procedure TFrmPreCad.EditSenhaChange(Sender: TObject);
+begin
+  EditSenha.Color := clwindow;
+end;
+
+procedure TFrmPreCad.EditTelefoneChange(Sender: TObject);
+begin
+   EditTelefone.Color := clWindow;
+end;
+
+procedure TFrmPreCad.SelectEstadoCivilChange(Sender: TObject);
+begin
+    SelectEstadoCivil.Color := clWindow;
+    if SelectEstadoCivil.ItemIndex = 0 then
+    begin
+      UnimPanel7.Height := 190;
+      UnimPanel7.Visible := True;
+      UNimPanel2.Height := 600;
+    end
+    else
+    begin
+      UnimPanel7.Height := 0;
+      UnimPanel7.Visible := False;
+      UNimPanel2.Height := 407;
+    end;
+end;
+
+procedure TFrmPreCad.UnimFormShow(Sender: TObject);
+const clienteCadastrado : integer = 0;
+begin
+  codigoCliente := frmPrincipal.proxID('tb_cliente');
+
+  clienteJaCadastrado := (frmPrincipal.VerificaInscricao(frmPrincipal.edtCPF.Text) = clienteCadastrado);
+
+  if clienteJaCadastrado then
+  begin
+    with UniMainModule.dsCliente.DataSet do
+    begin
+      Filtered := False;
+      Filter := 'CPF = '+ QuotedStr(frmPrincipal.edtCPF.Text);
+      Filtered := True;
+      Edit;
+    end;
+  end else
+  begin
+    with UniMainModule.dsCliente.DataSet do
+    begin
+      Append;
+      FieldByName('ID').Value          := codigoCliente;
+      FieldByName('NOME').Value        := frmPrincipal.edtNome.Text;
+      FieldByName('CPF').Value         := frmPrincipal.edtCPF.Text;
+      FieldByName('CLIENTEAGN').Value  := 'NÃO';
+      FieldByName('MUNICIPIO').Value   := 'NATAL';
+    end;
+  end;
+
+  UnimPanel7.Height := 0;
+  UNimPanel2.Height := 407;
+  UnimPanel1.Height := 950;
+  UnimScrollBox1.ScrollHeight := 950;
+
+  with frmPrincipal do
+  begin
+    edtCPF.Text      := '';
+    edtNome.Text     := '';
+    edtCPFacomp.Text := '';
+    edtSenha.Text    := '';
+  end;
+
+end;
+
+end.

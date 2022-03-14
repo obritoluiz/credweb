@@ -1,0 +1,207 @@
+object frmPedirDocs: TfrmPedirDocs
+  Left = 0
+  Top = 0
+  ClientHeight = 668
+  ClientWidth = 653
+  Caption = 'frmPedirDocs'
+  OnShow = UnimFormShow
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  ShowAnimation = 'fade'
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object scrlBody: TUnimScrollBox
+    Left = 0
+    Top = 0
+    Width = 653
+    Height = 668
+    Hint = ''
+    Align = alClient
+    ExplicitWidth = 560
+    ScrollHeight = 47
+    ScrollWidth = 0
+    object pgPrincipal: TUnimTabPanel
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 645
+      Height = 607
+      Hint = ''
+      ActivePage = pgSolicitados
+      Align = alClient
+      ExplicitLeft = 27
+      ExplicitWidth = 552
+      object pgDocumentos: TUnimTabSheet
+        Left = 4
+        Top = 51
+        Width = 637
+        Height = 552
+        Hint = ''
+        Caption = 'Documentos'
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 289
+        ExplicitHeight = 193
+        object pnlDocumentos: TUnimPanel
+          Left = 0
+          Top = 0
+          Width = 637
+          Height = 552
+          Hint = ''
+          Align = alClient
+          ExplicitLeft = -150
+          ExplicitTop = 215
+          ExplicitWidth = 694
+          ExplicitHeight = 337
+          object grdDocs1: TUnimDBListGrid
+            AlignWithMargins = True
+            Left = 4
+            Top = 69
+            Width = 629
+            Height = 479
+            Hint = ''
+            Align = alClient
+            DataSource = UniMainModule.dsDocumentos
+            OnDblClick = grdDocs1DblClick
+            Columns = <
+              item
+                Title.Caption = 'DESCRICAO'
+                FieldName = 'DESCRICAO'
+                Width = 334
+              end
+              item
+                Title.Caption = 'SITUA'#199#195'O'
+                FieldName = 'SITUACAO'
+                Width = 160
+              end
+              item
+                Title.Caption = 'DATA'
+                FieldName = 'DATACADASTRO'
+                Width = 161
+              end>
+          end
+          object UnimLabel1: TUnimLabel
+            AlignWithMargins = True
+            Left = 21
+            Top = 21
+            Width = 595
+            Height = 25
+            Hint = ''
+            Margins.Left = 20
+            Margins.Top = 20
+            Margins.Right = 20
+            Margins.Bottom = 20
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'Lista de documentos solicitados'
+            Align = alTop
+            ParentFont = False
+            Font.Color = 7092497
+            Font.Style = [fsBold]
+            ExplicitLeft = 29
+            ExplicitTop = 29
+          end
+        end
+      end
+      object pgSolicitados: TUnimTabSheet
+        Left = 4
+        Top = 51
+        Width = 637
+        Height = 552
+        Hint = ''
+        Caption = 'Solicitados'
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 552
+        ExplicitHeight = 607
+        object umpDocumentos: TUnimPanel
+          AlignWithMargins = True
+          Left = 3
+          Top = 3
+          Width = 631
+          Height = 546
+          Hint = ''
+          Align = alClient
+          ExplicitWidth = 538
+          object umlDocumentos: TUnimLabel
+            AlignWithMargins = True
+            Left = 21
+            Top = 21
+            Width = 589
+            Height = 25
+            Hint = ''
+            Margins.Left = 20
+            Margins.Top = 20
+            Margins.Right = 20
+            Margins.Bottom = 20
+            Alignment = taCenter
+            AutoSize = False
+            Caption = 'Solicitar documentos'
+            Align = alTop
+            ParentFont = False
+            Font.Color = 7092497
+            Font.Style = [fsBold]
+            ExplicitLeft = 22
+            ExplicitTop = 20
+          end
+          object grdDocs2: TUnimDBListGrid
+            AlignWithMargins = True
+            Left = 4
+            Top = 69
+            Width = 623
+            Height = 473
+            Hint = ''
+            Align = alClient
+            DataSource = dsSolicitarDocs
+            OnDblClick = grdDocs2DblClick
+            Columns = <
+              item
+                Title.Caption = 'DESCRICAO'
+                FieldName = 'DESCRICAO'
+                Width = 480
+              end
+              item
+                Title.Caption = 'SOLICITAR'
+                FieldName = 'SOLICITAR'
+                Width = 110
+              end>
+          end
+        end
+      end
+    end
+    object umbConfirmar: TUnimButton
+      AlignWithMargins = True
+      Left = 3
+      Top = 616
+      Width = 645
+      Height = 47
+      Hint = ''
+      Align = alBottom
+      Caption = 'Confirmar'
+      Font.Color = 7092497
+      OnClick = umbConfirmarClick
+      ExplicitLeft = 4
+      ExplicitTop = 81
+      ExplicitWidth = 266
+    end
+  end
+  object qrySilicitarDocs: TFDQuery
+    Connection = UniMainModule.FDConnection
+    SQL.Strings = (
+      'select '
+      '  * '
+      'from tb_documentos')
+    Left = 522
+    Top = 73
+  end
+  object dsSolicitarDocs: TDataSource
+    DataSet = qrySilicitarDocs
+    Left = 522
+    Top = 25
+  end
+end

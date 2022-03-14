@@ -1,0 +1,32 @@
+unit UadminMsg;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm;
+
+type
+  TfrmAdminMsg = class(TUniForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmAdminMsg: TfrmAdminMsg;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmAdminMsg: TfrmAdminMsg;
+begin
+  Result := TfrmAdminMsg(UniMainModule.GetFormInstance(TfrmAdminMsg));
+end;
+
+end.

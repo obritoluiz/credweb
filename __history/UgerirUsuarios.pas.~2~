@@ -1,0 +1,81 @@
+unit UgerirUsuarios;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, uniBitBtn, unimBitBtn,
+  Vcl.Imaging.pngimage, uniImage, unimImage, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, uniButton, unimButton, uniLabel, unimLabel, uniEdit,
+  unimEdit, unimPanel, uniBasicGrid, uniDBGrid, unimDBListGrid, unimScrollBox,
+  uniPanel, uniPageControl, unimTabPanel, uniGUIBaseClasses;
+
+type
+  TfrmGerirUsuarios = class(TUnimForm)
+    pgMain: TUnimTabPanel;
+    pgClientes: TUnimTabSheet;
+    scrlBody: TUnimScrollBox;
+    dbGridDadosClientes: TUnimDBListGrid;
+    pgCredNatal: TUnimTabSheet;
+    pgSEJUV: TUnimTabSheet;
+    UnimPanel2: TUnimPanel;
+    EditSenhaConf: TUnimEdit;
+    EditSenhaNova: TUnimEdit;
+    UnimLabel21: TUnimLabel;
+    UnimLabel22: TUnimLabel;
+    UnimLabel15: TUnimLabel;
+    EditSenhaAtual: TUnimEdit;
+    UnimButton1: TUnimButton;
+    qryUsuarios: TFDQuery;
+    umpFooter: TUnimPanel;
+    UnimImage1: TUnimImage;
+    UnimLabel8: TUnimLabel;
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    UnimPanel1: TUnimPanel;
+    UnimBitBtn1: TUnimBitBtn;
+    LabelUsuario: TUnimLabel;
+    pgAdministradores: TUnimTabSheet;
+    UnimScrollBox1: TUnimScrollBox;
+    dbGridDadosCrednatal: TUnimDBListGrid;
+    dsUsuarios: TDataSource;
+    procedure pgMainChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmGerirUsuarios: TfrmGerirUsuarios;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmGerirUsuarios: TfrmGerirUsuarios;
+begin
+  Result := TfrmGerirUsuarios(UniMainModule.GetFormInstance(TfrmGerirUsuarios));
+end;
+
+procedure TfrmGerirUsuarios.pgMainChange(Sender: TObject);
+begin
+ case pgMain.ActivePage.Name of
+   'pgClientes' :
+   begin
+     ds
+   end;
+
+
+
+ end;
+end;
+
+end.

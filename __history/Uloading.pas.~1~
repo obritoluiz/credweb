@@ -1,0 +1,42 @@
+unit Uloading;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Vcl.Imaging.GIFImg, uniImage, unimImage, uniGUIBaseClasses;
+
+type
+  TfrmLoading = class(TUnimForm)
+    ctnLoading: TUnimContainerPanel;
+    imgLoading: TUnimImage;
+    procedure UnimFormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmLoading: TfrmLoading;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmLoading: TfrmLoading;
+begin
+  Result := TfrmLoading(UniMainModule.GetFormInstance(TfrmLoading));
+end;
+
+procedure TfrmLoading.UnimFormShow(Sender: TObject);
+begin
+  ctnLoading.Visible := True;
+  (imgLoading.Picture.Graphic as TGIFImage).Animate := True;
+end;
+
+end.

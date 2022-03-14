@@ -1,0 +1,237 @@
+unit Uchat;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniButton, unimButton, uniMemo, unimMemo, unimScrollBox, uniGUIBaseClasses,
+  unimPanel, uniLabel, unimLabel, uniEdit, unimEdit, uniTimer, uniScrollBox;
+
+type
+  TfrmChat = class(TUnimForm)
+    pnlRodape: TUnimPanel;
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimContainerPanel2: TUnimContainerPanel;
+    btnEnviar: TUnimButton;
+    lblSair: TUnimLabel;
+    lblMsg: TUnimEdit;
+    UnimLabel1: TUnimLabel;
+    UniTimer: TUniTimer;
+    scrMensagens: TUnimScrollBox;
+    procedure btnEnviarClick(Sender: TObject);
+    procedure lblSairClick(Sender: TObject);
+    procedure CriarBalaoDialogo(id: integer);
+    procedure UnimFormShow(Sender: TObject);
+    procedure carregarChat();
+    procedure UniTimerTimer(Sender: TObject);
+    procedure scrMensagensScrollChange(Sender: TComponent; const X, Y: Integer);
+
+  private
+    { Private declarations }
+  public
+  var
+    ctnChat : TUnimContainerPanel;
+    i : integer;
+  end;
+
+function frmChat: TfrmChat;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UcadSucesso, UcnpjClienteFormal, UdadosCliente, UdadosUsuario,
+  UdocsReprovados, UexportarCsv, UinfImportantes, Umsg, UpedirDocs, Upep,
+  UpesquisaInicialReprovada, UpreCad, UrecuperarSenha, Usejuv, Usolicitacao,
+  Utermos, Uusuarios;
+
+function frmChat: TfrmChat;
+begin
+  Result := TfrmChat(UniMainModule.GetFormInstance(TfrmChat));
+end;
+
+procedure TfrmChat.carregarChat();
+var
+  id, cliente: integer;
+begin
+
+  //Criando Container do CHAT de mensagem
+  ctnChat.Free;
+  ctnChat        := TUnimContainerPanel.Create(scrMensagens);
+  ctnChat.Top    := 5;
+  ctnChat.Height := 5000;
+  ctnChat.Width  := 295;
+  ctnChat.Parent := scrMensagens;
+  //Application.ProcessMessages;
+
+  cliente := UniMainModule.dsCliente.DataSet.FieldByName('ID').Value;
+
+  with UniMainModule.FDQuery do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('select id from tb_chat where cliente = ' + IntToStr(cliente));
+    SQL.Add(' order by id');
+    Open;
+    Active := True;
+  end;
+
+  with UniMainModule.dsQuery.DataSet do
+  begin
+
+    First;
+    while not eof do
+    begin
+      id := FieldByName('ID').Value;
+      CriarBalaoDialogo(id);
+
+      Next;
+    end;
+
+    First;
+
+  end;
+
+end;
+
+procedure TfrmChat.CriarBalaoDialogo(id: integer);
+var
+  ctn : TUnimContainerPanel;
+  User, msg, data : TunimLabel;
+  remetente : string;
+begin
+  //Filtrando a mensagem no banco
+  with UniMainModule.dsChat.DataSet do
+  begin
+    Filtered := False;
+    Filter   := 'ID = ' + intToStr(id);
+    Filtered := True;
+
+    remetente := FieldByName('REMETENTE').Value;
+  end;
+
+
+  //Criando balão de mensagem
+  ctn := TUnimContainerPanel.Create(ctnChat);
+
+  if remetente = 'AGN' then   //mensagem da agn
+  begin
+    ctn.Margins.Left     := 35;
+    ctn.Margins.Right    := 10;
+    ctn.Color            := $00D7FFD7;  //verde
+  end
+  else    //mensagem do cliente
+  begin
+    ctn.Margins.Left     := 10;
+    ctn.Margins.Right    := 35;
+    ctn.Color            := $00FDE8CC; //azul
+  end;
+
+  ctn.Height           := 85;
+  ctn.Top              := ctnChat.Height;
+  ctn.Align            := alBottom;
+  ctn.AlignWithMargins := True;
+  ctn.Parent           := ctnChat;
+
+  //Criando label de usuário
+  user := TUnimLabel.Create(ctn);
+
+  user.Align             := alTop;
+  user.AlignWithMargins  := True;
+
+  if remetente = 'AGN' then   //mensagem da agn
+    user.Caption           := 'Op. AGN - ' + UniMainModule.dsUsuario.DataSet.FieldByName('NOME').Value
+  else
+    user.Caption           := 'Cliente - ' + Copy(UniMainModule.dsCliente.DataSet.FieldByName('NOME').Value,1,20) + '.';
+
+  user.Font.Size         := 10;
+  user.Font.Style        := [fsBold];
+  user.Parent            := ctn;
+
+  //Criando label da mensagem
+  msg := TUnimLabel.Create(ctn);
+
+  msg.Align             := alTop;
+  msg.AlignWithMargins  := True;
+  msg.Caption           := UniMainModule.dsChat.DataSet.FieldByName('MENSAGEM').Value;
+  msg.Font.Size         := 10;
+  msg.Parent            := ctn;
+
+  //Criando label de data e hora
+  data := TUnimLabel.Create(ctn);
+
+  data.Align             := alTop;
+  data.AlignWithMargins  := True;
+  data.Alignment         := taRightJustify;
+  data.Caption           := UniMainModule.dsChat.DataSet.FieldByName('DATA').AsString + ' às ' + UniMainModule.dsChat.DataSet.FieldByName('HORA').AsString;
+  data.Font.Size         := 7;
+  data.Parent            := ctn;
+
+  //Application.ProcessMessages;
+end;
+
+procedure TfrmChat.btnEnviarClick(Sender: TObject);
+var
+  cliente, operador, id : integer;
+begin
+  if lblMsg.Text = '' then Abort;
+
+  id       := frmPrincipal.proxID('tb_chat');
+  cliente  := UniMainModule.dsCliente.DataSet.FieldByName('ID').Value;
+  operador := UniMainModule.dsUsuario.DataSet.FieldByName('ID').Value;
+
+  with UniMainModule.dsChat.DataSet do
+  begin
+    Append;
+    FieldByName('ID').Value        := id;
+    FieldByName('CLIENTE').Value   := cliente;
+    FieldByName('OPERADOR').Value  := operador;
+    FieldByName('REMETENTE').Value := 'AGN';
+    FieldByName('MENSAGEM').Value  := lblMsg.Text;
+    FieldByName('DATA').Value      := now;
+    FieldByName('HORA').Value      := time;
+    Post;
+  end;
+
+  UniSession.AddJS('window.scroll(0, 5000)');
+  lblMsg.Text := '';
+  lblMsg.SetFocus;
+
+end;
+
+procedure TfrmChat.lblSairClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmChat.scrMensagensScrollChange(Sender: TComponent; const X,
+  Y: Integer);
+begin
+  ShowMessage(intToStr(X) + ' ' + intToStr(Y));
+end;
+
+procedure TfrmChat.UnimFormShow(Sender: TObject);
+begin
+  carregarChat();
+  lblMsg.SetFocus;
+
+  //UnimScrollBox3.ScrollTo(20, 20);
+  scrMensagens.JSInterface.JSCode(
+    #1'.getScrollable().getScrollingElement().dom.scrollTo({'+
+    '  top: 4492,'+
+    '  left: 0'+
+    '});'
+  );
+end;
+
+procedure TfrmChat.UniTimerTimer(Sender: TObject);
+begin
+  //Atualiza o CHAT a cada 1 segundo
+  carregarChat();
+end;
+
+end.

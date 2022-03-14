@@ -1,0 +1,50 @@
+unit UpesquisaInicialReprovada;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniMemo, uniDBMemo, unimDBMemo, uniButton, unimButton, uniLabel, unimLabel,
+  uniGUIBaseClasses, unimMemo;
+
+type
+  TfrmPesqPendencia = class(TUnimForm)
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimLabel1: TUnimLabel;
+    UnimContainerPanel2: TUnimContainerPanel;
+    UnimButton1: TUnimButton;
+    UnimContainerPanel3: TUnimContainerPanel;
+    mmMsgCLiente: TUnimMemo;
+    procedure UnimButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmPesqPendencia: TfrmPesqPendencia;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UcadSucesso, UcnpjClienteFormal, UdadosCliente, UdadosUsuario,
+  UdocsReprovados, Umsg, UpedirDocs, Upep, UpreCad, UrecuperarSenha, Usejuv,
+  Usolicitacao, Utermos, Uusuarios;
+
+function frmPesqPendencia: TfrmPesqPendencia;
+begin
+  Result := TfrmPesqPendencia(UniMainModule.GetFormInstance(TfrmPesqPendencia));
+end;
+
+procedure TfrmPesqPendencia.UnimButton1Click(Sender: TObject);
+begin
+  frmPrincipal.msgPesqRep := mmMsgCLiente.Text;
+  Close;
+end;
+
+end.

@@ -1,0 +1,306 @@
+unit Usejuv;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniBasicGrid, uniDBGrid, unimDBListGrid, unimDBGrid, uniLabel, unimLabel,
+  Vcl.Imaging.pngimage, uniImage, unimImage, unimPanel, unimScrollBox, uniPanel,
+  uniPageControl, unimTabPanel, uniGUIBaseClasses, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, uniButton, uniBitBtn,
+  unimBitBtn, Vcl.Menus, uniMainMenu, uniImageList, uniTreeView, uniTreeMenu,
+  unimTreeMenu, unimButton, uniEdit, unimEdit, uniMultiItem, unimSelect,
+  unimDBTimePicker, uniDBEdit, unimDBEdit, uniDateTimePicker,
+  uniDBDateTimePicker, unimDBDatePicker, unimTimePicker, unimDatePicker;
+
+type
+  TfrmAdminSejuv = class(TUnimForm)
+    umpHeader: TUnimPanel;
+    imgBgHeader: TUnimImage;
+    imgLogoAGN: TUnimImage;
+    qryCliente: TFDQuery;
+    dsCliente: TDataSource;
+    pgMain: TUnimTabPanel;
+    pgInicio: TUnimTabSheet;
+    scrlBody: TUnimScrollBox;
+    dbGridDados: TUnimDBListGrid;
+    umcLateral: TUnimContainerPanel;
+    UnimPanel1: TUnimPanel;
+    UnimLabel1: TUnimLabel;
+    mtmenu: TUnimTreeMenu;
+    NativeImageList: TUniNativeImageList;
+    mmenuitens: TUniMenuItems;
+    Sair1: TUniMenuItem;
+    lblUsuario: TUnimLabel;
+    umcCorpo: TUnimContainerPanel;
+    pgAgeCap: TUnimTabSheet;
+    Data: TUnimLabel;
+    lblHorario: TUnimLabel;
+    lblLocal: TUnimLabel;
+    btnConfirmar: TUnimButton;
+    lblTituloPaginaCapacitacao: TUnimLabel;
+    UnimDBTimePicker1: TUnimDBTimePicker;
+    UnimDBDatePicker1: TUnimDBDatePicker;
+    UnimDBEdit1: TUnimDBEdit;
+    Alterarsenha1: TUniMenuItem;
+    pgAlterarSenha: TUnimTabSheet;
+    UnimPanel2: TUnimPanel;
+    EditSenhaConf: TUnimEdit;
+    EditSenhaNova: TUnimEdit;
+    UnimLabel21: TUnimLabel;
+    UnimLabel22: TUnimLabel;
+    UnimLabel15: TUnimLabel;
+    EditSenhaAtual: TUnimEdit;
+    UnimButton1: TUnimButton;
+    umpFiltros: TUnimPanel;
+    UnimPanel3: TUnimPanel;
+    LabelFiltro: TUnimLabel;
+    SelectTipoBusca: TUnimSelect;
+    EditBusca: TUnimEdit;
+    UnimPanel4: TUnimPanel;
+    LabelCidade: TUnimLabel;
+    SelectMunicipio: TUnimSelect;
+    UnimLabel2: TUnimLabel;
+    SelectSituacao: TUnimSelect;
+    ButtonBuscar: TUnimButton;
+    procedure dbGridDadosDblClick(Sender: TObject);
+    procedure UnimBitBtn1Click(Sender: TObject);
+    procedure UnimFormShow(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
+    procedure btnConfirmarClick(Sender: TObject);
+    procedure Alterarsenha1Click(Sender: TObject);
+    procedure UnimButton1Click(Sender: TObject);
+    procedure UnimLabel1Click(Sender: TObject);
+    procedure ButtonBuscarClick(Sender: TObject);
+
+  private
+    { Private declarations }
+    var ConsultaSQLcliente: string;
+  public
+    { Public declarations }
+  end;
+
+function frmAdminSejuv: TfrmAdminSejuv;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, UpreCad, Uadmin,
+  UanexarDoc, UdadosCliente, UdadosUsuario, Umsg, UpedirDocs, UrecuperarSenha,
+  Usolicitacao, Uusuarios, Usenha;
+
+function frmAdminSejuv: TfrmAdminSejuv;
+begin
+  Result := TfrmAdminSejuv(UniMainModule.GetFormInstance(TfrmAdminSejuv));
+end;
+
+
+procedure TfrmAdminSejuv.Alterarsenha1Click(Sender: TObject);
+begin
+  pgMain.Pages[0].Visible := False;
+  pgMain.Pages[1].Visible := False;
+  pgMain.Pages[2].Visible := True;
+end;
+
+procedure TfrmAdminSejuv.btnConfirmarClick(Sender: TObject);
+begin
+  if btnConfirmar.Caption = 'Salvar' then
+  begin
+    UniMainModule.dsCapacitacao.DataSet.Post;
+
+    frmPrincipal.adicionarEtapa(11, qryCliente.FieldByName('idsolicitacao').Value);
+
+    with UniMainModule.FDQuery do
+    begin
+      Close;
+      SQL.Clear;
+      SQL.Add('update tb_solicitacao set situacao = 11 where cliente = ' + intToStr(qryCliente.FieldByName('idcliente').Value));
+      ExecSQL;
+    end;
+
+  end
+  else
+  begin
+    If UniMainModule.dsCapacitacao.DataSet.State in [ dsInsert, dsEdit ] then
+      UniMainModule.dsCapacitacao.DataSet.Post;
+  end;
+
+  qryCliente.Active := False;
+  qryCliente.Active := True;
+
+  pgMain.Pages[0].Visible := True;
+  pgMain.Pages[1].Visible := False;
+  pgMain.Pages[2].Visible := False;
+end;
+
+procedure TfrmAdminSejuv.ButtonBuscarClick(Sender: TObject);
+begin
+  with qryCliente do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add(ConsultaSQLcliente);
+    if SelectMunicipio.ItemIndex <> 0 then SQL.Add(' and c.municipio = ' + QuotedStr(SelectMunicipio.Text));
+    if SelectSituacao.ItemIndex <> 0 then SQL.Add(' and e.nome = ' + QuotedStr(SelectSituacao.Text));
+    if EditBusca.Text <> '' then
+    begin
+      if SelectTipoBusca.ItemIndex = 0 then SQL.Add(' and c.cpf = ' + QuotedStr(EditBusca.Text));
+      if SelectTipoBusca.ItemIndex = 1 then SQL.Add(' and c.nome like ' + QuotedStr('%' + EditBusca.Text + '%'));
+    end;
+    Open;
+  end;
+end;
+
+procedure TfrmAdminSejuv.dbGridDadosDblClick(Sender: TObject);
+var cliente : string;
+begin
+
+  cliente := dsCliente.DataSet.FieldByName('IDCLIENTE').AsString;
+
+  with UniMainModule.dsCliente.DataSet do
+  begin
+    Filtered := False;
+    Filter   := 'ID = ' + cliente;
+    Filtered := True;
+  end;
+
+  with UniMainModule.dsSolicitacao.DataSet do
+  begin
+    Filtered := False;
+    Filter   := 'CLIENTE = ' + cliente;
+    Filtered := True;
+  end;
+
+  if qryCliente.FieldByName('SITUACAO').Value = 'AGENDAR CAPACITAÇÃO' then
+  begin
+    //Altera o título da página de agentar capacitação
+    lblTituloPaginaCapacitacao.Caption := 'Agendar capacitação para ' + qryCliente.FieldByName('NOME').Value;
+
+    //Abre a tabela pra adição de registro
+    with UniMainModule.dsCapacitacao.DataSet do
+    begin
+      Append;
+      FieldByName('ID').Value      := frmPrincipal.proxID('tb_capacitacao');
+      FieldByName('CLIENTE').Value := qryCliente.FieldByName('idcliente').Value;
+    end;
+
+    btnConfirmar.Caption := 'Salvar';
+
+    pgMain.Pages[0].Visible := False;
+    pgMain.Pages[1].Visible := True;
+    pgMain.Pages[2].Visible := False;
+  end;
+
+  if qryCliente.FieldByName('SITUACAO').Value = 'CAPACITAÇÃO AGENDADA' then
+  begin
+    btnConfirmar.Caption := 'Atualizar';
+
+    pgMain.Pages[0].Visible := False;
+    pgMain.Pages[1].Visible := True;
+    pgMain.Pages[2].Visible := False;
+  end;
+
+
+end;
+
+procedure TfrmAdminSejuv.Sair1Click(Sender: TObject);
+begin
+  if UniMainModule.msg('Tem certeza que deseja sair?') then Close;
+end;
+
+procedure TfrmAdminSejuv.UnimBitBtn1Click(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmAdminSejuv.UnimButton1Click(Sender: TObject);
+var
+  senhaAtual    : string;
+  senhaAtualMD5 : string;
+  senhaSalva    : string;
+  senhaNova     : string;
+  senhaNovaConf : string;
+  senhaNovaMD5  : string;
+begin
+  senhaSalva    := UniMainModule.dsUsuario.DataSet.FieldByName('senha').Value;
+  senhaAtual    := EditSenhaAtual.Text;
+  senhaAtualMD5 := frmPrincipal.MD5(senhaAtual);
+  senhaNova     := EditSenhaNova.Text;
+  senhaNovaConf := EditSenhaConf.Text;
+  senhaNovaMd5  := frmPrincipal.MD5(senhaNova);
+
+  EditSenhaAtual.Text := '';
+  EditSenhaNova.Text  := '';
+  EditSenhaConf.text  := '';
+
+  case Usenha.alterarSenha(senhaAtual, senhaAtualMD5, senhaSalva, senhaNova, senhaNovaConf) of
+    1:
+    begin
+      with UniMainModule.dsUsuario.DataSet do
+      begin
+        edit;
+        FieldByName('SENHA').Value := senhaNovaMD5;
+        post;
+      end;
+      ShowMessage('Senha alterada com sucesso.');
+    end;
+    2:
+    begin
+      ShowMessage('Senha inválida, por favor digite uma senha que tenha pelo menos 6 caracteres.');
+    end;
+    3:
+    begin
+      ShowMessage('Erro, a senha nova precisa ser diferente da senha antiga.');
+    end;
+    4:
+    begin
+      ShowMessage('As senhas não coincidem, por favor certifique-se que as duas senhas sejam iguais.');
+    end;
+    5:
+    begin
+      ShowMessage('Senha atual não foi inserida corretamente');
+    end
+    else
+    begin
+      ShowMessage('Não foi possível alterar a senha');
+    end;
+  end;
+
+  pgMain.Pages[0].Visible := True;
+  pgMain.Pages[1].Visible := False;
+  pgMain.Pages[2].Visible := False;
+
+end;
+
+procedure TfrmAdminSejuv.UnimFormShow(Sender: TObject);
+begin
+  ConsultaSQLcliente   := qryCliente.SQL.Text;
+
+  //Ativa a consulta de clientes
+  qryCliente.Active := True;
+  UniMainModule.tb_capacitacao.Active := True;
+
+  pgMain.Pages[0].Visible := True;
+  pgMain.Pages[1].Visible := False;
+  pgMain.Pages[2].Visible := False;
+
+  lblUsuario.Caption := 'Bem vindo(a), ' + UniMainModule.dsUsuario.DataSet.FieldByName('NOME').Value + '.';
+end;
+
+procedure TfrmAdminSejuv.UnimLabel1Click(Sender: TObject);
+begin
+  mtmenu.Micro := not mtmenu.Micro;
+
+  if mtmenu.Micro then
+    umcLateral.Width := 44
+  else
+    umcLateral.Width := 220;
+end;
+
+end.

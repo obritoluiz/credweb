@@ -1,0 +1,61 @@
+unit UcnpjClienteFormal;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniMemo, uniDBMemo, unimDBMemo, uniMultiItem, unimSelect, unimDBSelect,
+  uniEdit, uniDBEdit, unimDBEdit, uniLabel, unimLabel, uniButton, unimButton,
+  uniGUIBaseClasses;
+
+type
+  TfrmCnpjClienteFormal = class(TUnimForm)
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimContainerPanel2: TUnimContainerPanel;
+    UnimContainerPanel3: TUnimContainerPanel;
+    UnimButton1: TUnimButton;
+    UnimLabel1: TUnimLabel;
+    UnimLabel2: TUnimLabel;
+    edtCnpj: TUnimDBEdit;
+    UnimLabel3: TUnimLabel;
+    slctQtdeSocios: TUnimDBSelect;
+    edtSocios: TUnimDBMemo;
+    UnimLabel4: TUnimLabel;
+    procedure UnimButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmCnpjClienteFormal: TfrmCnpjClienteFormal;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, Mainm, ServerModule, Uacomp, Uadmin,
+  UanexarDoc, UdadosCliente, UdadosUsuario, UdocsReprovados, Umsg, UpedirDocs,
+  UpreCad, UrecuperarSenha, Usejuv, Usolicitacao, Uusuarios;
+
+function frmCnpjClienteFormal: TfrmCnpjClienteFormal;
+begin
+  Result := TfrmCnpjClienteFormal(UniMainModule.GetFormInstance(TfrmCnpjClienteFormal));
+end;
+
+procedure TfrmCnpjClienteFormal.UnimButton1Click(Sender: TObject);
+begin
+  if edtCnpj.Text = '' then
+  begin
+    ShowMessage('CNPJ inválido');
+    edtCnpj.SetFocus;
+    Abort;
+  end;
+
+  Close;
+end;
+
+end.

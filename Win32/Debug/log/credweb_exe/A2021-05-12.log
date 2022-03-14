@@ -1,0 +1,380 @@
+credweb.exe: 00002700: 14:01:46 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002700: 14:01:46 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002700: 14:01:47 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002700: 14:01:47 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002700: 14:01:47 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002700: 14:01:47 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002700: 14:01:47 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002700: 14:01:47 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002700: 14:01:47 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002700: 14:01:47 []:<-------------------------------------------------------------->
+credweb.exe: 00002700: 14:01:47 [Terminated]:Exit Code: 0
+credweb.exe: 00003768: 14:02:09 []:>--------------------------------------------------------------<
+credweb.exe: 00003768: 14:02:09 [TUniServerModule]:Server First Init.
+credweb.exe: 00003768: 14:02:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00003768: 14:02:10 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000000D8: 14:02:20 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00003768: 14:10:43 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00003768: 14:10:43 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00003768: 14:10:43 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00003768: 14:10:43 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00003768: 14:10:43 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00003768: 14:10:43 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00003768: 14:10:43 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00003768: 14:10:43 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00003768: 14:10:43 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00003768: 14:10:43 []:<-------------------------------------------------------------->
+credweb.exe: 00003768: 14:10:43 [Terminated]:Exit Code: 0
+credweb.exe: 0000200C: 14:11:25 []:>--------------------------------------------------------------<
+credweb.exe: 0000200C: 14:11:25 [TUniServerModule]:Server First Init.
+credweb.exe: 0000200C: 14:11:26 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 0000200C: 14:11:26 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000026E4: 14:11:31 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 0000200C: 14:12:27 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 0000200C: 14:12:27 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 0000200C: 14:12:28 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 0000200C: 14:12:28 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 0000200C: 14:12:28 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 0000200C: 14:12:28 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 0000200C: 14:12:28 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 0000200C: 14:12:28 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 0000200C: 14:12:28 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 0000200C: 14:12:28 []:<-------------------------------------------------------------->
+credweb.exe: 0000200C: 14:12:28 [Terminated]:Exit Code: 0
+credweb.exe: 000029DC: 14:26:17 []:>--------------------------------------------------------------<
+credweb.exe: 000029DC: 14:26:17 [TUniServerModule]:Server First Init.
+credweb.exe: 000029DC: 14:26:17 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000029DC: 14:26:17 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00003624: 14:28:07 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000029DC: 15:37:07 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000029DC: 15:37:07 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000029DC: 15:37:07 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000029DC: 15:37:07 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000029DC: 15:37:07 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000029DC: 15:37:07 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000029DC: 15:37:07 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000029DC: 15:37:07 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000029DC: 15:37:08 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000029DC: 15:37:08 []:<-------------------------------------------------------------->
+credweb.exe: 000029DC: 15:37:08 [Terminated]:Exit Code: 0
+credweb.exe: 00002FC4: 15:37:25 []:>--------------------------------------------------------------<
+credweb.exe: 00002FC4: 15:37:25 [TUniServerModule]:Server First Init.
+credweb.exe: 00002FC4: 15:37:25 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002FC4: 15:37:25 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000023D0: 15:37:26 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00002FC4: 15:45:50 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002FC4: 15:45:50 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002FC4: 15:45:50 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002FC4: 15:45:50 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002FC4: 15:45:50 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002FC4: 15:45:50 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002FC4: 15:45:50 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002FC4: 15:45:51 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002FC4: 15:45:51 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002FC4: 15:45:51 []:<-------------------------------------------------------------->
+credweb.exe: 00002FC4: 15:45:51 [Terminated]:Exit Code: 0
+credweb.exe: 000032F4: 15:45:56 []:>--------------------------------------------------------------<
+credweb.exe: 000032F4: 15:45:56 [TUniServerModule]:Server First Init.
+credweb.exe: 000032F4: 15:45:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000032F4: 15:45:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00000870: 15:46:07 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000032F4: 16:08:21 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000032F4: 16:08:21 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000032F4: 16:08:21 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000032F4: 16:08:21 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000032F4: 16:08:21 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000032F4: 16:08:21 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000032F4: 16:08:21 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000032F4: 16:08:21 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000032F4: 16:08:21 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000032F4: 16:08:21 []:<-------------------------------------------------------------->
+credweb.exe: 000032F4: 16:08:21 [Terminated]:Exit Code: 0
+credweb.exe: 000033B4: 16:20:21 []:>--------------------------------------------------------------<
+credweb.exe: 000033B4: 16:20:21 [TUniServerModule]:Server First Init.
+credweb.exe: 000033B4: 16:20:21 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000033B4: 16:20:21 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000011FC: 16:20:25 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000033B4: 16:43:02 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000033B4: 16:43:02 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000033B4: 16:43:03 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000033B4: 16:43:03 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000033B4: 16:43:03 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000033B4: 16:43:03 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000033B4: 16:43:03 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000033B4: 16:43:03 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000033B4: 16:43:03 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000033B4: 16:43:03 []:<-------------------------------------------------------------->
+credweb.exe: 000033B4: 16:43:03 [Terminated]:Exit Code: 0
+credweb.exe: 000018CC: 16:43:14 []:>--------------------------------------------------------------<
+credweb.exe: 000018CC: 16:43:14 [TUniServerModule]:Server First Init.
+credweb.exe: 000018CC: 16:43:14 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000018CC: 16:43:14 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00003614: 16:43:19 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000018CC: 17:00:15 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000018CC: 17:00:15 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000018CC: 17:00:16 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000018CC: 17:00:16 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000018CC: 17:00:16 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000018CC: 17:00:16 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000018CC: 17:00:16 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000018CC: 17:00:16 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000018CC: 17:00:16 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000018CC: 17:00:16 []:<-------------------------------------------------------------->
+credweb.exe: 000018CC: 17:00:16 [Terminated]:Exit Code: 0
+credweb.exe: 000031B8: 17:00:23 []:>--------------------------------------------------------------<
+credweb.exe: 000031B8: 17:00:23 [TUniServerModule]:Server First Init.
+credweb.exe: 000031B8: 17:00:23 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000031B8: 17:00:23 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00003784: 17:00:30 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000031B8: 17:01:32 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000031B8: 17:01:32 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000031B8: 17:01:33 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000031B8: 17:01:33 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000031B8: 17:01:33 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000031B8: 17:01:33 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000031B8: 17:01:34 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000031B8: 17:01:34 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000031B8: 17:01:34 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000031B8: 17:01:34 []:<-------------------------------------------------------------->
+credweb.exe: 000031B8: 17:01:34 [Terminated]:Exit Code: 0
+credweb.exe: 00003660: 17:01:40 []:>--------------------------------------------------------------<
+credweb.exe: 00003660: 17:01:40 [TUniServerModule]:Server First Init.
+credweb.exe: 00003660: 17:01:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00003660: 17:01:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00000C18: 17:01:47 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00003660: 17:03:01 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00003660: 17:03:01 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00003660: 17:03:02 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00003660: 17:03:02 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00003660: 17:03:02 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00003660: 17:03:02 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00003660: 17:03:02 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00003660: 17:03:03 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00003660: 17:03:03 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00003660: 17:03:03 []:<-------------------------------------------------------------->
+credweb.exe: 00003660: 17:03:03 [Terminated]:Exit Code: 0
+credweb.exe: 000009A8: 17:03:08 []:>--------------------------------------------------------------<
+credweb.exe: 000009A8: 17:03:08 [TUniServerModule]:Server First Init.
+credweb.exe: 000009A8: 17:03:08 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000009A8: 17:03:08 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002EC4: 17:03:16 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000009A8: 17:04:38 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000009A8: 17:04:38 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000009A8: 17:04:39 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000009A8: 17:04:39 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000009A8: 17:04:39 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000009A8: 17:04:39 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000009A8: 17:04:39 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000009A8: 17:04:39 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000009A8: 17:04:39 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000009A8: 17:04:39 []:<-------------------------------------------------------------->
+credweb.exe: 000009A8: 17:04:39 [Terminated]:Exit Code: 0
+credweb.exe: 000011E0: 17:04:45 []:>--------------------------------------------------------------<
+credweb.exe: 000011E0: 17:04:45 [TUniServerModule]:Server First Init.
+credweb.exe: 000011E0: 17:04:45 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000011E0: 17:04:45 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00001D98: 17:04:51 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000011E0: 17:05:33 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000011E0: 17:05:33 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000011E0: 17:05:34 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000011E0: 17:05:34 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000011E0: 17:05:34 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000011E0: 17:05:34 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000011E0: 17:05:34 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000011E0: 17:05:34 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000011E0: 17:05:34 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000011E0: 17:05:34 []:<-------------------------------------------------------------->
+credweb.exe: 000011E0: 17:05:34 [Terminated]:Exit Code: 0
+credweb.exe: 00003394: 17:05:40 []:>--------------------------------------------------------------<
+credweb.exe: 00003394: 17:05:40 [TUniServerModule]:Server First Init.
+credweb.exe: 00003394: 17:05:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00003394: 17:05:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002F08: 17:05:46 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00003394: 17:06:57 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00003394: 17:06:57 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00003394: 17:06:58 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00003394: 17:06:58 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00003394: 17:06:58 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00003394: 17:06:58 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00003394: 17:06:58 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00003394: 17:06:58 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00003394: 17:06:58 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00003394: 17:06:58 []:<-------------------------------------------------------------->
+credweb.exe: 00003394: 17:06:58 [Terminated]:Exit Code: 0
+credweb.exe: 0000264C: 17:07:04 []:>--------------------------------------------------------------<
+credweb.exe: 0000264C: 17:07:04 [TUniServerModule]:Server First Init.
+credweb.exe: 0000264C: 17:07:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 0000264C: 17:07:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000009B4: 17:07:08 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 0000264C: 17:07:34 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 0000264C: 17:07:34 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 0000264C: 17:07:36 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 0000264C: 17:07:36 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 0000264C: 17:07:36 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 0000264C: 17:07:36 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 0000264C: 17:07:36 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 0000264C: 17:07:36 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 0000264C: 17:07:36 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 0000264C: 17:07:36 []:<-------------------------------------------------------------->
+credweb.exe: 0000264C: 17:07:36 [Terminated]:Exit Code: 0
+credweb.exe: 000037F8: 17:07:42 []:>--------------------------------------------------------------<
+credweb.exe: 000037F8: 17:07:42 [TUniServerModule]:Server First Init.
+credweb.exe: 000037F8: 17:07:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000037F8: 17:07:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000021E8: 17:07:47 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000037F8: 17:08:34 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000037F8: 17:08:34 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000037F8: 17:08:35 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000037F8: 17:08:35 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000037F8: 17:08:35 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000037F8: 17:08:35 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000037F8: 17:08:35 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000037F8: 17:08:35 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000037F8: 17:08:35 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000037F8: 17:08:35 []:<-------------------------------------------------------------->
+credweb.exe: 000037F8: 17:08:35 [Terminated]:Exit Code: 0
+credweb.exe: 00002790: 17:09:00 []:>--------------------------------------------------------------<
+credweb.exe: 00002790: 17:09:00 [TUniServerModule]:Server First Init.
+credweb.exe: 00002790: 17:09:00 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002790: 17:09:00 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000027A0: 17:09:36 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00002790: 17:10:11 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002790: 17:10:11 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002790: 17:10:12 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002790: 17:10:12 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002790: 17:10:12 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002790: 17:10:12 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002790: 17:10:13 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002790: 17:10:13 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002790: 17:10:13 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002790: 17:10:13 []:<-------------------------------------------------------------->
+credweb.exe: 00002790: 17:10:13 [Terminated]:Exit Code: 0
+credweb.exe: 00002050: 17:20:26 []:>--------------------------------------------------------------<
+credweb.exe: 00002050: 17:20:26 [TUniServerModule]:Server First Init.
+credweb.exe: 00002050: 17:20:26 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002050: 17:20:26 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00003780: 17:20:31 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00002050: 17:23:44 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002050: 17:23:44 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002050: 17:23:44 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002050: 17:23:44 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002050: 17:23:44 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002050: 17:23:44 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002050: 17:23:44 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002050: 17:23:44 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002050: 17:23:44 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002050: 17:23:44 []:<-------------------------------------------------------------->
+credweb.exe: 00002050: 17:23:44 [Terminated]:Exit Code: 0
+credweb.exe: 00002560: 17:23:55 []:>--------------------------------------------------------------<
+credweb.exe: 00002560: 17:23:55 [TUniServerModule]:Server First Init.
+credweb.exe: 00002560: 17:23:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002560: 17:23:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000031B0: 17:24:08 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00002560: 17:25:59 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002560: 17:25:59 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002560: 17:26:00 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002560: 17:26:00 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002560: 17:26:00 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002560: 17:26:00 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002560: 17:26:00 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002560: 17:26:00 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002560: 17:26:00 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002560: 17:26:00 []:<-------------------------------------------------------------->
+credweb.exe: 00002560: 17:26:00 [Terminated]:Exit Code: 0
+credweb.exe: 00001EC4: 17:40:16 []:>--------------------------------------------------------------<
+credweb.exe: 00001EC4: 17:40:16 [TUniServerModule]:Server First Init.
+credweb.exe: 00001EC4: 17:40:16 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00001EC4: 17:40:16 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00000540: 17:40:21 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00001EC4: 17:46:58 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00001EC4: 17:46:58 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00001EC4: 17:46:58 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00001EC4: 17:46:58 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00001EC4: 17:46:58 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00001EC4: 17:46:58 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00001EC4: 17:46:58 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00001EC4: 17:46:58 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00001EC4: 17:46:58 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00001EC4: 17:46:58 []:<-------------------------------------------------------------->
+credweb.exe: 00001EC4: 17:46:58 [Terminated]:Exit Code: 0
+credweb.exe: 000031D8: 17:47:05 []:>--------------------------------------------------------------<
+credweb.exe: 000031D8: 17:47:05 [TUniServerModule]:Server First Init.
+credweb.exe: 000031D8: 17:47:05 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000031D8: 17:47:05 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002560: 17:47:10 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000031D8: 17:47:29 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000031D8: 17:47:29 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000031D8: 17:47:30 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000031D8: 17:47:30 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000031D8: 17:47:30 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000031D8: 17:47:30 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000031D8: 17:47:30 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000031D8: 17:47:30 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000031D8: 17:47:30 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000031D8: 17:47:30 []:<-------------------------------------------------------------->
+credweb.exe: 000031D8: 17:47:30 [Terminated]:Exit Code: 0
+credweb.exe: 000011F4: 17:47:36 []:>--------------------------------------------------------------<
+credweb.exe: 000011F4: 17:47:36 [TUniServerModule]:Server First Init.
+credweb.exe: 000011F4: 17:47:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000011F4: 17:47:36 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00000B64: 17:47:44 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000011F4: 17:49:30 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000011F4: 17:49:30 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000011F4: 17:49:31 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000011F4: 17:49:31 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000011F4: 17:49:31 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000011F4: 17:49:31 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000011F4: 17:49:31 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000011F4: 17:49:31 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000011F4: 17:49:31 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000011F4: 17:49:31 []:<-------------------------------------------------------------->
+credweb.exe: 000011F4: 17:49:31 [Terminated]:Exit Code: 0
+credweb.exe: 000029B0: 17:53:42 []:>--------------------------------------------------------------<
+credweb.exe: 000029B0: 17:53:42 [TUniServerModule]:Server First Init.
+credweb.exe: 000029B0: 17:53:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 000029B0: 17:53:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002068: 17:53:42 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00002068: 17:53:42 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 000029B0: 17:55:08 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 000029B0: 17:55:08 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 000029B0: 17:55:09 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 000029B0: 17:55:09 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 000029B0: 17:55:09 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 000029B0: 17:55:09 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 000029B0: 17:55:09 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 000029B0: 17:55:09 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 000029B0: 17:55:09 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 000029B0: 17:55:09 []:<-------------------------------------------------------------->
+credweb.exe: 000029B0: 17:55:09 [Terminated]:Exit Code: 0
+credweb.exe: 00002430: 17:55:15 []:>--------------------------------------------------------------<
+credweb.exe: 00002430: 17:55:15 [TUniServerModule]:Server First Init.
+credweb.exe: 00002430: 17:55:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002430: 17:55:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 00002F74: 17:55:23 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00002430: 18:59:28 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002430: 18:59:28 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002430: 18:59:29 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002430: 18:59:29 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002430: 18:59:29 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002430: 18:59:29 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002430: 18:59:29 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002430: 18:59:29 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002430: 18:59:29 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002430: 18:59:29 []:<-------------------------------------------------------------->
+credweb.exe: 00002430: 18:59:29 [Terminated]:Exit Code: 0
+credweb.exe: 00002A54: 18:59:37 []:>--------------------------------------------------------------<
+credweb.exe: 00002A54: 18:59:37 [TUniServerModule]:Server First Init.
+credweb.exe: 00002A54: 18:59:38 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credweb.exe: 00002A54: 18:59:38 [TUniServerModule]:HTTP Server Started on Port: 8077
+credweb.exe: 000035D8: 18:59:42 [127.0.0.1]:EUniSessionException : Sua sessão expirou. Por favor, recarregue a página. : Addr: $007CFB8B
+credweb.exe: 00002A54: 19:07:04 [TUniServerModule]:Shutting Down Server.
+credweb.exe: 00002A54: 19:07:04 [TUniServerModule]:Stopping HTTP Server.
+credweb.exe: 00002A54: 19:07:05 [TUniServerModule]:HTTP Server Stopped.
+credweb.exe: 00002A54: 19:07:05 [TUniGUISessionManager]:Terminating Session manager.
+credweb.exe: 00002A54: 19:07:05 [TUniGUISessionManager]:Stopping Cache Eraser...
+credweb.exe: 00002A54: 19:07:05 [TUniGUISessionManager]:Cache Eraser Stopped.
+credweb.exe: 00002A54: 19:07:05 [TUniGUISessionManager]:Destroying Worker Threads.
+credweb.exe: 00002A54: 19:07:05 [TUniGUISessionManager]:Session manager terminated.
+credweb.exe: 00002A54: 19:07:05 [TUniServerModule]:Server Shutdown Completed.
+credweb.exe: 00002A54: 19:07:05 []:<-------------------------------------------------------------->
+credweb.exe: 00002A54: 19:07:05 [Terminated]:Exit Code: 0

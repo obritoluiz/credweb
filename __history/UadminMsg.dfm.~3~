@@ -1,0 +1,92 @@
+object frmAdminMsg: TfrmAdminMsg
+  Left = 0
+  Top = 0
+  ClientHeight = 607
+  ClientWidth = 688
+  Caption = 'frmAdminMsg'
+  AutoHeight = False
+  ShowTitle = False
+  FullScreen = False
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 0
+  PlatformData = {}
+  object pgPrincipal: TUnimTabPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 682
+    Height = 601
+    Hint = ''
+    ActivePage = pgMensagens
+    Align = alClient
+    ExplicitLeft = 11
+    ExplicitTop = 11
+    ExplicitWidth = 647
+    ExplicitHeight = 570
+    object pgMensagens: TUnimTabSheet
+      Left = 4
+      Top = 51
+      Width = 674
+      Height = 546
+      Hint = ''
+      Caption = 'Mensagens'
+      ExplicitWidth = 639
+      ExplicitHeight = 515
+      object pnlDocumentos: TUnimPanel
+        Left = 0
+        Top = 0
+        Width = 674
+        Height = 546
+        Hint = ''
+        Align = alClient
+        ExplicitWidth = 639
+        ExplicitHeight = 515
+        object grdDocs1: TUnimDBListGrid
+          AlignWithMargins = True
+          Left = 4
+          Top = 4
+          Width = 666
+          Height = 538
+          Hint = ''
+          Align = alClient
+          DataSource = UniMainModule.dsDocumentos
+          Columns = <
+            item
+              Title.Caption = 'DESCRICAO'
+              FieldName = 'DESCRICAO'
+              Width = 334
+            end
+            item
+              Title.Caption = 'SITUA'#199#195'O'
+              FieldName = 'SITUACAO'
+              Width = 160
+            end
+            item
+              Title.Caption = 'DATA'
+              FieldName = 'DATACADASTRO'
+              Width = 161
+            end>
+        end
+      end
+    end
+  end
+  object dsMsg: TDataSource
+    DataSet = qryMsg
+    Left = 554
+    Top = 25
+  end
+  object qryMsg: TFDQuery
+    Connection = UniMainModule.FDConnection
+    SQL.Strings = (
+      'select '
+      '  * '
+      'from tb_documentos'
+      'where solicitar = '#39'SIM'#39'  and '
+      'situacao <> '#39'PENDENTE'#39)
+    Left = 554
+    Top = 73
+  end
+end

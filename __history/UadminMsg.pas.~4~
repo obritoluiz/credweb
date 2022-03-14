@@ -1,0 +1,43 @@
+unit UadminMsg;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, uniBasicGrid, uniDBGrid, unimDBListGrid, unimPanel,
+  uniPanel, uniPageControl, unimTabPanel, uniGUIBaseClasses;
+
+type
+  TfrmAdminMsg = class(TUnimForm)
+    pgPrincipal: TUnimTabPanel;
+    pgMensagens: TUnimTabSheet;
+    pnlDocumentos: TUnimPanel;
+    grdDocs1: TUnimDBListGrid;
+    dsMsg: TDataSource;
+    qryMsg: TFDQuery;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmAdminMsg: TfrmAdminMsg;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmAdminMsg: TfrmAdminMsg;
+begin
+  Result := TfrmAdminMsg(UniMainModule.GetFormInstance(TfrmAdminMsg));
+end;
+
+end.

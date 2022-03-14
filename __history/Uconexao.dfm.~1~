@@ -1,0 +1,73 @@
+object frmConexao: TfrmConexao
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 320
+  Caption = 'Conex'#227'o '
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object umlServidor: TUnimLabel
+    Left = 8
+    Top = 72
+    Width = 225
+    Height = 23
+    Hint = ''
+    AutoSize = False
+    Caption = 'Servidor'
+    ParentFont = False
+  end
+  object umeServidor: TUnimEdit
+    Left = 8
+    Top = 101
+    Width = 304
+    Height = 47
+    Hint = ''
+    Text = ''
+    ParentFont = False
+    TabOrder = 1
+  end
+  object UnimLabel1: TUnimLabel
+    Left = 8
+    Top = 152
+    Width = 225
+    Height = 23
+    Hint = ''
+    AutoSize = False
+    Caption = 'Servidor'
+    ParentFont = False
+  end
+  object UnimEdit1: TUnimEdit
+    Left = 8
+    Top = 181
+    Width = 304
+    Height = 47
+    Hint = ''
+    Text = ''
+    ParentFont = False
+    TabOrder = 3
+  end
+  object UnimLabel2: TUnimLabel
+    Left = 8
+    Top = 232
+    Width = 225
+    Height = 23
+    Hint = ''
+    AutoSize = False
+    Caption = 'Servidor'
+    ParentFont = False
+  end
+  object UnimEdit2: TUnimEdit
+    Left = 8
+    Top = 261
+    Width = 304
+    Height = 47
+    Hint = ''
+    Text = ''
+    ParentFont = False
+    TabOrder = 5
+  end
+end

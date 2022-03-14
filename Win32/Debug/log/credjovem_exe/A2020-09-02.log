@@ -1,0 +1,177 @@
+credJovem.exe: 000015E8: 12:37:13 []:>--------------------------------------------------------------<
+credJovem.exe: 000015E8: 12:37:13 [TUniServerModule]:Server First Init.
+credJovem.exe: 000015E8: 12:37:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 000015E8: 12:37:13 [InitWebServer]:EIdCouldNotBindSocket : Could not bind socket. Address and port are already in use. : Addr: $006C8D79
+credJovem.exe: 000015E8: 12:37:17 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 000015E8: 12:37:17 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 000015E8: 12:37:18 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 000015E8: 12:37:18 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 000015E8: 12:37:18 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 000015E8: 12:37:18 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 000015E8: 12:37:18 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 000015E8: 12:37:18 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 000015E8: 12:37:18 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 000015E8: 12:37:18 []:<-------------------------------------------------------------->
+credJovem.exe: 000015E8: 12:37:18 [Terminated]:Exit Code: 0
+credJovem.exe: 0000133C: 12:37:30 []:>--------------------------------------------------------------<
+credJovem.exe: 0000133C: 12:37:30 [TUniServerModule]:Server First Init.
+credJovem.exe: 0000133C: 12:37:30 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 0000133C: 12:37:30 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00002F48: 12:37:39 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B7907
+credJovem.exe: 0000133C: 12:54:33 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 0000133C: 12:54:34 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 0000133C: 12:54:34 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 0000133C: 12:54:34 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 0000133C: 12:54:34 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 0000133C: 12:54:34 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 0000133C: 12:54:34 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 0000133C: 12:54:34 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 0000133C: 12:54:34 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 0000133C: 12:54:34 []:<-------------------------------------------------------------->
+credJovem.exe: 0000133C: 12:54:34 [Terminated]:Exit Code: 0
+credJovem.exe: 0000191C: 12:59:01 []:>--------------------------------------------------------------<
+credJovem.exe: 0000191C: 12:59:01 [TUniServerModule]:Server First Init.
+credJovem.exe: 0000191C: 12:59:01 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 0000191C: 12:59:01 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 000019EC: 12:59:11 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 0000191C: 13:02:17 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 0000191C: 13:02:17 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 0000191C: 13:02:19 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 0000191C: 13:02:19 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 0000191C: 13:02:19 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 0000191C: 13:02:19 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 0000191C: 13:02:19 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 0000191C: 13:02:19 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 0000191C: 13:02:19 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 0000191C: 13:02:19 []:<-------------------------------------------------------------->
+credJovem.exe: 0000191C: 13:02:19 [Terminated]:Exit Code: 0
+credJovem.exe: 0000210C: 13:02:31 []:>--------------------------------------------------------------<
+credJovem.exe: 0000210C: 13:02:31 [TUniServerModule]:Server First Init.
+credJovem.exe: 0000210C: 13:02:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 0000210C: 13:02:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00002208: 13:02:49 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 0000210C: 13:13:00 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 0000210C: 13:13:00 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 0000210C: 13:13:01 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 0000210C: 13:13:01 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 0000210C: 13:13:01 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 0000210C: 13:13:01 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 0000210C: 13:13:01 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 0000210C: 13:13:01 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 0000210C: 13:13:01 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 0000210C: 13:13:01 []:<-------------------------------------------------------------->
+credJovem.exe: 0000210C: 13:13:01 [Terminated]:Exit Code: 0
+credJovem.exe: 000020CC: 13:13:16 []:>--------------------------------------------------------------<
+credJovem.exe: 000020CC: 13:13:16 [TUniServerModule]:Server First Init.
+credJovem.exe: 000020CC: 13:13:16 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 000020CC: 13:13:16 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00002704: 13:13:28 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 000020CC: 13:19:17 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 000020CC: 13:19:17 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 000020CC: 13:19:17 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 000020CC: 13:19:17 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 000020CC: 13:19:17 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 000020CC: 13:19:17 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 000020CC: 13:19:18 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 000020CC: 13:19:18 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 000020CC: 13:19:18 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 000020CC: 13:19:18 []:<-------------------------------------------------------------->
+credJovem.exe: 000020CC: 13:19:18 [Terminated]:Exit Code: 0
+credJovem.exe: 00002E54: 13:19:29 []:>--------------------------------------------------------------<
+credJovem.exe: 00002E54: 13:19:29 [TUniServerModule]:Server First Init.
+credJovem.exe: 00002E54: 13:19:29 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 00002E54: 13:19:29 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 000002FC: 13:19:43 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B7907
+credJovem.exe: 00002E54: 13:22:05 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 00002E54: 13:22:06 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 00002E54: 13:22:06 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 00002E54: 13:22:06 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 00002E54: 13:22:06 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 00002E54: 13:22:06 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 00002E54: 13:22:06 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 00002E54: 13:22:06 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 00002E54: 13:22:06 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 00002E54: 13:22:06 []:<-------------------------------------------------------------->
+credJovem.exe: 00002E54: 13:22:06 [Terminated]:Exit Code: 0
+credJovem.exe: 00000D70: 13:31:40 []:>--------------------------------------------------------------<
+credJovem.exe: 00000D70: 13:31:40 [TUniServerModule]:Server First Init.
+credJovem.exe: 00000D70: 13:31:41 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 00000D70: 13:31:41 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00001058: 13:31:49 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 000005C0: 13:33:08 []:>--------------------------------------------------------------<
+credJovem.exe: 000005C0: 13:33:08 [TUniServerModule]:Server First Init.
+credJovem.exe: 000005C0: 13:33:08 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+credJovem.exe: 000005C0: 13:33:08 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 000005C0: 13:33:08 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 000022A4: 13:35:11 []:>--------------------------------------------------------------<
+credJovem.exe: 000022A4: 13:35:11 [TUniServerModule]:Server First Init.
+credJovem.exe: 000022A4: 13:35:11 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+credJovem.exe: 000022A4: 13:35:12 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 000022A4: 13:35:12 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00000D18: 13:35:12 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 00000D18: 13:35:12 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 00001590: 13:35:14 [HandleFileRequest[127.0.0.1]]:File not found: \\SERVERAGN01\GETIC - Gerencia de Tecnologia da Informacao\SISTEMAS DE INFORMAÇÃO\Projeto Cred Jovem\Sistema\Win32\Debug\favicon.ico
+credJovem.exe: 000022A4: 13:38:24 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 000022A4: 13:38:24 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 000022A4: 13:38:24 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 000022A4: 13:38:24 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 000022A4: 13:38:24 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 000022A4: 13:38:24 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 000022A4: 13:38:24 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 000022A4: 13:38:24 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 000022A4: 13:38:25 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 000022A4: 13:38:25 []:<-------------------------------------------------------------->
+credJovem.exe: 000022A4: 13:38:25 [Terminated]:Exit Code: 0
+credJovem.exe: 00002F24: 13:38:40 []:>--------------------------------------------------------------<
+credJovem.exe: 00002F24: 13:38:40 [TUniServerModule]:Server First Init.
+credJovem.exe: 00002F24: 13:38:41 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 00002F24: 13:38:41 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00002500: 13:38:50 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 00002F24: 13:40:44 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 00002F24: 13:40:44 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 00002F24: 13:40:45 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 00002F24: 13:40:45 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 00002F24: 13:40:45 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 00002F24: 13:40:45 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 00002F24: 13:40:45 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 00002F24: 13:40:46 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 00002F24: 13:40:46 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 00002F24: 13:40:46 []:<-------------------------------------------------------------->
+credJovem.exe: 00002F24: 13:40:46 [Terminated]:Exit Code: 0
+credJovem.exe: 00002474: 13:41:06 []:>--------------------------------------------------------------<
+credJovem.exe: 00002474: 13:41:06 [TUniServerModule]:Server First Init.
+credJovem.exe: 00002474: 13:41:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 00002474: 13:41:07 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 0000226C: 13:41:13 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 00002474: 13:44:11 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 00002474: 13:44:11 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 00002474: 13:44:12 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 00002474: 13:44:12 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 00002474: 13:44:13 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 00002474: 13:44:13 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 00002474: 13:44:13 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 00002474: 13:44:13 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 00002474: 13:44:13 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 00002474: 13:44:13 []:<-------------------------------------------------------------->
+credJovem.exe: 00002474: 13:44:13 [Terminated]:Exit Code: 0
+credJovem.exe: 0000248C: 13:44:37 []:>--------------------------------------------------------------<
+credJovem.exe: 0000248C: 13:44:37 [TUniServerModule]:Server First Init.
+credJovem.exe: 0000248C: 13:44:38 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 0000248C: 13:44:38 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 00000428: 13:44:56 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683
+credJovem.exe: 0000248C: 13:53:44 [TUniServerModule]:Shutting Down Server.
+credJovem.exe: 0000248C: 13:53:44 [TUniServerModule]:Stopping HTTP Server.
+credJovem.exe: 0000248C: 13:53:44 [TUniServerModule]:HTTP Server Stopped.
+credJovem.exe: 0000248C: 13:53:44 [TUniGUISessionManager]:Terminating Session manager.
+credJovem.exe: 0000248C: 13:53:44 [TUniGUISessionManager]:Stopping Cache Eraser...
+credJovem.exe: 0000248C: 13:53:44 [TUniGUISessionManager]:Cache Eraser Stopped.
+credJovem.exe: 0000248C: 13:53:44 [TUniGUISessionManager]:Destroying Worker Threads.
+credJovem.exe: 0000248C: 13:53:44 [TUniGUISessionManager]:Session manager terminated.
+credJovem.exe: 0000248C: 13:53:45 [TUniServerModule]:Server Shutdown Completed.
+credJovem.exe: 0000248C: 13:53:45 []:<-------------------------------------------------------------->
+credJovem.exe: 0000248C: 13:53:45 [Terminated]:Exit Code: 0
+credJovem.exe: 00002CE4: 13:53:56 []:>--------------------------------------------------------------<
+credJovem.exe: 00002CE4: 13:53:56 [TUniServerModule]:Server First Init.
+credJovem.exe: 00002CE4: 13:53:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+credJovem.exe: 00002CE4: 13:53:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+credJovem.exe: 0000229C: 13:54:36 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B8683

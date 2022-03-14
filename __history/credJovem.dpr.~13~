@@ -1,0 +1,24 @@
+program credJovem;
+
+uses
+  Forms,
+  ServerModule in 'ServerModule.pas' {UniServerModule: TUniGUIServerModule},
+  MainModule in 'MainModule.pas' {UniMainModule: TUniGUIMainModule},
+  Mainm in 'Mainm.pas' {frmPrincipal: TUnimForm},
+  UpreCad in 'UpreCad.pas' {FrmPreCad: TUnimForm},
+  Uacomp in 'Uacomp.pas' {frmAcomp: TUnimForm},
+  Uadmin in 'Uadmin.pas' {frmAdmin: TUnimForm},
+  Usolicitacao in 'Usolicitacao.pas' {FrmSolicitacao: TUnimForm},
+  Usejuv in 'Usejuv.pas' {frmAdminSejuv: TUnimForm},
+  UdadosCliente in 'UdadosCliente.pas' {frmDadosCliente: TUnimForm},
+  UrecuperarSenha in 'UrecuperarSenha.pas' {frmRecuperarSenha: TUnimForm},
+  Usenha in 'Usenha.pas' {FunctionSenha: TUnimForm};
+
+{$R *.res}
+
+begin
+  ReportMemoryLeaksOnShutdown := True;
+  Application.Initialize;
+  TUniServerModule.Create(Application);
+  Application.Run;
+end.
